@@ -8,4 +8,4 @@ This leads to additional work for harmonising multiple catalogues, for instance 
 To agree on a first level of generic terms for the taxonomy of public services
 
 ## How to contribute?
-Follow the ReadMe directly included within the taxonomy file [here]().
+Follow the ReadMe directly included within the taxonomy file [here](https://github.com/catalogue-of-services-isa/Taxonomy/blob/master/Taxonomy%20proposal%20v0.10.xlsx).

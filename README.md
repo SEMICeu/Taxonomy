@@ -1,4 +1,4 @@
-# Taxonomy
+# Taxonomy of public services
 
 ## Context
 Even though the CPSV-AP pushes for the harmonisation between catalogue of public services in Europe, our experience has shown that most of the catalogues and egovernment portals are following different taxonomies or big differences exist in the naming of public services. 

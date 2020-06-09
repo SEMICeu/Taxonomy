@@ -1,0 +1,287 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdr-publicservice-label: <http://publications.europa.eu/resource/authority/publicservice-theme/label/> .
+@prefix mdr-publicservice-scheme: <http://publications.europa.eu/resource/authority/publicservice-theme/scheme/> .
+@prefix mdr-publicservice-theme: <http://publications.europa.eu/resource/authority/publicservice-theme/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdr-publicservice-label:AgricultureAndFood a skosxl:Label;
+  skosxl:literalForm "Agriculture & food"@en .
+
+mdr-publicservice-label:Animal a skosxl:Label;
+  skosxl:literalForm "Animal"@en .
+
+mdr-publicservice-label:BorderControl a skosxl:Label;
+  skosxl:literalForm "Border control"@en .
+
+mdr-publicservice-label:CultureSportAndLeisure a skosxl:Label;
+  skosxl:literalForm "Culture, sport and leisure"@en .
+
+mdr-publicservice-label:Defence a skosxl:Label;
+  skosxl:literalForm "Defence"@en .
+
+mdr-publicservice-label:Digital a skosxl:Label;
+  skosxl:literalForm "Digital"@en .
+
+mdr-publicservice-label:Education a skosxl:Label;
+  skosxl:literalForm "Education"@en .
+
+mdr-publicservice-label:Emergency a skosxl:Label;
+  skosxl:literalForm "Emergency"@en .
+
+mdr-publicservice-label:Environmental a skosxl:Label;
+  skosxl:literalForm "Environmental"@en .
+
+mdr-publicservice-label:Family a skosxl:Label;
+  skosxl:literalForm "Family"@en .
+
+mdr-publicservice-label:GeneralBusiness a skosxl:Label;
+  skosxl:literalForm "General Business"@en .
+
+mdr-publicservice-label:GeneralGovernment a skosxl:Label;
+  skosxl:literalForm "General Government"@en .
+
+mdr-publicservice-label:GeneralPersonCivilStatus a skosxl:Label;
+  skosxl:literalForm "General Person / Civil status"@en .
+
+mdr-publicservice-label:HealthCare a skosxl:Label;
+  skosxl:literalForm "Health care"@en .
+
+mdr-publicservice-label:Housing a skosxl:Label;
+  skosxl:literalForm "Housing"@en .
+
+mdr-publicservice-label:Legal a skosxl:Label;
+  skosxl:literalForm "Legal"@en .
+
+mdr-publicservice-label:Manufacturing a skosxl:Label;
+  skosxl:literalForm "Manufacturing"@en .
+
+mdr-publicservice-label:Media a skosxl:Label;
+  skosxl:literalForm "Media"@en .
+
+mdr-publicservice-label:MonetaryPolicy a skosxl:Label;
+  skosxl:literalForm "Monetary policy"@en .
+
+mdr-publicservice-label:MoneyAndDebt a skosxl:Label;
+  skosxl:literalForm "Money & Debt"@en .
+
+mdr-publicservice-label:NaturalResources a skosxl:Label;
+  skosxl:literalForm "Natural resources"@en .
+
+mdr-publicservice-label:PublicSpaceManagementAndHeritage a skosxl:Label;
+  skosxl:literalForm "Public space management & heritage"@en .
+
+mdr-publicservice-label:Religious a skosxl:Label;
+  skosxl:literalForm "Religious"@en .
+
+mdr-publicservice-label:Retail a skosxl:Label;
+  skosxl:literalForm "Retail"@en .
+
+mdr-publicservice-label:ScienceAndTechnology a skosxl:Label;
+  skosxl:literalForm "Science and technology"@en .
+
+mdr-publicservice-label:StockMarket a skosxl:Label;
+  skosxl:literalForm "Stock market"@en .
+
+mdr-publicservice-label:TourismAndTravelling a skosxl:Label;
+  skosxl:literalForm "Tourism & travelling"@en .
+
+mdr-publicservice-label:TransportationAndTransportationInfrastructure a skosxl:Label;
+  skosxl:literalForm "Transportation & transportation infrastructure"@en .
+
+mdr-publicservice-label:Utilities a skosxl:Label;
+  skosxl:literalForm "Utilities"@en .
+
+mdr-publicservice-label:WelfareAndSocialCare a skosxl:Label;
+  skosxl:literalForm "Welfare & social care"@en .
+
+mdr-publicservice-label:Work a skosxl:Label;
+  skosxl:literalForm "Work"@en .
+
+mdr-publicservice-label:PublicServiceTheme a skosxl:Label;
+  skosxl:literalForm "Public Service Theme"@en .
+
+mdr-publicservice-scheme:PublicServiceTheme a skos:ConceptScheme;
+  dct:description "Classification of public services by themes"@en;
+  dct:title "Public Services Theme"@en;
+  skos:hasTopConcept mdr-publicservice-theme:AgricultureAndFood, mdr-publicservice-theme:Animal,
+    mdr-publicservice-theme:BorderControl, mdr-publicservice-theme:CultureSportAndLeisure,
+    mdr-publicservice-theme:Defence, mdr-publicservice-theme:Digital, mdr-publicservice-theme:Education,
+    mdr-publicservice-theme:Emergency, mdr-publicservice-theme:Environmental, mdr-publicservice-theme:Family,
+    mdr-publicservice-theme:GeneralBusiness, mdr-publicservice-theme:GeneralGovernment,
+    mdr-publicservice-theme:GeneralPersonCivilStatus, mdr-publicservice-theme:HealthCare,
+    mdr-publicservice-theme:Housing, mdr-publicservice-theme:Legal, mdr-publicservice-theme:Manufacturing,
+    mdr-publicservice-theme:Media, mdr-publicservice-theme:MonetaryPolicy, mdr-publicservice-theme:MoneyAndDebt,
+    mdr-publicservice-theme:NaturalResources, mdr-publicservice-theme:PublicSpaceManagementAndHeritage,
+    mdr-publicservice-theme:Religious, mdr-publicservice-theme:Retail, mdr-publicservice-theme:ScienceAndTechnology,
+    mdr-publicservice-theme:StockMarket, mdr-publicservice-theme:TourismAndTravelling,
+    mdr-publicservice-theme:TransportationAndTransportationInfrastructure, mdr-publicservice-theme:Utilities,
+    mdr-publicservice-theme:WelfareAndSocialCare, mdr-publicservice-theme:Work;
+  skosxl:prefLabel mdr-publicservice-label:PublicServiceTheme .
+
+mdr-publicservice-theme:AgricultureAndFood a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:AgricultureAndFood .
+
+mdr-publicservice-theme:Animal a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Animal .
+
+mdr-publicservice-theme:BorderControl a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:BorderControl .
+
+mdr-publicservice-theme:CultureSportAndLeisure a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:CultureSportAndLeisure .
+
+mdr-publicservice-theme:Defence a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Defence .
+
+mdr-publicservice-theme:Digital a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Digital .
+
+mdr-publicservice-theme:Education a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Education .
+
+mdr-publicservice-theme:Emergency a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Emergency .
+
+mdr-publicservice-theme:Environmental a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Environmental .
+
+mdr-publicservice-theme:Family a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Family .
+
+mdr-publicservice-theme:GeneralBusiness a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:GeneralBusiness .
+
+mdr-publicservice-theme:GeneralGovernment a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:GeneralGovernment .
+
+mdr-publicservice-theme:GeneralPersonCivilStatus a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:GeneralPersonCivilStatus .
+
+mdr-publicservice-theme:HealthCare a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:HealthCare .
+
+mdr-publicservice-theme:Housing a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Housing .
+
+mdr-publicservice-theme:Legal a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Legal .
+
+mdr-publicservice-theme:Manufacturing a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Manufacturing .
+
+mdr-publicservice-theme:Media a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Media .
+
+mdr-publicservice-theme:MonetaryPolicy a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:MonetaryPolicy .
+
+mdr-publicservice-theme:MoneyAndDebt a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:MoneyAndDebt .
+
+mdr-publicservice-theme:NaturalResources a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:NaturalResources .
+
+mdr-publicservice-theme:PublicSpaceManagementAndHeritage a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:PublicSpaceManagementAndHeritage .
+
+mdr-publicservice-theme:Religious a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Religious .
+
+mdr-publicservice-theme:Retail a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Retail .
+
+mdr-publicservice-theme:ScienceAndTechnology a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:ScienceAndTechnology .
+
+mdr-publicservice-theme:StockMarket a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:StockMarket .
+
+mdr-publicservice-theme:TourismAndTravelling a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:TourismAndTravelling .
+
+mdr-publicservice-theme:TransportationAndTransportationInfrastructure a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:TransportationAndTransportationInfrastructure .
+
+mdr-publicservice-theme:Utilities a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Utilities .
+
+mdr-publicservice-theme:WelfareAndSocialCare a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:WelfareAndSocialCare .
+
+mdr-publicservice-theme:Work a skos:Concept;
+  skos:inScheme mdr-publicservice-scheme:PublicServiceTheme;
+  skos:topConceptOf mdr-publicservice-scheme:PublicServiceTheme;
+  skosxl:prefLabel mdr-publicservice-label:Work .

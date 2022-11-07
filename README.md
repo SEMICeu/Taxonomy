@@ -25,7 +25,7 @@ The spreadsheet includes three key columns in which the mapping is made:
 
 * Annex II: SDGR (in blue). This is Annex II in the SDGR, containing the life events and procedures.
 
-The document also includes a column where feedback can be given by Member States (column A) and indicative mappings to the Norwegian and Finnish websites regarding Life Events (columns N and P).
+The document also includes a column where feedback can be given by Member States (column A).
 
 
 The main logic that is followed to create the new (in green) controlled vocabulary is as follows:
@@ -33,9 +33,9 @@ The main logic that is followed to create the new (in green) controlled vocabula
  * No information from the “current” controlled vocabulary in Annex IV should be lost
  * All information from the SDGR Annex II should be included in the new controlled vocabulary
  * Main focus at this stage is on level 1 Life Events (column C). Level 2 Life Events are significantly more complex, since Member States have many different categories and degrees of detail on their portals. Furthermore, the wording and approach in the two source lists are different. The SDGR provides narrowly defined procedures, whereas Annex IV groups life events on a higher level. More feedback is needed to determine the way these two sources can be consolidated. 
- * Related to the point above, wording of the Annex IV descriptions was changed. Specifically, “this life event groups..” was deleted in most cases to better align with the SDGR life events. 
+ * Related to the point above, wording of the Annex IV descriptions was changed. Specifically, “this life event groups..” was deleted in most cases to better align with the SDGR life events. The content changes made from the previous version are indicated in red. 
 
-One possible solution to this ‘mismatch’ is to divide Annex IV descriptions into more granular events to the same level as the SDGR annex. However, it will be difficult to create an exhaustive list of possible events following this approach. 
+
 
 ### Business Events
 

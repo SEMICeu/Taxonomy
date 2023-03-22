@@ -1,0 +1,138 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix be: <http://data.europa.eu/m58/business-event/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/m58/business-event/> a skos:ConceptScheme;
+  skos:hasTopConcept be:CLBU, be:RUBU, be:STBU;
+  skos:prefLabel "Business Events"@en .
+
+be:STBU a skos:Concept;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:narrower be:FICO, be:HIEM, be:LPCA, be:REBR, be:RECB, be:REGCO, be:REIP, be:STAC;
+  skos:prefLabel "Starting a business"@en;
+  skos:topConceptOf <http://data.europa.eu/m58/business-event/> .
+
+be:REGCO a skos:Concept;
+  skos:broader be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Registring a company"@en .
+
+be:LPCA a skos:Concept;
+  skos:broader be:RUBU, be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Needing a licence, permit or certificate to start or continue an activity"@en .
+
+be:REIP a skos:Concept;
+  skos:broader be:RUBU, be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Registering Intellectual Property"@en .
+
+be:REBR a skos:Concept;
+  skos:broader be:RUBU, be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Registering a branch"@en .
+
+be:STAC a skos:Concept;
+  skos:broader be:RUBU, be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Starting a new activity"@en .
+
+be:FICO a skos:Concept;
+  skos:broader be:RUBU, be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Financing a company"@en .
+
+be:HIEM a skos:Concept;
+  skos:broader be:RUBU, be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Hiring an employee"@en .
+
+be:RECB a skos:Concept;
+  skos:broader be:STBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Registering a cross-border business"@en .
+
+be:RUBU a skos:Concept;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:narrower be:FICO, be:HIEM, be:HPPC, be:LPCA, be:NOBA, be:NORA, be:NOSS, be:PAPP,
+    be:PSCE, be:REBR, be:REEMER, be:REEMES, be:REIP, be:STAC, be:SUCT;
+  skos:prefLabel "Running a business"@en;
+  skos:topConceptOf <http://data.europa.eu/m58/business-event/> .
+
+be:PAPP a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Participating in public procurement"@en .
+
+be:NORA a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Notifying and reporting to authorities"@en .
+
+be:HPPC a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Having problems in paying creditors"@en .
+
+be:NOBA a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Notification of business activity, permission for exercising a business activity, changes of business activity and the termination of a business activity not involving insolvency or liquidation procedures, excluding the initial registration of a business activity with the business register and excluding procedures concerning the constitution of or any subsequent filing by companies or firms within the meaning of the second paragraph of Article 54 TFEU"@en .
+
+be:REEMER a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Registration of an employer (a natural person) with compulsory pension and insurance schemes"@en .
+
+be:REEMES a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Registration of employees with compulsory pension and insurance schemes"@en .
+
+be:SUCT a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Submitting a corporate tax declaration"@en .
+
+be:NOSS a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Notification to the social security schemes of the end of contract with an employee, excluding procedures for the collective termination of employee contracts"@en .
+
+be:PSCE a skos:Concept;
+  skos:broader be:RUBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Payment of social contributions for employees"@en .
+
+be:CLBU a skos:Concept;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:narrower be:DICO, be:RESCO;
+  skos:prefLabel "Closing a business"@en;
+  skos:topConceptOf <http://data.europa.eu/m58/business-event/> .
+
+be:RESCO a skos:Concept;
+  skos:broader be:CLBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Restructuring of a company"@en .
+
+be:DICO a skos:Concept;
+  skos:broader be:CLBU;
+  skos:inScheme <http://data.europa.eu/m58/business-event/>;
+  skos:prefLabel "Dissolution of a company"@en .

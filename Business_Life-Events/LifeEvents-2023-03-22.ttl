@@ -1,0 +1,86 @@
+@prefix le: <http://data.europa.eu/ox8/life-event/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.europa.eu/ox8/life-event/> a skos:ConceptScheme;
+  skos:hasTopConcept le:BIR, le:BSC, le:CRS, le:DRE, le:DRV, le:FCR, le:FEHP, le:GMS,
+    le:MOV, le:RES, le:RET, le:STU, le:WOR;
+  skos:prefLabel "Life Events"@en .
+
+le:BIR a skos:Concept;
+  skos:definition "This life event groups public services related to being or becoming a caretaker for a child, for instance in case of giving birth, adopting, receiving a foster child, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Birth"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:BSC a skos:Concept;
+  skos:definition "This life event groups public services related to the situation where you need to take care of another person (other than when you get a child), for instance for an elder, a disabled person, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Becoming a (social) caretaker"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:GMS a skos:Concept;
+  skos:definition "This life event groups public services related to taking up a mandatory military or civil service."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Going into military service"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:RET a skos:Concept;
+  skos:definition "This life event groups public services related to when someone retires from his job or becomes a senior."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Retiring"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:STU a skos:Concept;
+  skos:definition "This life event groups any public service related to education, education financing, certificates, diplomas in preschool education, elementary school, higher education, university, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Studying"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:WOR a skos:Concept;
+  skos:definition "This life event groups public services related to working, for example when someone is looking for a new job, starts, quits or loses a job, changes professional circumstances, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Working"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:RES a skos:Concept;
+  skos:definition "This life event groups public services related to a person’s place of living, for instance, buying a house or a piece of land, building, renting a house or apartment, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Residence"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:CRS a skos:Concept;
+  skos:definition "This life event groups public services related to a person’s official relationship, for instance marriage, registered partnership, divorce, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Changing relationship status"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:DRE a skos:Concept;
+  skos:definition "This life event groups public services that relate to when a relative passes a way, and cover the public services directly related to the decease of that person (for instance notifying the authorities, arranging the funeral…), as well as related to settling inheritance and donations."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Death of a relative"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:DRV a skos:Concept;
+  skos:definition "This life event groups public services related to driving a vehicle, for instance car, motorcycle, etc. Some example public services are getting your local driver license, following driving lessons, registering your car, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Driving a vehicle"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:MOV a skos:Concept;
+  skos:definition "This life events groups public services related to registering a change of address, moving from one country to another, travelling abroad, getting an international passport or international driving license, getting a visa, getting vaccination, etc."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Moving"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:FEHP a skos:Concept;
+  skos:definition "This life event groups public services related to when someone faces an emergency, for instance in the case of an accident, or a severe health problem, for instance getting disabled."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Facing an emergency / health problem"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .
+
+le:FCR a skos:Concept;
+  skos:definition "This life event groups public services related to a crime, for instance in case you are the committer of that crime, or the victim or witness of a particular crime."@en;
+  skos:inScheme <http://data.europa.eu/ox8/life-event/>;
+  skos:prefLabel "Facing a crime"@en;
+  skos:topConceptOf <http://data.europa.eu/ox8/life-event/> .

@@ -40,7 +40,7 @@ In addition the legal forms:
 The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything), which:
 * does not need to adapt the GLEIF Code list to be used every time
 * allows to perform just a SPARQL CONSTRUCT query, see [line 10](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L10)
-* allows to query multiple files, the GLEIF ELF Code list in CSV format and the Publications Office Country Authority Table in RDF format, via the SERVICE directive, see line  
+* allows to query multiple files, the GLEIF ELF Code list in CSV format and the Publications Office Country Authority Table in RDF format, via the SERVICE directive, see [line 27](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L27) and [line 47](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L47) 
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki
 
 The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table

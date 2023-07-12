@@ -27,13 +27,13 @@ WHERE {
     SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
       # extract values from the respective columns of the CSV file
       ?s xyz:ELF%20Code ?code .
-      ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
       ?s xyz:Country%20of%20formation ?countryFormation .
       ?s xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
       ?s xyz:Language%20Code%20%28ISO%20639-1%29 ?isoLang .
+      ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
       ?s xyz:Abbreviations%20Local%20language ?abbrList  .
       ?s xyz:Abbreviations%20transliterated ?abbrListTrans .
-      ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
+      ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
         
       # determine the URI of the skos:Concept to be created
       BIND("http://example.org/" AS ?baseURI) .

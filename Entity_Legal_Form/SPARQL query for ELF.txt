@@ -1,0 +1,68 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX at: <http://publications.europa.eu/ontology/authority/>
+
+CONSTRUCT {
+?identifier rdf:type skos:Concept .
+    ?identifier dct:location ?country .
+    ?identifier skos:prefLabel ?legalNameLang .
+    ?identifier skos:prefLabel ?legalNameTransLang .
+    ?identifier skos-xl:prefLabel ?bnode .
+    ?bnode rdf:type skos-xl:Label .
+    ?bnode skos-xl:literalForm ?legalNameLang .
+    ?bnode skos:notation ?abbr .
+    ?identifier skos-xl:prefLabel ?bnodeTrans .
+    ?bnodeTrans rdf:type skos-xl:Label .
+    ?bnodeTrans skos-xl:literalForm ?legalNameTransLang .
+    ?bnodeTrans skos:notation ?abbrTrans .
+
+}
+WHERE {
+ 
+    SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
+      ?s xyz:ELF%20Code ?o .
+      ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
+      ?s xyz:Country%20of%20formation ?countryFormation .
+      ?s xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
+      ?s xyz:Language%20Code%20%28ISO%20639-1%29 ?iso_lang .
+      ?s xyz:Abbreviations%20Local%20language ?abbrList  .
+      ?s xyz:Abbreviations%20transliterated ?abbrListTrans .
+      ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans
+      BIND("http://myidentifier.com/" AS ?baseURI) .
+      BIND(URI(CONCAT(?baseURI, ?o)) AS ?identifier) .
+      BIND(STRLANG(?legalName,?iso_lang) AS ?legalNameLang ) .
+      BIND(REPLACE(?legalName, " ", "", "i") AS ?legalNameTrim) .
+      BIND(URI(CONCAT(?baseURI, CONCAT("label/",?legalNameTrim))) AS ?legalNameURI) .
+      BIND(IF(?iso_lang = "ru" || ?iso_lang = "be" || ?iso_lang = "el" || ?iso_lang = "bg", CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
+      BIND(STRLANG(?legalNameTrans,?iso_lang_trans) AS ?legalNameTransLang) .
+      FILTER (?status = "ACTV") .
+      FILTER (?countryFormation IN ("Bulgaria") ) .
+      FILTER (?o = "FPP2") .
+
+    }
+ 
+    SERVICE <x-sparql-anything:countries-skos.rdf> {
+      ?country rdf:type skos:Concept .
+      ?country skos:prefLabel ?label .
+    FILTER NOT EXISTS {?country at:end.use ?endUse} .
+      FILTER (lang(?label) = 'en') .
+      BIND (STR(?label)  AS ?eng_label)
+    }
+ 
+  ?abbrs apf:strSplit(?abbrList ";") .
+  BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr)
+  ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
+  BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans)
+  #https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
+  {BIND(BNODE() AS ?bnode)}
+  {BIND(BNODE() AS ?bnodeTrans)}
+  FILTER(?countryFormation = ?eng_label) .
+   
+}

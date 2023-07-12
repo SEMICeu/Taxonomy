@@ -8,7 +8,7 @@ PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 
 CONSTRUCT {
-  	?identifier rdf:type skos:Concept .
+    ?identifier rdf:type skos:Concept .
     ?identifier dct:location ?country .
     ?identifier skos:prefLabel ?legalNameLang .
     ?identifier skos:prefLabel ?legalNameTransLang .

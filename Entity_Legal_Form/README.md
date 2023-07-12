@@ -49,6 +49,7 @@ The SPARQL query:
 * filters only the legal forms in ACTIVE status, see [line 42](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L42)
 * make sure to have the same countries present in the Publications Office Country Authority Table with the filter in [line 62](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L62)
 
-The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (on http://localhost:3000/sparql) it helps to type in the SPARQL query and to execute it.
+The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (on http://localhost:3000/sparql) it helps to type in the SPARQL query and to execute it. Although due to it's size it was not included in this repository, in order to run the query one must download the server version of SPARQL-Anything themselves.
+
 
 ### Validation

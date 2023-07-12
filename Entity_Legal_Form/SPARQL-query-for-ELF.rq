@@ -25,6 +25,7 @@ CONSTRUCT {
 }
 WHERE {
     SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
+      # extract values from the respective columns
       ?s xyz:ELF%20Code ?code .
       ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
       ?s xyz:Country%20of%20formation ?countryFormation .
@@ -33,31 +34,46 @@ WHERE {
       ?s xyz:Abbreviations%20Local%20language ?abbrList  .
       ?s xyz:Abbreviations%20transliterated ?abbrListTrans .
       ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
-    
-      BIND("http://myidentifier.com/" AS ?baseURI) .
+        
+      # determine the URI of the skos:Concept to be created
+      BIND("http://example.org/" AS ?baseURI) .
       BIND(URI(CONCAT(?baseURI, ?code)) AS ?identifier) .
+
+      # determine the preflabel of the skos:Concept
       BIND(STRLANG(?legalName,?iso_lang) AS ?legalNameLang ) .
+  
+      # determine if the transliteration need to be added   
       BIND(IF(?iso_lang IN ("ru","be","el","bg"), CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
       BIND(STRLANG(?legalNameTrans,?iso_lang_trans) AS ?legalNameTransLang) .
+
+      # filter the legal forms
       FILTER (?status = "ACTV") .
       FILTER (?countryFormation IN ("Bulgaria") ) .
       FILTER (?code = "FPP2") .
     }
  
     SERVICE <x-sparql-anything:countries-skos.rdf> {
+      # extract the URI of the countries with their English label 
       ?country rdf:type skos:Concept .
       ?country skos:prefLabel ?label .
       BIND (STR(?label)  AS ?eng_label) .
       FILTER (lang(?label) = 'en') .
+      
+      # filter out those countries that are active, otherwise you can get multiple URI
       FILTER NOT EXISTS {?country at:end.use ?endUse} .
     }
- 
+
+    # split abbreviations delimited via ; character
     ?abbrs apf:strSplit(?abbrList ";") .
     BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr) .
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
     BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
     # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
+
+    # create blank nodes for skos-xl labels
     {BIND(BNODE() AS ?bnode)} .
     {BIND(BNODE() AS ?bnodeTrans)} .
+
+    # make sure that ELF countries are the same as those in Publications Office Countries
     FILTER(?countryFormation = ?eng_label) .
 }

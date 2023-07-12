@@ -42,7 +42,7 @@ In addition, the legal forms:
 The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything), which:
 * does not need to adapt the GLEIF Entity Legal Forms file provided as input for the transformation
 * allows to perform just a SPARQL CONSTRUCT query, see [line 10](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L10), and can leverage SPARQL functions such as STRLANG to combine a string with a language tag, see [line 39](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L39)
-* allows to query multiple files in different format, the GLEIF ELF Code list in CSV format and the Publications Office Country Authority Table in RDF format, via the SERVICE directive, see [line 27](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L27) and [line 47](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L47) 
+* allows to query multiple files in different format, the GLEIF ELF Code list in CSV format and the Publications Office Country Authority Table in RDF format, via the SERVICE directive, see respectively [line 27](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L27) and [line 47](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L47) 
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 55]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L55)
 
 The SPARQL query:

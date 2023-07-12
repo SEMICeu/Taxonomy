@@ -43,7 +43,7 @@ WHERE {
       BIND(STRLANG(?legalName,?iso_lang) AS ?legalNameLang ) .
   
       # determine if the transliteration need to be added   
-      BIND(IF(?iso_lang IN ("ru","be","el","bg"), CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
+      BIND(IF(?iso_lang IN ("be","bg","el","ru"), CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
       BIND(STRLANG(?legalNameTrans,?iso_lang_trans) AS ?legalNameTransLang) .
 
       # filter the legal forms

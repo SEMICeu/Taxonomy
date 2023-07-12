@@ -35,7 +35,7 @@ In addition the legal forms:
 * have a status (Column "ELF Status ACTV/INAC") active or inactive
 * might have, for each single translation
   *  a transliteration in Latin, see for example the ELF Code for Greece [R3HO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L1388)
-  *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L234) that are concatenated via the ";" delimiter
+  *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L234), where they are concatenated via the ";" delimiter such as "PRIV ST.;PS"
 
 ### Transformation
 

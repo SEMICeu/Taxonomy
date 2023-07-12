@@ -34,7 +34,7 @@ In addition, the legal forms:
 * depend on a country (Column "Country of formation")
 * have a status (Column "ELF Status ACTV/INAC") active or inactive
 * might have, for each single translation
-  *  a transliteration in Latin, see for example the ELF Code for Greece [R3HO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L1388)
+  *  a transliteration in Latin, see for example the ELF Code for Greece [R3HO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L1388) 
   *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L234), where they are concatenated via the ";" delimiter such as "PRIV ST.;PS"
 
 ### Transformation
@@ -46,6 +46,7 @@ The transformation has been performed via the tool [SPARQL-Anything](https://git
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 55]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L55)
 
 The SPARQL query:
+* adds the transliteration to Latin only for certain languages like Bulgarian or Greek, see [line 40](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L40)
 * filters only the legal forms in ACTIVE status, see [line 42](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L42)
 * make sure to have the same countries present in the Publications Office Country Authority Table with the filter in [line 62](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L62)
 

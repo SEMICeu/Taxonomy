@@ -46,7 +46,7 @@ The transformation has been performed via the tool [SPARQL-Anything](https://git
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 55]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L55)
 
 The SPARQL query:
-* filters only the legal forms in ACTIVE status, see line: 
+* filters only the legal forms in ACTIVE status, see [line 42](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L42)
 
 The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table
 

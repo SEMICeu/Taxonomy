@@ -28,18 +28,20 @@ Therefore the CSV is the preferred format for the transformation.
 The CSV file contains a list of legal forms:
 * that are not logical linked (no order/ranking)
 * that are not physically linked (no reference between each other)
-* that are grouped by the "ELF Code" column because of multiple translations, see for example the ELF Code [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L99-L101)
+* that are grouped by the "ELF Code" column because of multiple translations, see for example the ELF Code for Belgium [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L99-L101) in Dutch, French and German
 
 In addition the legal forms:
 * depend on a country (Column "Country of formation")
 * have a status (Column "ELF Status ACTV/INAC") active or inactive
-* might have, for each single translation, a transliteration in Latin (see for example the ELF Code for Greece [R3HO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L1388) ) and multiple abbrevations (see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L234) )
+* might have, for each single translation
+  *  a transliteration in Latin, see for example the ELF Code for Greece [R3HO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L1388)
+  *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L234)
 
 ### Transformation
 
 The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything), which:
-* does not need to adapt the GLEIF Code list to be used every time
-* allows to perform just a SPARQL CONSTRUCT query, see [line 10](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L10)
+* does not need to adapt the GLEIF Code list provided as input for the transformation
+* allows to perform just a SPARQL CONSTRUCT query, see [line 10](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L10) and can leverage SPARQL constructs such as 
 * allows to query multiple files, the GLEIF ELF Code list in CSV format and the Publications Office Country Authority Table in RDF format, via the SERVICE directive, see [line 27](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L27) and [line 47](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L47) 
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki
 

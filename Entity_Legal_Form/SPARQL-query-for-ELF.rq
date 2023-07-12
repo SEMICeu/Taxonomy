@@ -25,7 +25,7 @@ CONSTRUCT {
 }
 WHERE {
     SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
-      # extract values from the respective columns
+      # extract values from the respective columns of the CSV file
       ?s xyz:ELF%20Code ?code .
       ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
       ?s xyz:Country%20of%20formation ?countryFormation .

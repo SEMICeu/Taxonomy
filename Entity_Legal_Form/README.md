@@ -13,7 +13,7 @@ The folder includes:
 ### Analysis of the GLEIF Entity Legal Forms
 
 #### Format
-The GLEIF Entity Legal Forms are provided in 3 formats: PDF, Excel and CSV.
+The GLEIF Entity Legal Forms are provided in 3 file formats: PDF, Excel and CSV.
 
 In order to perform a transformation, a structured format is preferred, therefore the choice is between Excel and CSV.
 

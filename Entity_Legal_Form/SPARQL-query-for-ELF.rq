@@ -25,7 +25,7 @@ CONSTRUCT {
 }
 WHERE {
     SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
-      ?s xyz:ELF%20Code ?o .
+      ?s xyz:ELF%20Code ?code .
       ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
       ?s xyz:Country%20of%20formation ?countryFormation .
       ?s xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
@@ -35,13 +35,13 @@ WHERE {
       ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
     
       BIND("http://myidentifier.com/" AS ?baseURI) .
-      BIND(URI(CONCAT(?baseURI, ?o)) AS ?identifier) .
+      BIND(URI(CONCAT(?baseURI, ?code)) AS ?identifier) .
       BIND(STRLANG(?legalName,?iso_lang) AS ?legalNameLang ) .
       BIND(IF(?iso_lang IN ("ru","be","el","bg"), CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
       BIND(STRLANG(?legalNameTrans,?iso_lang_trans) AS ?legalNameTransLang) .
       FILTER (?status = "ACTV") .
       FILTER (?countryFormation IN ("Bulgaria") ) .
-      FILTER (?o = "FPP2") .
+      FILTER (?code = "FPP2") .
     }
  
     SERVICE <x-sparql-anything:countries-skos.rdf> {

@@ -27,8 +27,8 @@ Therefore the CSV is the preferred format for the transformation.
 #### Content
 The CSV file contains a list of legal forms:
 * that are not logical linked (no order/ranking)
-* that are not physically linked (no referenced between each other)
-* that are grouped via the "ELF Code" column because of multiple translations, see for example the ELF Code [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L99-L101)
+* that are not physically linked (no reference between each other)
+* that are grouped by the "ELF Code" column because of multiple translations, see for example the ELF Code [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L99-L101)
 
 In addition the legal forms:
 * depend on a country (Column "Country of formation")

@@ -37,7 +37,7 @@ WHERE {
       BIND("http://myidentifier.com/" AS ?baseURI) .
       BIND(URI(CONCAT(?baseURI, ?o)) AS ?identifier) .
       BIND(STRLANG(?legalName,?iso_lang) AS ?legalNameLang ) .
-      BIND(IF(?iso_lang = "ru" || ?iso_lang = "be" || ?iso_lang = "el" || ?iso_lang = "bg", CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
+      BIND(IF(?iso_lang IN ("ru","be","el","bg"), CONCAT(?iso_lang,"-Latn"), ?iso_lang) AS ?iso_lang_trans) .
       BIND(STRLANG(?legalNameTrans,?iso_lang_trans) AS ?legalNameTransLang) .
       FILTER (?status = "ACTV") .
       FILTER (?countryFormation IN ("Bulgaria") ) .

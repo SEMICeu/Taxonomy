@@ -30,7 +30,7 @@ The CSV file contains a list of legal forms:
 * that are not physically linked (no reference between each other)
 * that are grouped by the "ELF Code" column because of multiple translations, see for example the ELF Code for Belgium [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L99-L101) in Dutch, French and German
 
-In addition the legal forms:
+In addition, the legal forms:
 * depend on a country (Column "Country of formation")
 * have a status (Column "ELF Status ACTV/INAC") active or inactive
 * might have, for each single translation

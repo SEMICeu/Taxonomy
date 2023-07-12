@@ -11,15 +11,24 @@ The folder includes:
 
 ## Process
 ### Analysis of the GLEIF Entity Legal Forms
+
+#### Format
 The GLEIF Entity Legal Forms are provided in 3 formats: PDF, Excel and CSV.
-In order to perform a transformation a structured format is preferred, therefore the choice between Excel and CSV.
+
+In order to perform a transformation, a structured format is preferred, therefore the choice is between Excel and CSV.
+
 The Excel file:
 * has 1 sheet only
 * does not contain excel/macros formulas
+* has the same content as the CSV file
 
 Therefore the CSV is the preferred format for the transformation.
 
-The CSV file contains a list of legal forms that for which:
+#### Content
+The CSV file contains a list of legal forms:
+* that are not logical linked (no order/ranking)
+* that are not physically linked (no referenced between each other)
+* that are grouped via ELF Code because of multiple translations, see for example the ELF Code [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2021-10-21-elf-code-list-v1.4.1.csv#L99-L101)
 
 ### Transformation
 

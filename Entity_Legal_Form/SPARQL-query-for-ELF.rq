@@ -55,9 +55,9 @@ WHERE {
     ?abbrs apf:strSplit(?abbrList ";") .
     BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr) .
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
-  	BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
-  	# https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
-  	{BIND(BNODE() AS ?bnode)} .
-  	{BIND(BNODE() AS ?bnodeTrans)} .
-  	FILTER(?countryFormation = ?eng_label) .
+    BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
+    # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
+    {BIND(BNODE() AS ?bnode)} .
+    {BIND(BNODE() AS ?bnodeTrans)} .
+    FILTER(?countryFormation = ?eng_label) .
 }

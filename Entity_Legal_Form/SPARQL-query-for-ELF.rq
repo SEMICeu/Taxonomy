@@ -18,7 +18,7 @@ CONSTRUCT {
     ?bnode skos-xl:literalForm ?legalNameLang .
     ?bnode skos:notation ?abbr .
   
-    ?identifier skos-xl:prefLabel ?bnodeTrans .
+    ?identifier skos-xl:prefLabelTrans ?bnodeTrans .
     ?bnodeTrans rdf:type skos-xl:Label .
     ?bnodeTrans skos-xl:literalForm ?legalNameTransLang .
     ?bnodeTrans skos:notation ?abbrTrans .
@@ -43,13 +43,18 @@ WHERE {
       BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
   
       # determine if the transliteration need to be added   
-      BIND(IF(?isoLang IN ("be","bg","el","ru"), CONCAT(?isoLang,"-Latn"), ?isoLang) AS ?isoLang_trans) .
-      BIND(STRLANG(?legalNameTrans,?isoLang_trans) AS ?legalNameTransLang) .
+      BIND(IF(?isoLang IN ("be","bg","el","ru"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
+    BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
 
       # filter the legal forms
       FILTER (?status = "ACTV") .
-      FILTER (?countryFormation IN ("Bulgaria") ) .
-      FILTER (?code = "FPP2") .
+      FILTER (?countryFormation IN ("Belarus") ) .
+      
+        # create blank nodes for skos-xl labels
+      # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
+      BIND(BNODE() AS ?bnode)  .
+      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTrans)  .
+    
     }
  
     SERVICE <x-sparql-anything:countries-skos.rdf> {
@@ -68,11 +73,6 @@ WHERE {
     BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr) .
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
     BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
-
-    # create blank nodes for skos-xl labels
-    # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
-    {BIND(BNODE() AS ?bnode)} .
-    {BIND(BNODE() AS ?bnodeTrans)} .
 
     # make sure that ELF countries are the same as those in Publications Office Countries
     FILTER(?countryFormation = ?eng_label) .

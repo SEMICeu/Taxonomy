@@ -1,0 +1,129 @@
+@prefix apf:     <http://jena.apache.org/ARQ/property#> .
+@prefix at:      <http://publications.europa.eu/ontology/authority/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix fx:      <http://sparql.xyz/facade-x/ns/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos-xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xyz:     <http://sparql.xyz/facade-x/data/> .
+
+<http://publications.europa.eu/resource/authority/entitylegalform/MR85>
+        rdf:type                skos:Concept ;
+        dct:location            <http://publications.europa.eu/resource/authority/country/BLR> ;
+        skos:inScheme           <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos:prefLabel          "Адкрытае акцыянернае таварыства"@be , "Открытое акционерное общество"@ru , "Adkrytae akcyyanernae tavarystva"@be-Latn , "Otkrytoe akcionernoe obshchestvo"@ru-Latn ;
+        skos:topConceptOf       <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ААТ" ;
+                                  skos-xl:literalForm  "Адкрытае акцыянернае таварыства"@be
+                                ] ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ОАО" ;
+                                  skos-xl:literalForm  "Открытое акционерное общество"@ru
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ОАО" ;
+                                  skos-xl:literalForm  "Otkrytoe akcionernoe obshchestvo"@ru-Latn
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "AAT" ;
+                                  skos-xl:literalForm  "Adkrytae akcyyanernae tavarystva"@be-Latn
+                                ] .
+
+<http://publications.europa.eu/resource/authority/entitylegalform/9X63>
+        rdf:type                skos:Concept ;
+        dct:location            <http://publications.europa.eu/resource/authority/country/BLR> ;
+        skos:inScheme           <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos:prefLabel          "Унитарное предприятие"@ru , "Unitarnoe predpriyatie"@ru-Latn , "Unіtarnae pradpryemstva"@be-Latn , "Унітарнае прадпрыемства"@be ;
+        skos:topConceptOf       <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "УП" ;
+                                  skos-xl:literalForm  "Унітарнае прадпрыемства"@be
+                                ] ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "УП" ;
+                                  skos-xl:literalForm  "Унитарное предприятие"@ru
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "UP" ;
+                                  skos-xl:literalForm  "Unіtarnae pradpryemstva"@be-Latn
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "UP" ;
+                                  skos-xl:literalForm  "Unitarnoe predpriyatie"@ru-Latn
+                                ] .
+
+<http://publications.europa.eu/resource/authority/entitylegalform/JLR3>
+        rdf:type                skos:Concept ;
+        dct:location            <http://publications.europa.eu/resource/authority/country/BLR> ;
+        skos:inScheme           <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos:prefLabel          "Tavarystva z dadatkovaj adkaznascyu"@be-Latn , "Таварыства з дадатковай адказнасцю"@be , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
+        skos:topConceptOf       <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ТДА" ;
+                                  skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be
+                                ] ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ОДО" ;
+                                  skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ODO" ;
+                                  skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ТDA" ;
+                                  skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn
+                                ] .
+
+<http://publications.europa.eu/resource/authority/entitylegalform/106J>
+        rdf:type                skos:Concept ;
+        dct:location            <http://publications.europa.eu/resource/authority/country/BLR> ;
+        skos:inScheme           <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos:prefLabel          "Zakrytoe akcionernoe obshchestvo"@ru-Latn , "Закрытае акцыянернае таварыства"@be , "Zakrytae akcyyanernae tavarystva"@be-Latn , "Закрытое акционерное общество"@ru ;
+        skos:topConceptOf       <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ЗАТ" ;
+                                  skos-xl:literalForm  "Закрытае акцыянернае таварыства"@be
+                                ] ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ЗАО" ;
+                                  skos-xl:literalForm  "Закрытое акционерное общество"@ru
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ZAT" ;
+                                  skos-xl:literalForm  "Zakrytae akcyyanernae tavarystva"@be-Latn
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ZAО" ;
+                                  skos-xl:literalForm  "Zakrytoe akcionernoe obshchestvo"@ru-Latn
+                                ] .
+
+<http://publications.europa.eu/resource/authority/entitylegalform/AABD>
+        rdf:type                skos:Concept ;
+        dct:location            <http://publications.europa.eu/resource/authority/country/BLR> ;
+        skos:inScheme           <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos:prefLabel          "Таварыства з абмежаванай адказнасцю"@be , "Общество с ограниченной ответственностью"@ru , "Tavarystva z abmezhavanaj adkaznascyu"@be-Latn , "Obshchestvo s ogranichennoj otvetstvennost'yu"@ru-Latn ;
+        skos:topConceptOf       <http://publications.europa.eu/resource/authority/entitylegalform> ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ООО" ;
+                                  skos-xl:literalForm  "Общество с ограниченной ответственностью"@ru
+                                ] ;
+        skos-xl:prefLabel       [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ТАА" ;
+                                  skos-xl:literalForm  "Таварыства з абмежаванай адказнасцю"@be
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ООО" ;
+                                  skos-xl:literalForm  "Obshchestvo s ogranichennoj otvetstvennost'yu"@ru-Latn
+                                ] ;
+        skos-xl:prefLabelTrans  [ rdf:type             skos-xl:Label ;
+                                  skos:notation        "ТАА" ;
+                                  skos-xl:literalForm  "Tavarystva z abmezhavanaj adkaznascyu"@be-Latn
+                                ] .
+
+<http://publications.europa.eu/resource/authority/entitylegalform>
+        rdf:type            skos:ConceptScheme ;
+        dct:title           "Entity Legal Form"@en ;
+        skos:hasTopConcept  <http://publications.europa.eu/resource/authority/entitylegalform/AABD> , <http://publications.europa.eu/resource/authority/entitylegalform/JLR3> , <http://publications.europa.eu/resource/authority/entitylegalform/9X63> , <http://publications.europa.eu/resource/authority/entitylegalform/106J> , <http://publications.europa.eu/resource/authority/entitylegalform/MR85> ;
+        skos:prefLabel      "Entity Legal Form"@en .

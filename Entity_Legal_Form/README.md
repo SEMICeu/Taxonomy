@@ -56,3 +56,10 @@ Due to it's size (200 MB), SPARQL-Anything was not included in this repository, 
 
 
 ### Validation
+
+The output of the transformation is a RDF file containing skos:ConceptScheme pointing to all skos:Concept generated.
+
+The RDF file is validated manually against:
+
+* https://skos-play.sparna.fr/skos-testing-tool/
+* the shapes, downloaded from: https://github.com/skohub-io/shapes

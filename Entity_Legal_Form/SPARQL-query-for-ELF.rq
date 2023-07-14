@@ -8,23 +8,31 @@ PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 
 CONSTRUCT {
-    ?identifier rdf:type skos:Concept .
-    ?identifier dct:location ?country .
-    ?identifier skos:prefLabel ?legalNameLang .
-    ?identifier skos:prefLabel ?legalNameTransLang .
+    ?concept rdf:type skos:Concept .
+    ?concept dct:location ?country .
+    ?concept skos:prefLabel ?legalNameLang .
+    ?concept skos:prefLabel ?legalNameTransLang .
   
-    ?identifier skos-xl:prefLabel ?bnode .
+    ?concept skos-xl:prefLabel ?bnode .
     ?bnode rdf:type skos-xl:Label .
     ?bnode skos-xl:literalForm ?legalNameLang .
     ?bnode skos:notation ?abbr .
   
-    ?identifier skos-xl:prefLabelTrans ?bnodeTrans .
+    ?concept skos-xl:prefLabelTrans ?bnodeTrans .
     ?bnodeTrans rdf:type skos-xl:Label .
     ?bnodeTrans skos-xl:literalForm ?legalNameTransLang .
     ?bnodeTrans skos:notation ?abbrTrans .
+  
+    ?conceptScheme rdf:type skos:ConceptScheme .
+    ?conceptScheme skos:prefLabel ?conceptSchemeLabel .
+    ?conceptScheme dct:title ?conceptSchemeLabel .
+    ?conceptScheme skos:hasTopConcept ?concept .
+    ?concept skos:topConceptOf ?conceptScheme .
+    ?concept skos:inScheme ?conceptScheme .
 }
 WHERE {
     SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
+    
       # extract values from the respective columns of the CSV file
       ?s xyz:ELF%20Code ?code .
       ?s xyz:Country%20of%20formation ?countryFormation .
@@ -34,23 +42,23 @@ WHERE {
       ?s xyz:Abbreviations%20Local%20language ?abbrList  .
       ?s xyz:Abbreviations%20transliterated ?abbrListTrans .
       ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
-        
+    
+      # filter the legal forms
+      FILTER (?status = "ACTV") .
+      FILTER (?countryFormation IN ("Belarus") ) .
+    
       # determine the URI of the skos:Concept to be created
-      BIND("http://example.org/" AS ?baseURI) .
-      BIND(URI(CONCAT(?baseURI, ?code)) AS ?identifier) .
+      BIND("http://publications.europa.eu/resource/authority/entitylegalform" AS ?baseURI) .
+      BIND(URI(CONCAT(?baseURI, "/", ?code)) AS ?concept) .
 
       # determine the preflabel of the skos:Concept
       BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
   
       # determine if the transliteration need to be added   
       BIND(IF(?isoLang IN ("be","bg","el","ru"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
-    BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
-
-      # filter the legal forms
-      FILTER (?status = "ACTV") .
-      FILTER (?countryFormation IN ("Belarus") ) .
-      
-        # create blank nodes for skos-xl labels
+      BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
+        
+      # create blank nodes for skos-xl labels
       # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
       BIND(BNODE() AS ?bnode)  .
       BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTrans)  .
@@ -58,6 +66,7 @@ WHERE {
     }
  
     SERVICE <x-sparql-anything:countries-skos.rdf> {
+    
       # extract the URI of the countries with their English label 
       ?country rdf:type skos:Concept .
       ?country skos:prefLabel ?label .
@@ -73,6 +82,10 @@ WHERE {
     BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr) .
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
     BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
+
+    # determine the URI of the skos:ConceptScheme to be created 
+    BIND(URI(?baseURI) AS ?conceptScheme) .
+    BIND("Entity Legal Form"@en AS ?conceptSchemeLabel) .
 
     # make sure that ELF countries are the same as those in Publications Office Countries
     FILTER(?countryFormation = ?eng_label) .

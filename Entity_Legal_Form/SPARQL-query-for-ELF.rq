@@ -55,7 +55,7 @@ WHERE {
       BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
   
       # determine if the transliteration need to be added   
-      BIND(IF(?isoLang IN ("be","bg","el","ru"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
+      BIND(IF(?isoLang IN ("ar","be","bg","el","ja","km","kr","mk","sr","zh","ru"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
       BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
         
       # create blank nodes for skos-xl labels

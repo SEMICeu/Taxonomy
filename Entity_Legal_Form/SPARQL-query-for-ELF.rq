@@ -1,5 +1,5 @@
-PREFIX at: <http://publications.europa.eu/ontology/authority/>
 PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX at: <http://publications.europa.eu/ontology/authority/>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX fx: <http://sparql.xyz/facade-x/ns/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -39,7 +39,7 @@ WHERE {
       ?s xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
       ?s xyz:Language%20Code%20%28ISO%20639-1%29 ?isoLang .
       ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
-      ?s xyz:Abbreviations%20Local%20language ?abbrList  .
+      ?s xyz:Abbreviations%20Local%20language ?abbrList .
       ?s xyz:Abbreviations%20transliterated ?abbrListTrans .
       ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
     
@@ -60,8 +60,8 @@ WHERE {
         
       # create blank nodes for skos-xl labels
       # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
-      BIND(BNODE() AS ?bnode)  .
-      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTrans)  .
+      BIND(BNODE() AS ?bnode) .
+      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTrans) .
     
     }
  

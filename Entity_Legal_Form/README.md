@@ -50,7 +50,7 @@ The SPARQL query:
 * filters only the legal forms in ACTIVE status, see [line 50](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L50)
 * make sure to have the same countries present in the Publications Office Country Authority Table with the filter in [line 78](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L78)
 
-The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the brower to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
+The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the browser to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
 
 Due to it's size (200 MB), SPARQL-Anything was not included in this repository, so, in order to run the query, one must download the server version of SPARQL-Anything themselves.
 
@@ -61,5 +61,5 @@ The output of the transformation is a RDF file containing skos:ConceptScheme poi
 
 The RDF file is validated manually against:
 
-* https://skos-play.sparna.fr/skos-testing-tool/
-* the shapes, downloaded from: https://github.com/skohub-io/shapes
+* [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
+* the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate

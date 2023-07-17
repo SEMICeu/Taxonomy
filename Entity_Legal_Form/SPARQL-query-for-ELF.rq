@@ -64,7 +64,12 @@ WHERE {
       BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTrans) .
     
     }
- 
+
+    SERVICE <x-sparql-anything:ELF_OP_mapping.csv,csv.headers=true,csv.delimiter=;> {
+      ?mapping xyz:ELF ?CountryELF .
+      ?mapping xyz:OP ?CountryOP .
+    }
+
     SERVICE <x-sparql-anything:countries-skos.rdf> {
     
       # extract the URI of the countries with their English label 
@@ -88,5 +93,7 @@ WHERE {
     BIND("Entity Legal Form"@en AS ?conceptSchemeLabel) .
 
     # make sure that ELF countries are the same as those in Publications Office Countries
-    FILTER(?countryFormation = ?eng_label) .
+    # FILTER(?countryFormation = ?eng_label) .
+    FILTER(?countryFormation = ?CountryELF) .
+    FILTER(?CountryOP = ?eng_label) .
 }

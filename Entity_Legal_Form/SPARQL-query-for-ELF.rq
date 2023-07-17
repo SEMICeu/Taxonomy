@@ -13,15 +13,15 @@ CONSTRUCT {
     ?concept skos:prefLabel ?legalNameLang .
     ?concept skos:prefLabel ?legalNameTransLang .
   
-    ?concept skos-xl:prefLabel ?bnode .
-    ?bnode rdf:type skos-xl:Label .
-    ?bnode skos-xl:literalForm ?legalNameLang .
-    ?bnode skos:notation ?abbr .
+    ?concept skos-xl:prefLabel ?bnodeLabel .
+    ?bnodeLabel rdf:type skos-xl:Label .
+    ?bnodeLabel skos-xl:literalForm ?legalNameLang .
+    ?bnodeLabel skos:notation ?abbr .
   
-    ?concept skos-xl:prefLabelTrans ?bnodeTrans .
-    ?bnodeTrans rdf:type skos-xl:Label .
-    ?bnodeTrans skos-xl:literalForm ?legalNameTransLang .
-    ?bnodeTrans skos:notation ?abbrTrans .
+    ?concept skos-xl:prefLabelTrans ?bnodeTransLabel .
+    ?bnodeTransLabel rdf:type skos-xl:Label .
+    ?bnodeTransLabel skos-xl:literalForm ?legalNameTransLang .
+    ?bnodeTransLabel skos:notation ?abbrTrans .
   
     ?conceptScheme rdf:type skos:ConceptScheme .
     ?conceptScheme skos:prefLabel ?conceptSchemeLabel .
@@ -34,14 +34,14 @@ WHERE {
     SERVICE <x-sparql-anything:2021-10-21-elf-code-list-v1.4.1.csv,csv.headers=true> {
     
       # extract values from the respective columns of the CSV file
-      ?s xyz:ELF%20Code ?code .
-      ?s xyz:Country%20of%20formation ?countryFormation .
-      ?s xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
-      ?s xyz:Language%20Code%20%28ISO%20639-1%29 ?isoLang .
-      ?s xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
-      ?s xyz:Abbreviations%20Local%20language ?abbrList .
-      ?s xyz:Abbreviations%20transliterated ?abbrListTrans .
-      ?s xyz:ELF%20Status%20ACTV%2FINAC ?status .
+      ?elf xyz:ELF%20Code ?code .
+      ?elf xyz:Country%20of%20formation ?countryFormation .
+      ?elf xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
+      ?elf xyz:Language%20Code%20%28ISO%20639-1%29 ?isoLang .
+      ?elf xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
+      ?elf xyz:Abbreviations%20Local%20language ?abbrList .
+      ?elf xyz:Abbreviations%20transliterated ?abbrListTrans .
+      ?elf xyz:ELF%20Status%20ACTV%2FINAC ?status .
     
       # filter the legal forms
       FILTER (?status = "ACTV") .
@@ -59,9 +59,8 @@ WHERE {
       BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
         
       # create blank nodes for skos-xl labels
-      # https://stackoverflow.com/questions/46155991/produce-the-same-blank-node-in-construct-across-multiple-solutions
-      BIND(BNODE() AS ?bnode) .
-      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTrans) .
+      BIND(BNODE() AS ?bnodeLabel) .
+      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTransLabel) .
     
     }
 

@@ -94,6 +94,7 @@ WHERE {
 
     # make sure that ELF countries are the same as those in Publications Office Countries
     # FILTER(?countryFormation = ?eng_label) .
+    # or if mapping from ELF to OP countries is needed (e.g "Czech Republic" to "Czechia") enable below
     FILTER(?countryFormation = ?CountryELF) .
     FILTER(?CountryOP = ?eng_label) .
 }

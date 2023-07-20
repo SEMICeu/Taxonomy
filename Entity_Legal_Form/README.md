@@ -6,8 +6,11 @@ This folder includes the material used to generate the Entity Legal Forms in RDF
 The folder mainly includes:
 1. The file [2021-10-21-elf-code-list-v1.4.1.csv](2021-10-21-elf-code-list-v1.4.1.csv) downloaded from [GLEIF Entity Legal Forms](https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list)
 2. The file [countries-skos.rdf](countries-skos.rdf) downloaded from [Publications Office Country Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country)
-3. The file [SPARQL-query-for-ELF.rq](SPARQL-query-for-ELF.rq) created to generate the Entity Legal Forms in RDF
-4. The file [ELF_OP_mapping.csv](ELF_OP_mapping.csv) to map the countries in GLEIF to those in Publications Office
+3. The file [ELF_OP_mapping.csv](ELF_OP_mapping.csv) to map the countries in GLEIF to those in Publications Office
+4. The file [SPARQL-query-for-ELF.rq](SPARQL-query-for-ELF.rq) created to generate the Entity Legal Forms in RDF
+
+
+![](GLEIF.jpg)
 
 ## Process
 ### Analysis of the GLEIF Entity Legal Forms

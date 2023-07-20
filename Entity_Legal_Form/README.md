@@ -40,7 +40,7 @@ In addition, the legal forms:
 ### Transformation
 
 The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything), which:
-* does not need to adapt the GLEIF Entity Legal Forms file provided as input for the transformation
+* does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
 * allows to perform just a SPARQL CONSTRUCT query, see [line 10](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L10), and can leverage SPARQL functions such as STRLANG to combine a string with a language tag, see [line 54](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L54)
 * allows to query multiple files in different format via the SERVICE directive:
   * the GLEIF ELF Code list in CSV format, see [line 34](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF.rq#L34)

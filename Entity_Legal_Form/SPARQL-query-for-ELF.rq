@@ -45,7 +45,6 @@ WHERE {
     
       # filter the legal forms
       FILTER (?status = "ACTV") .
-      FILTER (?countryFormation IN ("Belarus") ) .
     
       # determine the URI of the skos:Concept to be created
       BIND("http://publications.europa.eu/resource/authority/entitylegalform" AS ?baseURI) .

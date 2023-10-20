@@ -47,7 +47,7 @@ WHERE {
       FILTER (?status = "ACTV") .
     
       # determine the URI of the skos:Concept to be created
-      BIND("http://publications.europa.eu/resource/authority/entitylegalform" AS ?baseURI) .
+      BIND("http://data.europa.eu/ih3/legal-form" AS ?baseURI) .
       BIND(URI(CONCAT(?baseURI, "/", ?code)) AS ?concept) .
 
       # determine the preflabel of the skos:Concept
@@ -86,8 +86,8 @@ WHERE {
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
     BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
 
-    # determine the URI of the skos:ConceptScheme to be created 
-    BIND(URI(?baseURI) AS ?conceptScheme) .
+    # determine the URI of the skos:ConceptScheme to be created
+  	BIND(URI(CONCAT(?baseURI, "/", "LE")) AS ?conceptScheme) .
     BIND("Entity Legal Form"@en AS ?conceptSchemeLabel) .
 
     # make sure that ELF countries are the same as those in Publications Office Countries

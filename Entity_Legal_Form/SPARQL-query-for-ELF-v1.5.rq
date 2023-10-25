@@ -90,7 +90,7 @@ WHERE {
     # determine the URI of the skos:ConceptScheme to be created and add metadata
     BIND(URI(CONCAT(?baseURI, "/", "LE")) AS ?conceptScheme) .
     BIND("Entity Legal Forms"@en AS ?conceptSchemeLabel) .
-    BIND("The list of Entity Legal Forms is generated out of the GLEIF Entity Legal Forms Code List expressed as CSV which has authority on the content. The ISA SEMIC action, in the context of Core Business Vocabulary, is responsible for the maintenance in RDF."@en AS ?conceptSchemeDescription) .
+    BIND("The Entity Legal Forms is a controlled vocabulary classifying legal forms related to legal entities. It is supported by the Core Business vocabulary, whereas the original content is provided by the GLEIF Entity Legal Forms Code List."@en AS ?conceptSchemeDescription) .
 
     # make sure that ELF countries are the same as those in Publications Office Countries
     # FILTER(?countryFormation = ?eng_label) .

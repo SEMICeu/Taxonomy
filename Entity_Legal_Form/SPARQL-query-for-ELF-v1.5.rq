@@ -26,6 +26,7 @@ CONSTRUCT {
     ?conceptScheme rdf:type skos:ConceptScheme .
     ?conceptScheme skos:prefLabel ?conceptSchemeLabel .
     ?conceptScheme dct:title ?conceptSchemeLabel .
+    ?conceptScheme dct:description ?conceptSchemeDescription .
     ?conceptScheme skos:hasTopConcept ?concept .
     ?concept skos:topConceptOf ?conceptScheme .
     ?concept skos:inScheme ?conceptScheme .
@@ -86,9 +87,10 @@ WHERE {
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
     BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
 
-    # determine the URI of the skos:ConceptScheme to be created
-  	BIND(URI(CONCAT(?baseURI, "/", "LE")) AS ?conceptScheme) .
-    BIND("Entity Legal Form"@en AS ?conceptSchemeLabel) .
+    # determine the URI of the skos:ConceptScheme to be created and add metadata
+    BIND(URI(CONCAT(?baseURI, "/", "LE")) AS ?conceptScheme) .
+    BIND("Entity Legal Forms"@en AS ?conceptSchemeLabel) .
+    BIND("The list of Entity Legal Forms is generated out of the GLEIF Entity Legal Forms Code List expressed as CSV which has authority on the content. The ISA SEMIC action, in the context of Core Business Vocabulary, is responsible for the maintenance in RDF."@en AS ?conceptSchemeDescription) .
 
     # make sure that ELF countries are the same as those in Publications Office Countries
     # FILTER(?countryFormation = ?eng_label) .

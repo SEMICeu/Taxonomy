@@ -6,12 +6,20 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
 
 CONSTRUCT {
     ?concept rdf:type skos:Concept .
     ?concept dct:location ?country .
     ?concept skos:prefLabel ?legalNameLang .
     ?concept skos:prefLabel ?legalNameTransLang .
+  	?concept skos:notation ?abbr .
+  	?concept skos:notation ?abbrTrans .
+  	?concept dct:created ?dateCreated .
+  	?concept adms:status ?status .
+  	?concept dct:source ?source .
+	
   
     ?concept skos-xl:prefLabel ?bnodeLabel .
     ?bnodeLabel rdf:type skos-xl:Label .
@@ -43,13 +51,17 @@ WHERE {
       ?elf xyz:Abbreviations%20Local%20language ?abbrList .
       ?elf xyz:Abbreviations%20transliterated ?abbrListTrans .
       ?elf xyz:ELF%20Status%20ACTV%2FINAC ?status .
+      ?elf xyz:Date%20created%20YYYY-MM-DD%20%28ISO%208601%29 ?dateCreated .
     
       # filter the legal forms
-      FILTER (?status = "ACTV") .
+      #FILTER (?status = "ACTV") .
     
       # determine the URI of the skos:Concept to be created
       BIND("http://data.europa.eu/ih3/legal-form" AS ?baseURI) .
       BIND(URI(CONCAT(?baseURI, "/", ?code)) AS ?concept) .
+    
+      # add the source to each term
+      BIND("http://publications.europa.eu/resource/authority/notation-type/GLEIF_ELF" AS ?source) .
 
       # determine the preflabel of the skos:Concept
       BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .

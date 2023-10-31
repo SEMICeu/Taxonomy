@@ -20,14 +20,13 @@ CONSTRUCT {
     ?concept dct:created ?dateCreated .
     ?concept adms:status ?status .
     ?concept dct:source ?source .
-
   
     ?concept skos-xl:prefLabel ?bnodeLabel .
     ?bnodeLabel rdf:type skos-xl:Label .
     ?bnodeLabel skos-xl:literalForm ?legalNameLang .
-    ?bnodeLabel gleif-base:hasAbbreviationLoca ?abbr .
+    ?bnodeLabel gleif-base:hasAbbreviationLocal ?abbr .
   
-    ?concept skos-xl:prefLabelTrans ?bnodeTransLabel .
+    ?concept skos-xl:prefLabel ?bnodeTransLabel .
     ?bnodeTransLabel rdf:type skos-xl:Label .
     ?bnodeTransLabel skos-xl:literalForm ?legalNameTransLang .
     ?bnodeTransLabel gleif-base:hasAbbreviationTransliterated ?abbrTrans .
@@ -62,15 +61,15 @@ WHERE {
       BIND(URI(CONCAT(?baseURI, "/", ?code)) AS ?concept) .
     
       # add the source to each term
-      BIND("http://publications.europa.eu/resource/authority/notation-type/GLEIF_ELF" AS ?source) .
-
+      BIND(URI("http://publications.europa.eu/resource/authority/notation-type/GLEIF_ELF") AS ?source) .
+    
       # determine the preflabel of the skos:Concept
       BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
-  
+    
       # determine if the transliteration need to be added   
       BIND(IF(?isoLang IN ("ar","be","bg","el","ja","km","kr","mk","sr","zh","ru","my","th"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
       BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
-        
+    
       # create blank nodes for skos-xl labels
       BIND(BNODE() AS ?bnodeLabel) .
       BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTransLabel) .

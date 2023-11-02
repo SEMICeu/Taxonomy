@@ -5,7 +5,7 @@ This folder includes the material used to generate the Entity Legal Forms in RDF
 
 The folder mainly includes:
 1. The file [2023-09-28-elf-code-list-v1.5.csv](2023-09-28-elf-code-list-v1.5.csv) downloaded from [GLEIF Entity Legal Forms](https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list)
-2. The file [countries-skos.rdf](countries-skos.rdf) downloaded from [Publications Office Country Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country)
+2. The file [countries-skos.rdf](countries-skos.rdf) downloaded from [Publications Office Country Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) version 20230915-0
 3. The file [ELF_OP_matching.csv](ELF_OP_matching.csv) that matches the countries in GLEIF with those in Publications Office
 4. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) created to generate the Entity Legal Forms in RDF
 5. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
@@ -35,29 +35,30 @@ The CSV file contains a list of legal forms:
 * that are grouped by the "ELF Code" column because of multiple translations, see for example the ELF Code for Belgium [1TX8](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L115-L117) in Dutch, French and German
 
 In addition, the legal forms:
-* depend on a country (Column "Country of formation") which name might be different from the countries in the Publication Office
+* depend on a country (Column "Country of formation") which name might be different from the countries published by the Publications Office, for example GLEIF uses "Brunei Darussalam" while Publications Office uses "Brunei" that is why the matching file [ELF_OP_matching.csv](ELF_OP_matching.csv) is needed
 * have a status (Column "ELF Status ACTV/INAC") active or inactive
 * might have, for each single language:
-  *  a transliteration in Latin, see for example the ELF Code for Greece [R3HO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L1413) 
+  *  a transliteration in Latin, see for example the ELF Code for Greece [3RHO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L1413) 
   *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L250), where they are concatenated via the ";" delimiter such as "PRIV ST.;PS"
 
 ### Transformation
 
 The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything), which:
 * does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
-* allows to perform just a SPARQL CONSTRUCT query, see [line 10](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L10), and can leverage SPARQL functions such as STRLANG to combine a string with a language tag, see [line 54](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L54)
+* allows to perform just a SPARQL CONSTRUCT query, see [line 14](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L14), and can leverage SPARQL functions such as STRLANG to combine a string with a language tag, see [line 70](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L70)
 * allows to query multiple files in different format via the SERVICE directive:
-  * the GLEIF ELF Code list in CSV format, see [line 34](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L34)
-  * the ELF OP matching in CSV format, see [line 66](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L66)
-  * the Publications Office Country Authority Table in RDF format, see [line 71](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L71) 
-* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 84]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L84)
+  * the GLEIF ELF Code list in CSV format, see [line 44](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L44)
+  * the ELF OP matching in CSV format, see [line 82](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L82)
+  * the Publications Office Country Authority Table in RDF format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L86) 
+* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 100]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L100)
+
+![](sparql-anything.jpg)
 
 The SPARQL query:
-* filters only the legal forms in ACTIVE status, see [line 47](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L47)
-* adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 57](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L57)
-* make sure to have the same countries present in the Publications Office Country Authority Table by using the matching retrieved in [lines 66-69](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L66-L69) with the filter in [lines 96-97](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L96-L97)
+* adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 73](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L73)
+* make sure to have the same countries present in the Publications Office Country Authority Table by using the matching retrieved in [lines 82-84](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L82-L84) with the filter in [lines 113-114](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L113-114)
 
-The [server version of SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the browser to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
+The [SPARQL-Anything server] (https://github.com/SPARQL-Anything/sparql.anything#using-the-server) [version 0.8.2](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.8.2) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the browser to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
 
 Due to it's size (200 MB), SPARQL-Anything was not included in this repository, so, in order to run the query, one must download the server version of SPARQL-Anything themselves.
 
@@ -72,7 +73,7 @@ The RDF file is validated manually against:
 
 The validation against the skos testing tool find out errors concerning the content:
 * ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645): the concepts are described in the languages of their respective countries
-* ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1): The code X0SD is under investigation, currently resolved manually by changing the preferred label in alternative label
+* ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1): The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-339) is under investigation, currently resolved manually by changing the preferred label in alternative label
 * ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL: the concepts are described in the languages of their respective countries
 * oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645): relationships are not created in the CSV and the creation of such relations would need legal analysis
 * ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234): it happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband"

@@ -1,7 +1,7 @@
 # Entity Legal Forms Code List
 
 ## Content
-This folder includes the material used to generate the Entity Legal Forms in RDF to be published by the Publications Office for the [legal form of a Legal Entity](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AlegalFormType)  .
+This folder includes the material used to generate the Entity Legal Forms in RDF to be published by the Publications Office for the [legal form of a Legal Entity](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AlegalFormType) in the Core Business vocabulary.
 
 The folder mainly includes:
 1. The file [2023-09-28-elf-code-list-v1.5.csv](2023-09-28-elf-code-list-v1.5.csv) downloaded from [GLEIF Entity Legal Forms](https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list)

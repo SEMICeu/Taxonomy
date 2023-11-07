@@ -19,7 +19,7 @@ CONSTRUCT {
     ?concept gleif-base:hasAbbreviationLocal ?abbr .
     ?concept gleif-base:hasAbbreviationTransliterated ?abbrTrans .
     ?concept dct:created ?created .
-    ?concept adms:status ?status .
+    ?concept adms:status ?conceptStatus .
     ?concept dct:source ?source .
   
     ?concept skos-xl:prefLabel ?bnodeLabel .
@@ -56,10 +56,12 @@ WHERE {
     
       # filter the legal forms
       #FILTER (?status = "ACTV") .
+      BIND("http://publications.europa.eu/resource/authority/concept-status/" AS ?conceptStatusBaseURI) .
+      BIND(IF(?status = "ACTV", URI(CONCAT(?conceptStatusBaseURI, "CURRENT")), URI(CONCAT(?conceptStatusBaseURI, "DEPRECATED"))) AS ?conceptStatus) .
     
       # determine the URI of the skos:Concept to be created
-      BIND("http://data.europa.eu/ih3/legal-form" AS ?baseURI) .
-      BIND(URI(CONCAT(?baseURI, "/", ?code)) AS ?concept) .
+      BIND("http://data.europa.eu/ih3/legal-form/" AS ?baseURI) .
+      BIND(URI(CONCAT(?baseURI, ?code)) AS ?concept) .
     
       # add the source to each term
       BIND(URI("http://publications.europa.eu/resource/authority/notation-type/GLEIF_ELF") AS ?source) .
@@ -103,13 +105,13 @@ WHERE {
     BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
 
     # determine the URI of the skos:ConceptScheme to be created and add metadata
-    BIND(URI(CONCAT(?baseURI, "/", "ELF")) AS ?conceptScheme) .
+    BIND(URI(CONCAT(?baseURI, "ELF")) AS ?conceptScheme) .
     BIND("Entity Legal Forms"@en AS ?conceptSchemeLabel) .
     BIND("The Entity Legal Forms is a controlled vocabulary classifying legal forms related to legal entities. It is supported by the Core Business vocabulary, whereas the original content is provided by the GLEIF Entity Legal Forms Code List."@en AS ?conceptSchemeDescription) .
 
     # make sure that ELF countries are the same as those in Publications Office Countries
     # FILTER(?countryFormation = ?eng_label) .
-    # or if mapping from ELF to OP countries is needed (e.g "Czech Republic" to "Czechia") enable below
+    # or, if mapping from ELF to OP countries is needed, enable below
     FILTER(?countryFormation = ?CountryELF) .
     FILTER(?CountryOP = ?eng_label) .
 }

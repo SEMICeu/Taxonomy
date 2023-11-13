@@ -1,0 +1,7 @@
+Distance;Results;False Positives (fp);Positive;Ratio (fp/results)
+Jaro Winkler;117;2;115;0,017094017
+LongestCommonSubsequenceDistance;118;4;114;0,033898305
+Jaccard;117;7;110;0,05982906
+Qgram;131;16;115;0,122137405
+Levenhstein;135;25;110;0,185185185
+Cosine;718;634;84;0,883008357

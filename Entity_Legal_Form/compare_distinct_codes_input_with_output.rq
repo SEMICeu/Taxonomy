@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+
+SELECT (COUNT(DISTINCT ?code) as ?DistinctCodesAsInput) (COUNT(DISTINCT ?generated) as ?DistinctCodesAsOutput)
+WHERE {
+
+    SERVICE <x-sparql-anything:2023-09-28-elf-code-list-v1.5.csv,csv.headers=true> {
+    
+      # extract values from the respective columns of the CSV file
+      ?elf xyz:ELF%20Code ?code .
+    
+    FILTER (?code not in ("X0SD", "8888", "9999")) #expected 3427
+  } 
+  
+   SERVICE <x-sparql-anything:output-v1.5.ttl> {
+    
+      # extract the URI of the countries with their English label 
+      ?generated rdf:type skos:Concept . #expected 3427
+    }
+}

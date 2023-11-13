@@ -1,7 +1,7 @@
 # Entity Legal Forms Code List
 
 ## Content
-This folder includes the material used to generate the Entity Legal Forms in RDF to be published by the Publications Office for the [legal form of a Legal Entity](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AlegalFormType) in the Core Business vocabulary.
+This folder includes the material used to generate the Entity Legal Forms in RDF to be published by the Publications Office for the [legal form type of a Legal Entity](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AlegalFormType) in the Core Business vocabulary.
 
 The folder mainly includes:
 1. The file [2023-09-28-elf-code-list-v1.5.csv](2023-09-28-elf-code-list-v1.5.csv) downloaded from [GLEIF Entity Legal Forms](https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list)
@@ -43,7 +43,7 @@ In addition, the legal forms:
 
 ### Transformation
 
-The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything), which:
+The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything) [version 0.8.2](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.8.2), which:
 * does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
 * allows to perform just a SPARQL CONSTRUCT query, see [line 14](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L14), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 70](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L70)
 * allows to query multiple files in different format via the SERVICE directive:

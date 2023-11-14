@@ -23,17 +23,17 @@ CONSTRUCT {
     ?concept dct:created ?created .
     ?concept skos:notation ?code .
     ?concept owl:sameAs ?source .
-
+  
     ?concept skos-xl:prefLabel ?bnodeLabel .
     ?bnodeLabel rdf:type skos-xl:Label .
     ?bnodeLabel skos-xl:literalForm ?legalNameLang .
     ?bnodeLabel gleif-base:hasAbbreviationLocal ?abbr .
-
+  
     ?concept skos-xl:prefLabel ?bnodeTransLabel .
     ?bnodeTransLabel rdf:type skos-xl:Label .
     ?bnodeTransLabel skos-xl:literalForm ?legalNameTransLang .
     ?bnodeTransLabel gleif-base:hasAbbreviationTransliterated ?abbrTrans .
-
+  
     ?conceptScheme rdf:type skos:ConceptScheme .
     ?conceptScheme skos:prefLabel ?conceptSchemeLabel .
     ?conceptScheme dct:title ?conceptSchemeLabel .
@@ -44,7 +44,7 @@ CONSTRUCT {
 }
 WHERE {
     SERVICE <x-sparql-anything:2023-09-28-elf-code-list-v1.5.csv,csv.headers=true> {
-
+    
       # extract values from the respective columns of the CSV file
       ?elf xyz:ELF%20Code ?code .
       ?elf xyz:Country%20of%20formation ?countryFormation .
@@ -60,30 +60,28 @@ WHERE {
       BIND("http://data.europa.eu/ih3/legal-form/" AS ?baseURI) .
       BIND(MD5(CONCAT(?code, "-", ?dateCreated)) AS ?id) .
       BIND(URI(CONCAT(?baseURI, "GL-", ?id)) AS ?concept) .    
-
+    
       # determine the preflabel of the skos:Concept
       BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
-
+    
       # determine if the transliteration need to be added   
       BIND(IF(?isoLang IN ("ar","be","bg","el","ja","km","kr","mk","sr","zh","ru","my","th"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
       BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
-
+    
       # create blank nodes for skos-xl labels
       BIND(BNODE() AS ?bnodeLabel) .
       BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTransLabel) .
-
+    
       # add the date to each term
       BIND(STRDT(STR(?dateCreated), xsd:date) AS ?created) .
-
+    
       # associate the status with the OP Concept status
       BIND("http://publications.europa.eu/resource/authority/concept-status/" AS ?conceptStatusBaseURI) .
       BIND(IF(?status = "ACTV", URI(CONCAT(?conceptStatusBaseURI, "CURRENT")), URI(CONCAT(?conceptStatusBaseURI, "DEPRECATED"))) AS ?conceptStatus) .
-
+    
       # add the source to each term
       BIND(URI(CONCAT("https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list#",?code)) AS ?source)
-
-      FILTER(?code != "X0SD")
-
+        
     }
 
     SERVICE <x-sparql-anything:ELF_OP_matching.csv,csv.headers=true,csv.delimiter=;> {

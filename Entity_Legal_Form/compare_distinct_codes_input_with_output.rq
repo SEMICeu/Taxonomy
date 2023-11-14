@@ -10,12 +10,12 @@ WHERE {
       # extract values from the respective columns of the CSV file
       ?elf xyz:ELF%20Code ?code .
     
-    FILTER (?code not in ("X0SD", "8888", "9999")) #expected 3427
+    FILTER (?code not in ("8888", "9999")) #expected 3428
   } 
   
    SERVICE <x-sparql-anything:output-v1.5.ttl> {
     
       # extract the URI of the countries with their English label 
-      ?generated rdf:type skos:Concept . #expected 3427
+      ?generated rdf:type skos:Concept .  #expected 3428
     }
 }

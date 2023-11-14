@@ -22437,14 +22437,15 @@
         owl:sameAs         <https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list#X0SD> ;
         skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos:notation      "X0SD" ;
-        skos:prefLabel     "Companhia"@pt , "Sociedade Anônima"@pt ;
+        skos:prefLabel     "Sociedade Anônima"@pt ;
+        skos:altLabel      "Companhia"@pt ;
         skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
                              skos-xl:literalForm  "Sociedade Anônima"@pt ;
                              gleif-base:hasAbbreviationLocal
                                      "S/A" , "S.A."
                            ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+        skos-xl:altLabel  [ rdf:type             skos-xl:Label ;
                              skos-xl:literalForm  "Companhia"@pt ;
                              gleif-base:hasAbbreviationLocal
                                      "S/A" , "S.A."

@@ -1,7 +1,7 @@
-Distance;Results;False Positives (fp);Positive;Ratio (fp/results);Comment
-JaroWinklerDistance;117;2;115;0,017094017;Threshold could be set at 0.26 to remove false positive
-CosineDistance;117;2;115;0,017094017;Threshold could not be set
-LongestCommonSubsequenceDistance;118;4;114;0,033898305;Threshold could not be set
-JaccardDistance;117;7;110;0,05982906;Threshold could not be set
-QGramDistance;131;16;115;0,122137405;Threshold could not be set
-LevenshteinDistance;135;25;110;0,185185185;Threshold could not be set
+Distance;Results;False Positives (fp);Positives (p);Precision (p/results);Comment
+JaroWinklerDistance;117;2;115;0,982905983;Threshold could be set at 0.26 to remove false positive
+CosineDistance;117;2;115;0,982905983;Threshold could not be set
+LongestCommonSubsequenceDistance;118;4;114;0,966101695;Threshold could not be set
+JaccardDistance;117;7;110;0,94017094;Threshold could not be set
+QGramDistance;131;16;115;0,877862595;Threshold could not be set
+LevenshteinDistance;135;25;110;0,814814815;Threshold could not be set

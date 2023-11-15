@@ -8,12 +8,16 @@ The folder mainly includes:
 2. The file [countries-skos.rdf](countries-skos.rdf) downloaded from [Publications Office Country Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) version 20230915-0
 3. The file [ELF_OP_matching.csv](ELF_OP_matching.csv) that matches the countries in GLEIF with those in Publications Office
 4. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) created to generate the Entity Legal Forms in RDF
-5. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
-
-
-![](GLEIF.jpg)
+5. The file [output-v1.5_validated.ttl](output-v1.5_validated.ttl) generated as output containing the Entity Legal Forms in RDF
 
 ## Process
+
+The process is divides in 4 steps:
+1. Analysis of the GLEIF Entity Legal Forms
+2. Finding and evaluate matches between GLEIF and Publications Office countries
+3. Transformation
+4. Validation
+
 ### Analysis of the GLEIF Entity Legal Forms
 
 #### Format
@@ -40,17 +44,29 @@ In addition, the legal forms:
 * might have, for each single language:
   *  a transliteration in Latin, see for example the ELF Code for Greece [3RHO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L1413) 
   *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L250), where they are concatenated via the ";" delimiter such as "PRIV ST.;PS"
+ 
+### Finding and evaluate matches between GLEIF and Publications Office countries
+
+As GLEIF and Publications Office publish their list of countries which differ, [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been used to generate candidate correnspondences. The candidate correspondences are then evaluated by the user and the exact correspondences are then created.
+
+![](find_correspondences.jpg)
+
+Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which uses the [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) string distance to find the closest matches.
+Jaro-Winkler resulted better than other string distances in finding closest matches, see [string_distance_comparison.csv](string_distance_comparison.csv), generating only 2 false positives. Therefore the file is reviewed so that it can be used in the transformation step.
 
 ### Transformation
 
-The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything) [version 0.8.2](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.8.2), which:
+The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5), which:
 * does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
-* allows to perform just a SPARQL CONSTRUCT query, see [line 14](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L14), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 70](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L70)
+* allows to perform just a SPARQL CONSTRUCT query, see [line 15](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L15), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 65](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L65)
 * allows to query multiple files in different format via the SERVICE directive:
-  * the GLEIF ELF Code list in CSV format, see [line 44](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L44)
-  * the ELF OP matching in CSV format, see [line 82](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L82)
-  * the Publications Office Country Authority Table in RDF format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L86) 
-* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 100]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L100)
+  * the GLEIF ELF Code list in CSV format, see [line 46](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L46)
+  * the ELF OP matching in CSV format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87)
+  * the Publications Office Country Authority Table in RDF format, see [line 92](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L92) 
+* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 105]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
+
+The transformation execution at the core of the process:
+![](transformation.jpg)
 
 ![extracting values from the ELF code list file](sparql-anything.jpg)
 

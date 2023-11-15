@@ -8,12 +8,16 @@ The folder mainly includes:
 2. The file [countries-skos.rdf](countries-skos.rdf) downloaded from [Publications Office Country Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) version 20230915-0
 3. The file [ELF_OP_matching.csv](ELF_OP_matching.csv) that matches the countries in GLEIF with those in Publications Office
 4. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) created to generate the Entity Legal Forms in RDF
-5. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
-
-The transformation execution at the core of the process:
-![](transformation.jpg)
+5. The file [output-v1.5_validated.ttl](output-v1.5_validated.ttl) generated as output containing the Entity Legal Forms in RDF
 
 ## Process
+
+The process is divides in 4 steps:
+1. Analysis of the GLEIF Entity Legal Forms
+2. Finding and evaluate matches between GLEIF and Publications Office countries
+3. Transformation
+4. Validation
+
 ### Analysis of the GLEIF Entity Legal Forms
 
 #### Format
@@ -60,6 +64,9 @@ The transformation has been performed via the tool [SPARQL-Anything](https://git
   * the ELF OP matching in CSV format, see [line 82](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L82)
   * the Publications Office Country Authority Table in RDF format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L86) 
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 100]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L100)
+
+The transformation execution at the core of the process:
+![](transformation.jpg)
 
 ![extracting values from the ELF code list file](sparql-anything.jpg)
 

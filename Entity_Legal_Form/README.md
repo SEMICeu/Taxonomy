@@ -10,8 +10,8 @@ The folder mainly includes:
 4. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) created to generate the Entity Legal Forms in RDF
 5. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
 
-
-![](GLEIF.jpg)
+The transformation execution at the core of the process
+![](transformation.jpg)
 
 ## Process
 ### Analysis of the GLEIF Entity Legal Forms
@@ -40,6 +40,15 @@ In addition, the legal forms:
 * might have, for each single language:
   *  a transliteration in Latin, see for example the ELF Code for Greece [3RHO](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L1413) 
   *  multiple abbrevations, see for example the ELF Code for Belgium [Y1Q4](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L250), where they are concatenated via the ";" delimiter such as "PRIV ST.;PS"
+ 
+### Finding and evaluate matches between GLEIF and Publications Office countries
+
+As GLEIF and Publications Office publish their list of countries which differ, Sparql-Anything has been used to generate candidate correnspondences. The candidate correspondences are then evaluated by the user and the exact correspondences are then created.
+
+![](find_correspondences.jpg)
+
+Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which uses the [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) string distance to find the closest matches.
+Jaro-Winkler resulted better than other string distances in finding closest matches, see [string_distance_comparison.csv]([string_distance_comparison.csv), generating only 2 false positives. Therefore the file is reviewed and exact correspondences are established.
 
 ### Transformation
 

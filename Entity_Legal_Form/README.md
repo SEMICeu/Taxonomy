@@ -10,7 +10,7 @@ The folder mainly includes:
 4. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) created to generate the Entity Legal Forms in RDF
 5. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
 
-The transformation execution at the core of the process
+The transformation execution at the core of the process:
 ![](transformation.jpg)
 
 ## Process
@@ -48,7 +48,7 @@ As GLEIF and Publications Office publish their list of countries which differ, S
 ![](find_correspondences.jpg)
 
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which uses the [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) string distance to find the closest matches.
-Jaro-Winkler resulted better than other string distances in finding closest matches, see [string_distance_comparison.csv]([string_distance_comparison.csv), generating only 2 false positives. Therefore the file is reviewed and exact correspondences are established.
+Jaro-Winkler resulted better than other string distances in finding closest matches, see [string_distance_comparison.csv](string_distance_comparison.csv), generating only 2 false positives. Therefore the file is reviewed and exact correspondences are established.
 
 ### Transformation
 

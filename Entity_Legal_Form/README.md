@@ -55,12 +55,14 @@ In addition, the legal forms:
  
 ### Finding and evaluate matches between GLEIF and Publications Office countries
 
-As GLEIF and Publications Office publish their list of countries which differ, [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been used to generate candidate correnspondences. The candidate correspondences are then evaluated by the user and the exact correspondences are then created.
+A preliminary analysis of the GLEIF and Publication Office shown that the list of countries have differences.
+SPARQL-Anything has been used to generate candidate correnspondences. The candidate correspondences are then evaluated by the user and the exact correspondences are then created.
 
 ![](find_correspondences.jpg)
 
-Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
-Jaro-Winkler resulted better than other string distances in finding closest matches, see [string_distance_comparison.csv](string_distance_comparison.csv), generating only 2 false positives. Therefore the file is reviewed so that it can be used in the transformation step.
+The GLEIF countries are in English language while the OP countries are in multiple language, therefore the English labels have been selected for matching. 
+Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
+Jaro-Winkler resulted better than other string distances available in Sparql-Anything in finding closest matches, see [string_distance_comparison.csv](string_distance_comparison.csv), generating only 2 false positives out of 117 results.  tThe file has been reviewed so that it can be used in the transformation step.
 
 ### Transformation
 

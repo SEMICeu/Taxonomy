@@ -58,7 +58,7 @@ In addition, the legal forms:
 A preliminary analysis of the GLEIF and Publication Office shown that the list of countries have differences.
 SPARQL-Anything has been used to generate candidate correnspondences. The candidate correspondences are then evaluated by the user and the exact correspondences are then created.
 
-![](find_correspondences.jpg)
+![](doc/find_correspondences.jpg)
 
 The GLEIF countries are in English language while the OP countries are in multiple language, therefore the English labels have been selected for matching. 
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
@@ -76,9 +76,9 @@ The transformation has been performed via the tool [SPARQL-Anything](https://git
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 105]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
 
 The transformation execution at the core of the process:
-![](transformation.jpg)
+![](doc/transformation.jpg)
 
-![extracting values from the ELF code list file](sparql-anything.jpg)
+![extracting values from the ELF code list file](doc/sparql-anything.jpg)
 
 The SPARQL query:
 * adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)

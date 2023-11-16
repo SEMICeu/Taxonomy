@@ -23,7 +23,7 @@ The folder mainly includes:
 7. The file [output-v1.5_validated.ttl](output-v1.5_validated.ttl) validated for publication
 
 ### Tools
-The [SPARQL-Anything server](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been used to find correspondences and to perform the transfromation.
+The [SPARQL-Anything server](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been used to find correspondences and to perform the transformation.
 SPARQL-Anything has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the browser to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
 
 ![extracting values from the ELF code list file](doc/sparql-anything.jpg)

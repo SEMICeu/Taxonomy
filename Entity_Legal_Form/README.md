@@ -22,7 +22,7 @@ The process is semi-automatic and it is divided in 4 steps:
 3. Transformation
 4. Validation
 
-[process](process.jpg)   
+![process](process.jpg)   
 
 ### Analysis of the GLEIF Entity Legal Forms
 

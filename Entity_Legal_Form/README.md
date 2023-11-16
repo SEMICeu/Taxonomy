@@ -22,7 +22,11 @@ The folder mainly includes:
 6. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
 7. The file [output-v1.5_validated.ttl](output-v1.5_validated.ttl) validated for publication
 
-The [SPARQL-Anything server](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the browser to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
+### Tools
+The [SPARQL-Anything server](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been used to find correspondences and to perform the transfromation.
+SPARQL-Anything has been downloaded directly in this folder so it can access to the GLEIF ELF Code list and to the Publications Office Country Authority Table and, via a web interface (pointing the browser to http://localhost:3000/sparql), it helps to type in the SPARQL query and to execute it. 
+
+![extracting values from the ELF code list file](doc/sparql-anything.jpg)
 
 Due to it's size (200 MB), SPARQL-Anything was not included in this repository, so, in order to run the query, one must download the server version of SPARQL-Anything themselves.
 
@@ -80,8 +84,6 @@ The transformation has been performed via the tool [SPARQL-Anything](https://git
 
 The transformation execution at the core of the process:
 ![](doc/transformation.jpg)
-
-![extracting values from the ELF code list file](doc/sparql-anything.jpg)
 
 The SPARQL query:
 * adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)

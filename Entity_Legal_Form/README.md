@@ -16,11 +16,13 @@ Due to it's size (200 MB), SPARQL-Anything was not included in this repository, 
 
 ## Process
 
-The process is divides in 4 steps:
+The process is semi-automatic and it is divided in 4 steps:
 1. Analysis of the GLEIF Entity Legal Forms
 2. Finding and evaluate matches between GLEIF and Publications Office countries
 3. Transformation
 4. Validation
+
+[process](process.jpg)   
 
 ### Analysis of the GLEIF Entity Legal Forms
 

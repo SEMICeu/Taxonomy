@@ -105,4 +105,5 @@ The validation against the skos testing tool find out errors concerning the cont
 
 The validation against the shacl shapes highlights only the problem of overlapping labels.
 
+The [output-v1.5.ttl](output-v1.5.ttl) has been reviewed and the [output-v1.5_validated.ttl](output-v1.5_validated.ttl) has been created by just replacing manually the preferred labels in alternative label for the 
 

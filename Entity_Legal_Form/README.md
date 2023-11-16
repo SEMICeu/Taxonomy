@@ -65,7 +65,7 @@ The GLEIF countries are in English language while the OP countries are in multip
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
 Jaro-Winkler [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything,  generating only 2 false positives out of 117 results.  
 
-The output file of the matching has been reviewed so that it can be used in the transformation step.
+The output file of the matching [ELF_OP_matching_candidates.csv](ELF_OP_matching_candidates.csv) has been reviewed so that [ELF_OP_matching.csv](ELF_OP_matching.csv) can be used in the transformation step.
 
 ### Transformation
 

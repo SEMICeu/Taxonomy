@@ -66,7 +66,7 @@ SPARQL-Anything has been used to generate candidate correnspondences. The candid
 
 ![](doc/find_correspondences.jpg)
 
-The GLEIF countries are in English language while the OP countries are in multiple language, therefore the English labels have been selected for matching.
+The GLEIF countries are in English language while the OP countries are in multiple languages, therefore the English labels have been selected for matching.
 
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
 Jaro-Winkler [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything,  generating only 2 false positives out of 117 results.  

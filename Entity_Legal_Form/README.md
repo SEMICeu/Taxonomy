@@ -66,7 +66,7 @@ SPARQL-Anything has been used to generate candidate correnspondences. The candid
 
 ![](doc/find_correspondences.jpg)
 
-The GLEIF countries are in English language while the OP countries are in multiple languages, therefore the English labels have been selected for matching.
+The GLEIF countries are in English language while the OP countries are in multiple languages, therefore the English (preferred) labels have been selected for matching.
 
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
 Jaro-Winkler [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything,  generating only 2 false positives out of 117 results.  
@@ -75,7 +75,7 @@ The output file of the matching [ELF_OP_matching_candidates.csv](ELF_OP_matching
 
 ### Transformation
 
-The transformation has been performed via the tool [SPARQL-Anything](https://github.com/SPARQL-Anything/sparql.anything) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5), which:
+SPARQL-Anything has been used to perform the transformation which:
 * does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
 * allows to perform just a SPARQL CONSTRUCT query, see [line 15](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L15), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 65](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L65)
 * allows to query multiple files in different format via the SERVICE directive:

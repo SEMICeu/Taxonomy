@@ -1,0 +1,1412 @@
+@prefix at:   <http://publications.europa.eu/ontology/authority/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://publications.europa.eu/resource/authority/country/SWE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Sweden"@en ;
+        skos:prefLabel  "Sweden"@en .
+
+<http://publications.europa.eu/resource/authority/country/TKL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Tokelau"@en .
+
+<http://publications.europa.eu/resource/authority/country/VGB>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "British Virgin Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXU>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Abyei Region (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/BRB>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Barbados"@en .
+
+<http://publications.europa.eu/resource/authority/country/MDV>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Maldives"@en ;
+        skos:prefLabel  "Maldives"@en .
+
+<http://publications.europa.eu/resource/authority/country/MDA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Moldova"@en ;
+        skos:prefLabel  "Moldova"@en .
+
+<http://publications.europa.eu/resource/authority/country/CYP>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Cyprus"@en ;
+        skos:prefLabel  "Cyprus"@en .
+
+<http://publications.europa.eu/resource/authority/country/VAT>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Holy See"@en .
+
+<http://publications.europa.eu/resource/authority/country/MTQ>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Martinique"@en .
+
+<http://publications.europa.eu/resource/authority/country/GEO>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Georgia"@en .
+
+<http://publications.europa.eu/resource/authority/country/COK>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Cook Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/XME>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Melanesia"@en .
+
+<http://publications.europa.eu/resource/authority/country/BIH>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Bosnia and Herzegovina"@en .
+
+<http://publications.europa.eu/resource/authority/country/BHR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Bahrain"@en ;
+        skos:prefLabel  "Bahrain"@en .
+
+<http://publications.europa.eu/resource/authority/country/CPV>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Cabo Verde"@en ;
+        skos:prefLabel  "Cabo Verde"@en .
+
+<http://publications.europa.eu/resource/authority/country/XIC>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Canary Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/EUR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "EU"@en ;
+        skos:prefLabel  "European Union"@en .
+
+<http://publications.europa.eu/resource/authority/country/KNA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federation of Saint Kitts and Nevis"@en ;
+        skos:prefLabel  "Saint Kitts and Nevis"@en .
+
+<http://publications.europa.eu/resource/authority/country/IOT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "BIOT"@en ;
+        skos:prefLabel  "British Indian Ocean Territory"@en .
+
+<http://publications.europa.eu/resource/authority/country/GNQ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Equatorial Guinea"@en ;
+        skos:prefLabel  "Equatorial Guinea"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXH>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Jammu Kashmir (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/GLP>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Guadeloupe"@en .
+
+<http://publications.europa.eu/resource/authority/country/AGO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Angola"@en ;
+        skos:prefLabel  "Angola"@en .
+
+<http://publications.europa.eu/resource/authority/country/MAR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Morocco"@en ;
+        skos:prefLabel  "Morocco"@en .
+
+<http://publications.europa.eu/resource/authority/country/KAZ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Kazakhstan"@en ;
+        skos:prefLabel  "Kazakhstan"@en .
+
+<http://publications.europa.eu/resource/authority/country/ABW>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Aruba"@en .
+
+<http://publications.europa.eu/resource/authority/country/XNC>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "areas of the Republic of Cyprus in which the Government of the Republic of Cyprus does not exercise effective control"@en .
+
+<http://publications.europa.eu/resource/authority/country/DMA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Commonwealth of Dominica"@en ;
+        skos:prefLabel  "Dominica"@en .
+
+<http://publications.europa.eu/resource/authority/country/SDN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of the Sudan"@en ;
+        skos:prefLabel  "Sudan"@en .
+
+<http://publications.europa.eu/resource/authority/country/BEN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Benin"@en ;
+        skos:prefLabel  "Benin"@en .
+
+<http://publications.europa.eu/resource/authority/country/CMR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Cameroon"@en ;
+        skos:prefLabel  "Cameroon"@en .
+
+<http://publications.europa.eu/resource/authority/country/BVT>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Bouvet Island"@en .
+
+<http://publications.europa.eu/resource/authority/country/JAM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Jamaica"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXP>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "China/Philippines/Vietnam/Taiwan/Malaysia (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/CHE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Swiss Confederation"@en ;
+        skos:prefLabel  "Switzerland"@en .
+
+<http://publications.europa.eu/resource/authority/country/XSC>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Ceuta"@en .
+
+<http://publications.europa.eu/resource/authority/country/GHA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Ghana"@en ;
+        skos:prefLabel  "Ghana"@en .
+
+<http://publications.europa.eu/resource/authority/country/SLE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Sierra Leone"@en ;
+        skos:prefLabel  "Sierra Leone"@en .
+
+<http://publications.europa.eu/resource/authority/country/HND>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Honduras"@en ;
+        skos:prefLabel  "Honduras"@en .
+
+<http://publications.europa.eu/resource/authority/country/ATF>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "French Southern and Antarctic Lands"@en .
+
+<http://publications.europa.eu/resource/authority/country/FLK>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Falkland Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/ARE>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "United Arab Emirates"@en .
+
+<http://publications.europa.eu/resource/authority/country/IND>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of India"@en ;
+        skos:prefLabel  "India"@en .
+
+<http://publications.europa.eu/resource/authority/country/POL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Poland"@en ;
+        skos:prefLabel  "Poland"@en .
+
+<http://publications.europa.eu/resource/authority/country/IMN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Isle of Man"@en .
+
+<http://publications.europa.eu/resource/authority/country/ZWE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Zimbabwe"@en ;
+        skos:prefLabel  "Zimbabwe"@en .
+
+<http://publications.europa.eu/resource/authority/country/ALB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Albania"@en ;
+        skos:prefLabel  "Albania"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXC>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Aksai Chin (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/VUT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Vanuatu"@en ;
+        skos:prefLabel  "Vanuatu"@en .
+
+<http://publications.europa.eu/resource/authority/country/FRA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "French Republic"@en ;
+        skos:prefLabel  "France"@en .
+
+<http://publications.europa.eu/resource/authority/country/IRN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Islamic Republic of Iran"@en ;
+        skos:prefLabel  "Iran"@en .
+
+<http://publications.europa.eu/resource/authority/country/GUM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Territory of Guam"@en ;
+        skos:prefLabel  "Guam"@en .
+
+<http://publications.europa.eu/resource/authority/country/NAM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Namibia"@en ;
+        skos:prefLabel  "Namibia"@en .
+
+<http://publications.europa.eu/resource/authority/country/ARM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Armenia"@en ;
+        skos:prefLabel  "Armenia"@en .
+
+<http://publications.europa.eu/resource/authority/country/LCA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Sainte Lucie"@en ;
+        skos:prefLabel  "Saint Lucia"@en .
+
+<http://publications.europa.eu/resource/authority/country/PRK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "DPRK"@en , "Democratic People’s Republic of Korea"@en ;
+        skos:prefLabel  "North Korea"@en .
+
+<http://publications.europa.eu/resource/authority/country/EST>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Estonia"@en ;
+        skos:prefLabel  "Estonia"@en .
+
+<http://publications.europa.eu/resource/authority/country/ERI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "State of Eritrea"@en ;
+        skos:prefLabel  "Eritrea"@en .
+
+<http://publications.europa.eu/resource/authority/country/BTN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Bhutan"@en ;
+        skos:prefLabel  "Bhutan"@en .
+
+<http://publications.europa.eu/resource/authority/country/MYT>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Mayotte"@en .
+
+<http://publications.europa.eu/resource/authority/country/HRV>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Croatia"@en ;
+        skos:prefLabel  "Croatia"@en .
+
+<http://publications.europa.eu/resource/authority/country/AFG>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Islamic Republic of Afghanistan"@en ;
+        skos:prefLabel  "Afghanistan"@en .
+
+<http://publications.europa.eu/resource/authority/country/XQR>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Japan/South Korea (joint regime)"@en .
+
+<http://publications.europa.eu/resource/authority/country/BMU>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Bermuda"@en .
+
+<http://publications.europa.eu/resource/authority/country/PCN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Pitcairn, Henderson, Ducie and Oeno Islands"@en ;
+        skos:prefLabel  "Pitcairn Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/ISL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Iceland"@en .
+
+<http://publications.europa.eu/resource/authority/country/ATA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Antarctica"@en .
+
+<http://publications.europa.eu/resource/authority/country/BGR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Bulgaria"@en ;
+        skos:prefLabel  "Bulgaria"@en .
+
+<http://publications.europa.eu/resource/authority/country/XIN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "International Waters"@en .
+
+<http://publications.europa.eu/resource/authority/country/DEU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federal Republic of Germany"@en , "FRG"@en ;
+        skos:prefLabel  "Germany"@en .
+
+<http://publications.europa.eu/resource/authority/country/BLR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Belarus"@en ;
+        skos:prefLabel  "Belarus"@en .
+
+<http://publications.europa.eu/resource/authority/country/AUT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Austria"@en ;
+        skos:prefLabel  "Austria"@en .
+
+<http://publications.europa.eu/resource/authority/country/OMN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Magan"@en , "Sultanate of Oman"@en ;
+        skos:prefLabel  "Oman"@en .
+
+<http://publications.europa.eu/resource/authority/country/DOM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Dominican Republic"@en .
+
+<http://publications.europa.eu/resource/authority/country/SGP>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Singapore"@en ;
+        skos:prefLabel  "Singapore"@en .
+
+<http://publications.europa.eu/resource/authority/country/CPT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Clipperton Island"@en ;
+        skos:prefLabel  "Clipperton"@en .
+
+<http://publications.europa.eu/resource/authority/country/USA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "USA"@en , "US"@en , "United States of America"@en ;
+        skos:prefLabel  "United States"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXF>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Hala'Ib Triangle (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/XBH>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Büsingen on the Upper Rhine"@en ;
+        skos:prefLabel  "Büsingen am Hochrhein"@en .
+
+<http://publications.europa.eu/resource/authority/country/MDG>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Madagascar"@en ;
+        skos:prefLabel  "Madagascar"@en .
+
+<http://publications.europa.eu/resource/authority/country/JOR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Hashemite Kingdom of Jordan"@en ;
+        skos:prefLabel  "Jordan"@en .
+
+<http://publications.europa.eu/resource/authority/country/GIB>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Gibraltar"@en .
+
+<http://publications.europa.eu/resource/authority/country/UKR>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Ukraine"@en .
+
+<http://publications.europa.eu/resource/authority/country/BLZ>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Belize"@en .
+
+<http://publications.europa.eu/resource/authority/country/HMD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "HIMI"@en , "Territory of Heard Island and McDonald Islands"@en ;
+        skos:prefLabel  "Heard Island and McDonald Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/NER>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Niger"@en ;
+        skos:prefLabel  "Niger"@en .
+
+<http://publications.europa.eu/resource/authority/country/UZB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Uzbekistan"@en ;
+        skos:prefLabel  "Uzbekistan"@en .
+
+<http://publications.europa.eu/resource/authority/country/SHN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Saint Helena, Ascension and Tristan da Cunha"@en .
+
+<http://publications.europa.eu/resource/authority/country/LBN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Lebanese Republic"@en ;
+        skos:prefLabel  "Lebanon"@en .
+
+<http://publications.europa.eu/resource/authority/country/IRQ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Iraq"@en ;
+        skos:prefLabel  "Iraq"@en .
+
+<http://publications.europa.eu/resource/authority/country/KOR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Korea"@en , "ROK"@en ;
+        skos:prefLabel  "South Korea"@en .
+
+<http://publications.europa.eu/resource/authority/country/XHS>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "High seas"@en .
+
+<http://publications.europa.eu/resource/authority/country/GRD>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Grenada"@en .
+
+<http://publications.europa.eu/resource/authority/country/BEL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Belgium"@en ;
+        skos:prefLabel  "Belgium"@en .
+
+<http://publications.europa.eu/resource/authority/country/SAU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "KSA"@en , "Kingdom of Saudi Arabia"@en ;
+        skos:prefLabel  "Saudi Arabia"@en .
+
+<http://publications.europa.eu/resource/authority/country/SUR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Suriname"@en ;
+        skos:prefLabel  "Suriname"@en .
+
+<http://publications.europa.eu/resource/authority/country/GNB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Guinea-Bissau"@en ;
+        skos:prefLabel  "Guinea-Bissau"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Senkaku Islands (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/AIA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Anguilla"@en .
+
+<http://publications.europa.eu/resource/authority/country/XSV>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Fisheries Protection Zone around Svalbard"@en .
+
+<http://publications.europa.eu/resource/authority/country/TCA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Turks and Caicos Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/MAC>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Macao Special Administrative Region of the People’s Republic of China"@en ;
+        skos:prefLabel  "Macao"@en .
+
+<http://publications.europa.eu/resource/authority/country/CCK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Cocos Keeling Islands"@en , "Territory of Cocos (Keeling) Islands"@en ;
+        skos:prefLabel  "Cocos (Keeling) Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/TUR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Türkiye"@en , "Republic of Turkey"@en , "Turkey"@en ;
+        skos:prefLabel  "Türkiye"@en .
+
+<http://publications.europa.eu/resource/authority/country/PER>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Peru"@en ;
+        skos:prefLabel  "Peru"@en .
+
+<http://publications.europa.eu/resource/authority/country/BLM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "St. Barts"@en , "St. Barth’s"@en , "Collectivity of Saint Barthélemy"@en ;
+        skos:prefLabel  "Saint Barthélemy"@en .
+
+<http://publications.europa.eu/resource/authority/country/MNG>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Mongolia"@en .
+
+<http://publications.europa.eu/resource/authority/country/GTM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Guatemala"@en ;
+        skos:prefLabel  "Guatemala"@en .
+
+<http://publications.europa.eu/resource/authority/country/COD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Congo-Kinshasa"@en ;
+        skos:prefLabel  "Democratic Republic of the Congo"@en .
+
+<http://publications.europa.eu/resource/authority/country/GRL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Greenland"@en .
+
+<http://publications.europa.eu/resource/authority/country/CIV>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Côte d’Ivoire"@en ;
+        skos:prefLabel  "Côte d’Ivoire"@en .
+
+<http://publications.europa.eu/resource/authority/country/BDI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Burundi"@en ;
+        skos:prefLabel  "Burundi"@en .
+
+<http://publications.europa.eu/resource/authority/country/TKM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Turkmenia"@en ;
+        skos:prefLabel  "Turkmenistan"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Paracel Islands (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/SSD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of South Sudan"@en ;
+        skos:prefLabel  "South Sudan"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXV>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Bir Tawil (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/NOR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Norway"@en ;
+        skos:prefLabel  "Norway"@en .
+
+<http://publications.europa.eu/resource/authority/country/THA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Thailand"@en ;
+        skos:prefLabel  "Thailand"@en .
+
+<http://publications.europa.eu/resource/authority/country/SPM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Territorial Collectivity of Saint Pierre and Miquelon"@en ;
+        skos:prefLabel  "Saint Pierre and Miquelon"@en .
+
+<http://publications.europa.eu/resource/authority/country/MWI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Malawi"@en ;
+        skos:prefLabel  "Malawi"@en .
+
+<http://publications.europa.eu/resource/authority/country/BOL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Plurinational State of Bolivia"@en ;
+        skos:prefLabel  "Bolivia"@en .
+
+<http://publications.europa.eu/resource/authority/country/TTO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Trinidad and Tobago"@en ;
+        skos:prefLabel  "Trinidad and Tobago"@en .
+
+<http://publications.europa.eu/resource/authority/country/EGY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Arab Republic of Egypt"@en ;
+        skos:prefLabel  "Egypt"@en .
+
+<http://publications.europa.eu/resource/authority/country/NCL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "New Caledonia"@en .
+
+<http://publications.europa.eu/resource/authority/country/MOZ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Mozambique"@en ;
+        skos:prefLabel  "Mozambique"@en .
+
+<http://publications.europa.eu/resource/authority/country/BHS>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Commonwealth of the Bahamas"@en ;
+        skos:prefLabel  "Bahamas"@en .
+
+<http://publications.europa.eu/resource/authority/country/SGS>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "SGSSI"@en ;
+        skos:prefLabel  "South Georgia and the South Sandwich Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/IRL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Ireland"@en .
+
+<http://publications.europa.eu/resource/authority/country/COL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Colombia"@en ;
+        skos:prefLabel  "Colombia"@en .
+
+<http://publications.europa.eu/resource/authority/country/PRI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Commonwealth of Puerto Rico"@en ;
+        skos:prefLabel  "Puerto Rico"@en .
+
+<http://publications.europa.eu/resource/authority/country/ETH>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federal Democratic Republic of Ethiopia"@en ;
+        skos:prefLabel  "Ethiopia"@en .
+
+<http://publications.europa.eu/resource/authority/country/MHL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of the Marshall Islands"@en ;
+        skos:prefLabel  "Marshall Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/LSO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Lesotho"@en ;
+        skos:prefLabel  "Lesotho"@en .
+
+<http://publications.europa.eu/resource/authority/country/PNG>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Independent State of Papua New Guinea"@en ;
+        skos:prefLabel  "Papua New Guinea"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "United Kingdom (Northern Ireland)"@en ;
+        skos:prefLabel  "Northern Ireland"@en .
+
+<http://publications.europa.eu/resource/authority/country/CUW>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Curaçao"@en .
+
+<http://publications.europa.eu/resource/authority/country/TWN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Formosa"@en ;
+        skos:prefLabel  "Taiwan"@en .
+
+<http://publications.europa.eu/resource/authority/country/GGY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Bailiwick of Guernsey"@en ;
+        skos:prefLabel  "Guernsey"@en .
+
+<http://publications.europa.eu/resource/authority/country/XQP>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Colombia/Jamaica (joint regime)"@en .
+
+<http://publications.europa.eu/resource/authority/country/NGA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federal Republic of Nigeria"@en ;
+        skos:prefLabel  "Nigeria"@en .
+
+<http://publications.europa.eu/resource/authority/country/RWA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Rwanda"@en ;
+        skos:prefLabel  "Rwanda"@en .
+
+<http://publications.europa.eu/resource/authority/country/CUB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Cuba"@en ;
+        skos:prefLabel  "Cuba"@en .
+
+<http://publications.europa.eu/resource/authority/country/NFK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Territory of Norfolk Island"@en ;
+        skos:prefLabel  "Norfolk Island"@en .
+
+<http://publications.europa.eu/resource/authority/country/PAK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Islamic Republic of Pakistan"@en ;
+        skos:prefLabel  "Pakistan"@en .
+
+<http://publications.europa.eu/resource/authority/country/TLS>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Democratic Republic of Timor-Leste"@en , "East Timor"@en ;
+        skos:prefLabel  "Timor-Leste"@en .
+
+<http://publications.europa.eu/resource/authority/country/LUX>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Grand Duchy of Luxembourg"@en ;
+        skos:prefLabel  "Luxembourg"@en .
+
+<http://publications.europa.eu/resource/authority/country/SVK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Slovak Republic"@en ;
+        skos:prefLabel  "Slovakia"@en .
+
+<http://publications.europa.eu/resource/authority/country/KIR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Kiribati"@en ;
+        skos:prefLabel  "Kiribati"@en .
+
+<http://publications.europa.eu/resource/authority/country/XCI>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Campione d’Italia"@en .
+
+<http://publications.europa.eu/resource/authority/country/MAF>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Collectivity of Saint Martin"@en ;
+        skos:prefLabel  "Saint Martin"@en .
+
+<http://publications.europa.eu/resource/authority/country/UMI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "US Minor Outlying Islands"@en ;
+        skos:prefLabel  "United States Minor Outlying Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/PHL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of the Philippines"@en ;
+        skos:prefLabel  "Philippines"@en .
+
+<http://publications.europa.eu/resource/authority/country/TCD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Chad"@en ;
+        skos:prefLabel  "Chad"@en .
+
+<http://publications.europa.eu/resource/authority/country/FRO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Faroe Islands"@en ;
+        skos:prefLabel  "Faroes"@en .
+
+<http://publications.europa.eu/resource/authority/country/XPM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Autonomous Region of Madeira"@en ;
+        skos:prefLabel  "Madeira"@en .
+
+<http://publications.europa.eu/resource/authority/country/ISR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "State of Israel"@en ;
+        skos:prefLabel  "Israel"@en .
+
+<http://publications.europa.eu/resource/authority/country/XMA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Mount Athos"@en .
+
+<http://publications.europa.eu/resource/authority/country/ATG>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Antigua and Barbuda"@en .
+
+<http://publications.europa.eu/resource/authority/country/GUF>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "French Guiana"@en .
+
+<http://publications.europa.eu/resource/authority/country/COG>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of the Congo"@en , "Congo-Brazzaville"@en ;
+        skos:prefLabel  "Congo"@en .
+
+<http://publications.europa.eu/resource/authority/country/PRY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Paraguay"@en ;
+        skos:prefLabel  "Paraguay"@en .
+
+<http://publications.europa.eu/resource/authority/country/MLI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Mali"@en ;
+        skos:prefLabel  "Mali"@en .
+
+<http://publications.europa.eu/resource/authority/country/LBY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "State of Libya"@en ;
+        skos:prefLabel  "Libya"@en .
+
+<http://publications.europa.eu/resource/authority/country/LVA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Latvia"@en ;
+        skos:prefLabel  "Latvia"@en .
+
+<http://publications.europa.eu/resource/authority/country/XGS>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Gaza Strip"@en .
+
+<http://publications.europa.eu/resource/authority/country/LTU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Lithuania"@en ;
+        skos:prefLabel  "Lithuania"@en .
+
+<http://publications.europa.eu/resource/authority/country/AND>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Principality of Andorra"@en ;
+        skos:prefLabel  "Andorra"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXD>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Arunashal Pradesh (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/GMB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of The Gambia"@en , "Gambia"@en ;
+        skos:prefLabel  "The Gambia"@en .
+
+<http://publications.europa.eu/resource/authority/country/CHN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "People’s Republic of China"@en ;
+        skos:prefLabel  "China"@en .
+
+<http://publications.europa.eu/resource/authority/country/KWT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "State of Kuwait"@en ;
+        skos:prefLabel  "Kuwait"@en .
+
+<http://publications.europa.eu/resource/authority/country/MCO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Principality of Monaco"@en ;
+        skos:prefLabel  "Monaco"@en .
+
+<http://publications.europa.eu/resource/authority/country/REU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Île Bourbon"@en ;
+        skos:prefLabel  "Réunion"@en .
+
+<http://publications.europa.eu/resource/authority/country/XSL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Somaliland"@en ;
+        skos:prefLabel  "Somaliland"@en .
+
+<http://publications.europa.eu/resource/authority/country/FSM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federated States of Micronesia"@en ;
+        skos:prefLabel  "Micronesia"@en .
+
+<http://publications.europa.eu/resource/authority/country/SJM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Svalbard and Jan Mayen"@en .
+
+<http://publications.europa.eu/resource/authority/country/MRT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Islamic Republic of Mauritania"@en ;
+        skos:prefLabel  "Mauritania"@en .
+
+<http://publications.europa.eu/resource/authority/country/LIE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Principality of Liechtenstein"@en ;
+        skos:prefLabel  "Liechtenstein"@en .
+
+<http://publications.europa.eu/resource/authority/country/XMAZ>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Marine zone"@en .
+
+<http://publications.europa.eu/resource/authority/country/SYR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Syrian Arab Republic"@en ;
+        skos:prefLabel  "Syria"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Navassa Island (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/MEX>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "United Mexican States"@en ;
+        skos:prefLabel  "Mexico"@en .
+
+<http://publications.europa.eu/resource/authority/country/DZA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "People’s Democratic Republic of Algeria"@en ;
+        skos:prefLabel  "Algeria"@en .
+
+<http://publications.europa.eu/resource/authority/country/HUN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Hungary"@en .
+
+<http://publications.europa.eu/resource/authority/country/WLF>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Territory of the Wallis and Futuna Islands"@en ;
+        skos:prefLabel  "Wallis and Futuna"@en .
+
+<http://publications.europa.eu/resource/authority/country/BRN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Brunei Darussalam"@en ;
+        skos:prefLabel  "Brunei"@en .
+
+<http://publications.europa.eu/resource/authority/country/XAC>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Territory of Ashmore and Cartier Islands"@en ;
+        skos:prefLabel  "Ashmore and Cartier Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/JPN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Japan"@en .
+
+<http://publications.europa.eu/resource/authority/country/SOM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federal Republic of Somalia"@en ;
+        skos:prefLabel  "Somalia"@en .
+
+<http://publications.europa.eu/resource/authority/country/MUS>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Mauritius"@en ;
+        skos:prefLabel  "Mauritius"@en .
+
+<http://publications.europa.eu/resource/authority/country/AZE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Azerbaijan"@en ;
+        skos:prefLabel  "Azerbaijan"@en .
+
+<http://publications.europa.eu/resource/authority/country/MSR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Emerald Isle of the Caribbean"@en ;
+        skos:prefLabel  "Montserrat"@en .
+
+<http://publications.europa.eu/resource/authority/country/SLV>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of El Salvador"@en ;
+        skos:prefLabel  "El Salvador"@en .
+
+<http://publications.europa.eu/resource/authority/country/UGA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Uganda"@en ;
+        skos:prefLabel  "Uganda"@en .
+
+<http://publications.europa.eu/resource/authority/country/XLF>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Fezzan region (Libya)"@en ;
+        skos:prefLabel  "Fezzan (Libya)"@en .
+
+<http://publications.europa.eu/resource/authority/country/PAN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Panama"@en ;
+        skos:prefLabel  "Panama"@en .
+
+<http://publications.europa.eu/resource/authority/country/XDST>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Disputed region"@en .
+
+<http://publications.europa.eu/resource/authority/country/MNE>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Montenegro"@en .
+
+<http://publications.europa.eu/resource/authority/country/PRT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Portuguese Republic"@en ;
+        skos:prefLabel  "Portugal"@en .
+
+<http://publications.europa.eu/resource/authority/country/ROU>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Romania"@en .
+
+<http://publications.europa.eu/resource/authority/country/ESH>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Western Sahara"@en .
+
+<http://publications.europa.eu/resource/authority/country/SVN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Slovenia"@en ;
+        skos:prefLabel  "Slovenia"@en .
+
+<http://publications.europa.eu/resource/authority/country/URY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Eastern Republic of Uruguay"@en ;
+        skos:prefLabel  "Uruguay"@en .
+
+<http://publications.europa.eu/resource/authority/country/BRA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federative Republic of Brazil"@en ;
+        skos:prefLabel  "Brazil"@en .
+
+<http://publications.europa.eu/resource/authority/country/CZE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Czech Republic"@en ;
+        skos:prefLabel  "Czechia"@en .
+
+<http://publications.europa.eu/resource/authority/country/VCT>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Saint Vincent and the Grenadines"@en .
+
+<http://publications.europa.eu/resource/authority/country/NLD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of the Netherlands"@en ;
+        skos:prefLabel  "Netherlands"@en .
+
+<http://publications.europa.eu/resource/authority/country/XSG>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Joint area between Senegal and Guinea-Bissau"@en .
+
+<http://publications.europa.eu/resource/authority/country/LKA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Democratic Socialist Republic of Sri Lanka"@en ;
+        skos:prefLabel  "Sri Lanka"@en .
+
+<http://publications.europa.eu/resource/authority/country/YEM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Yemen"@en ;
+        skos:prefLabel  "Yemen"@en .
+
+<http://publications.europa.eu/resource/authority/country/XKX>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kosovo"@en ;
+        skos:prefLabel  "Kosovo*"@en .
+
+<http://publications.europa.eu/resource/authority/country/ECU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Ecuador"@en ;
+        skos:prefLabel  "Ecuador"@en .
+
+<http://publications.europa.eu/resource/authority/country/XJM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Fisheries zone around Jan Mayen"@en .
+
+<http://publications.europa.eu/resource/authority/country/ESP>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Spain"@en ;
+        skos:prefLabel  "Spain"@en .
+
+<http://publications.europa.eu/resource/authority/country/BWA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Botswana"@en ;
+        skos:prefLabel  "Botswana"@en .
+
+<http://publications.europa.eu/resource/authority/country/XEU>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "EU Waters"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXG>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Ilemi Triangle (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/NIU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Rock of Polynesia"@en ;
+        skos:prefLabel  "Niue"@en .
+
+<http://publications.europa.eu/resource/authority/country/RUS>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Russian Federation"@en ;
+        skos:prefLabel  "Russia"@en .
+
+<http://publications.europa.eu/resource/authority/country/CRI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Costa Rica"@en ;
+        skos:prefLabel  "Costa Rica"@en .
+
+<http://publications.europa.eu/resource/authority/country/DNK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Denmark"@en ;
+        skos:prefLabel  "Denmark"@en .
+
+<http://publications.europa.eu/resource/authority/country/PSE>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Palestine"@en ;
+        skos:prefLabel  "Palestine*"@en .
+
+<http://publications.europa.eu/resource/authority/country/MLT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Malta"@en ;
+        skos:prefLabel  "Malta"@en .
+
+<http://publications.europa.eu/resource/authority/country/VIR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Virgin Islands of the United States"@en ;
+        skos:prefLabel  "US Virgin Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/DJI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Djibouti"@en ;
+        skos:prefLabel  "Djibouti"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Scattered Islands in the Indian Ocean"@en ;
+        skos:prefLabel  "Juan de Nova, Glorioso, Europa, Tromelin, Bassas da India"@en .
+
+<http://publications.europa.eu/resource/authority/country/KEN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Kenya"@en ;
+        skos:prefLabel  "Kenya"@en .
+
+<http://publications.europa.eu/resource/authority/country/GUY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Cooperative Republic of Guyana"@en ;
+        skos:prefLabel  "Guyana"@en .
+
+<http://publications.europa.eu/resource/authority/country/GBR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "United Kingdom of Great Britain and Northern Ireland"@en , "UK"@en ;
+        skos:prefLabel  "United Kingdom"@en .
+
+<http://publications.europa.eu/resource/authority/country/CRQ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Sark Island"@en ;
+        skos:prefLabel  "Sark"@en .
+
+<http://publications.europa.eu/resource/authority/country/XLI>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Livigno"@en .
+
+<http://publications.europa.eu/resource/authority/country/MMR>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Myanmar/Burma"@en .
+
+<http://publications.europa.eu/resource/authority/country/FJI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Fiji"@en ;
+        skos:prefLabel  "Fiji"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXB>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Spratly Islands (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/KHM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Cambodia"@en ;
+        skos:prefLabel  "Cambodia"@en .
+
+<http://publications.europa.eu/resource/authority/country/STP>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Democratic Republic of São Tomé and Príncipe"@en ;
+        skos:prefLabel  "São Tomé and Príncipe"@en .
+
+<http://publications.europa.eu/resource/authority/country/ALA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Åland Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/ZAF>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of South Africa"@en ;
+        skos:prefLabel  "South Africa"@en .
+
+<http://publications.europa.eu/resource/authority/country/CHL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Chile"@en ;
+        skos:prefLabel  "Chile"@en .
+
+<http://publications.europa.eu/resource/authority/country/MNP>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Commonwealth of the Northern Mariana Islands"@en ;
+        skos:prefLabel  "Northern Mariana Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/COM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Union of the Comoros"@en ;
+        skos:prefLabel  "Comoros"@en .
+
+<http://publications.europa.eu/resource/authority/country/MKD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of North Macedonia"@en ;
+        skos:prefLabel  "North Macedonia"@en .
+
+<http://publications.europa.eu/resource/authority/country/TJK>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Tajikistan"@en ;
+        skos:prefLabel  "Tajikistan"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXJ>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Liancourt Rock (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/MYS>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Malaysia"@en .
+
+<http://publications.europa.eu/resource/authority/country/SRB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Serbia"@en ;
+        skos:prefLabel  "Serbia"@en .
+
+<http://publications.europa.eu/resource/authority/country/NIC>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Nicaragua"@en ;
+        skos:prefLabel  "Nicaragua"@en .
+
+<http://publications.europa.eu/resource/authority/country/OP_DATPRO>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Provisional data"@en .
+
+<http://publications.europa.eu/resource/authority/country/TUN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Tunisia"@en ;
+        skos:prefLabel  "Tunisia"@en .
+
+<http://publications.europa.eu/resource/authority/country/CAF>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Central African Republic"@en .
+
+<http://publications.europa.eu/resource/authority/country/HKG>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Hong Kong Special Administrative Region"@en , "Hong Kong Special Administrative Region of the People’s Republic of China"@en , "Hong Kong SAR"@en ;
+        skos:prefLabel  "Hong Kong"@en .
+
+<http://publications.europa.eu/resource/authority/country/ITA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Italian Republic"@en ;
+        skos:prefLabel  "Italy"@en .
+
+<http://publications.europa.eu/resource/authority/country/VNM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Socialist Republic of Vietnam"@en ;
+        skos:prefLabel  "Vietnam"@en .
+
+<http://publications.europa.eu/resource/authority/country/GAB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Gabonese Republic"@en ;
+        skos:prefLabel  "Gabon"@en .
+
+<http://publications.europa.eu/resource/authority/country/FIN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Finland"@en ;
+        skos:prefLabel  "Finland"@en .
+
+<http://publications.europa.eu/resource/authority/country/SYC>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Seychelles"@en ;
+        skos:prefLabel  "Seychelles"@en .
+
+<http://publications.europa.eu/resource/authority/country/LBR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Liberia"@en ;
+        skos:prefLabel  "Liberia"@en .
+
+<http://publications.europa.eu/resource/authority/country/SXM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Sint Maarten"@en .
+
+<http://publications.europa.eu/resource/authority/country/HTI>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Haiti"@en ;
+        skos:prefLabel  "Haiti"@en .
+
+<http://publications.europa.eu/resource/authority/country/GIN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Guinea"@en ;
+        skos:prefLabel  "Guinea"@en .
+
+<http://publications.europa.eu/resource/authority/country/CYM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Cayman Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/TUV>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Ellice Islands"@en ;
+        skos:prefLabel  "Tuvalu"@en .
+
+<http://publications.europa.eu/resource/authority/country/SMR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of San Marino"@en ;
+        skos:prefLabel  "San Marino"@en .
+
+<http://publications.europa.eu/resource/authority/country/IDN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Indonesia"@en ;
+        skos:prefLabel  "Indonesia"@en .
+
+<http://publications.europa.eu/resource/authority/country/CAN>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Canada"@en .
+
+<http://publications.europa.eu/resource/authority/country/AUS>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Commonwealth of Australia"@en ;
+        skos:prefLabel  "Australia"@en .
+
+<http://publications.europa.eu/resource/authority/country/XLL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Italian waters of Lake Lugano"@en .
+
+<http://publications.europa.eu/resource/authority/country/BGD>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "People’s Republic of Bangladesh"@en ;
+        skos:prefLabel  "Bangladesh"@en .
+
+<http://publications.europa.eu/resource/authority/country/JEY>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Bailiwick of Jersey"@en ;
+        skos:prefLabel  "Jersey"@en .
+
+<http://publications.europa.eu/resource/authority/country/ARG>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Argentine Republic"@en ;
+        skos:prefLabel  "Argentina"@en .
+
+<http://publications.europa.eu/resource/authority/country/SEN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Senegal"@en ;
+        skos:prefLabel  "Senegal"@en .
+
+<http://publications.europa.eu/resource/authority/country/WSM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Independent State of Samoa"@en ;
+        skos:prefLabel  "Samoa"@en .
+
+<http://publications.europa.eu/resource/authority/country/LAO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Lao People’s Democratic Republic"@en ;
+        skos:prefLabel  "Laos"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXZ>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Kuril Islands (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/PLW>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Palau"@en ;
+        skos:prefLabel  "Palau"@en .
+
+<http://publications.europa.eu/resource/authority/country/TGO>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Siam"@en , "Togolese Republic"@en ;
+        skos:prefLabel  "Togo"@en .
+
+<http://publications.europa.eu/resource/authority/country/NPL>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Federal Democratic Republic of Nepal"@en ;
+        skos:prefLabel  "Nepal"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXE>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "China/India (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/QAT>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "State of Qatar"@en ;
+        skos:prefLabel  "Qatar"@en .
+
+<http://publications.europa.eu/resource/authority/country/KGZ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kyrgyz Republic"@en ;
+        skos:prefLabel  "Kyrgyzstan"@en .
+
+<http://publications.europa.eu/resource/authority/country/TZA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "United Republic of Tanzania"@en ;
+        skos:prefLabel  "Tanzania"@en .
+
+<http://publications.europa.eu/resource/authority/country/XSM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Melilla"@en .
+
+<http://publications.europa.eu/resource/authority/country/PYF>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "French Polynesia"@en .
+
+<http://publications.europa.eu/resource/authority/country/XPA>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Autonomous Region of the Azores"@en ;
+        skos:prefLabel  "Azores"@en .
+
+<http://publications.europa.eu/resource/authority/country/ZMB>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Republic of Zambia"@en ;
+        skos:prefLabel  "Zambia"@en .
+
+<http://publications.europa.eu/resource/authority/country/BFA>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Burkina Faso"@en .
+
+<http://publications.europa.eu/resource/authority/country/XIH>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Islands of Heligoland"@en ;
+        skos:prefLabel  "Heligoland"@en .
+
+<http://publications.europa.eu/resource/authority/country/GRC>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Hellenic Republic"@en ;
+        skos:prefLabel  "Greece"@en .
+
+<http://publications.europa.eu/resource/authority/country/NRU>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Pleasant Island"@en , "Republic of Nauru"@en ;
+        skos:prefLabel  "Nauru"@en .
+
+<http://publications.europa.eu/resource/authority/country/XXM>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Scarborough Reef (disputed territory)"@en .
+
+<http://publications.europa.eu/resource/authority/country/VEN>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Bolivarian Republic of Venezuela"@en ;
+        skos:prefLabel  "Venezuela"@en .
+
+<http://publications.europa.eu/resource/authority/country/XAD>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "UK Sovereign Base Areas of Akrotiri and Dhekelia"@en .
+
+<http://publications.europa.eu/resource/authority/country/CXR>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Christmas Island Territory"@en ;
+        skos:prefLabel  "Christmas Island"@en .
+
+<http://publications.europa.eu/resource/authority/country/SLB>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Solomon Islands"@en .
+
+<http://publications.europa.eu/resource/authority/country/NZL>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "New Zealand"@en .
+
+<http://publications.europa.eu/resource/authority/country/ASM>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Territory of American Samoa"@en ;
+        skos:prefLabel  "American Samoa"@en .
+
+<http://publications.europa.eu/resource/authority/country/TON>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Tonga"@en ;
+        skos:prefLabel  "Tonga"@en .
+
+<http://publications.europa.eu/resource/authority/country/BES>
+        rdf:type        skos:Concept ;
+        skos:prefLabel  "Bonaire, Sint Eustatius and Saba"@en .
+
+<http://publications.europa.eu/resource/authority/country/SWZ>
+        rdf:type        skos:Concept ;
+        skos:altLabel   "Kingdom of Eswatini"@en ;
+        skos:prefLabel  "Eswatini"@en .

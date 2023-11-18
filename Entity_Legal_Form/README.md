@@ -74,8 +74,8 @@ CosineDistance (and JaroWinkler) [resulted better](string_distance_comparison.cs
 
 To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
 
-In the example below, the republic of Congo would have been the minimum distance if looking only at the preferred label therefore South Korea could not have been matched.
-However, taking in account the alternative labels, the distance with Republic of Korea is lesser, thus allowing to select the right match.
+In the example below, the republic of Congo would have been the minimum distance (0,571) if looking only at the preferred label therefore South Korea could not have been matched (0,757).
+However, taking in account the alternative labels, the distance with Republic of Korea is lesser (0,248), thus allowing to select the right match.
 
 ![](doc/matching.jpg)
 

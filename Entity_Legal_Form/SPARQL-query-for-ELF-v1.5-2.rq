@@ -1,0 +1,111 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX at: <http://publications.europa.eu/ontology/authority/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX gleif-base: <https://www.gleif.org/ontology/Base/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+    ?concept rdf:type skos:Concept .
+    ?concept adms:status ?conceptStatus .
+    ?concept dct:location ?country .
+    ?concept skos:prefLabel ?legalNameLang .
+    ?concept skos:prefLabel ?legalNameTransLang .
+    ?concept gleif-base:hasAbbreviationLocal ?abbr .
+    ?concept gleif-base:hasAbbreviationTransliterated ?abbrTrans .
+    ?concept dct:created ?created .
+    ?concept skos:notation ?code .
+    ?concept owl:sameAs ?source .
+  
+    ?concept skos-xl:prefLabel ?bnodeLabel .
+    ?bnodeLabel rdf:type skos-xl:Label .
+    ?bnodeLabel skos-xl:literalForm ?legalNameLang .
+    ?bnodeLabel gleif-base:hasAbbreviationLocal ?abbr .
+  
+    ?concept skos-xl:prefLabel ?bnodeTransLabel .
+    ?bnodeTransLabel rdf:type skos-xl:Label .
+    ?bnodeTransLabel skos-xl:literalForm ?legalNameTransLang .
+    ?bnodeTransLabel gleif-base:hasAbbreviationTransliterated ?abbrTrans .
+  
+    ?conceptScheme rdf:type skos:ConceptScheme .
+    ?conceptScheme skos:prefLabel ?conceptSchemeLabel .
+    ?conceptScheme dct:title ?conceptSchemeLabel .
+    ?conceptScheme dct:description ?conceptSchemeDescription .
+    ?conceptScheme skos:hasTopConcept ?concept .
+    ?concept skos:topConceptOf ?conceptScheme .
+    ?concept skos:inScheme ?conceptScheme .
+}
+WHERE {
+    SERVICE <x-sparql-anything:2023-09-28-elf-code-list-v1.5.csv,csv.headers=true> {
+    
+      # extract values from the respective columns of the CSV file
+      ?elf xyz:ELF%20Code ?code .
+      ?elf xyz:Country%20of%20formation ?countryFormation .
+      ?elf xyz:Entity%20Legal%20Form%20name%20Local%20name ?legalName .
+      ?elf xyz:Language%20Code%20%28ISO%20639-1%29 ?isoLang .
+      ?elf xyz:Entity%20Legal%20Form%20name%20Transliterated%20name%20%28per%20ISO%2001-140-10%29 ?legalNameTrans .
+      ?elf xyz:Abbreviations%20Local%20language ?abbrList .
+      ?elf xyz:Abbreviations%20transliterated ?abbrListTrans .
+      ?elf xyz:Date%20created%20YYYY-MM-DD%20%28ISO%208601%29 ?dateCreated .
+      ?elf xyz:ELF%20Status%20ACTV%2FINAC ?status .
+
+      # determine the URI of the skos:Concept to be created
+      BIND("http://data.europa.eu/ih3/legal-form/" AS ?baseURI) .
+      BIND(MD5(CONCAT(?code, "-", ?dateCreated)) AS ?id) .
+      BIND(URI(CONCAT(?baseURI, "GL-", ?id)) AS ?concept) .    
+    
+      # determine the preflabel of the skos:Concept
+      BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
+    
+      # determine if the transliteration need to be added   
+      BIND(IF(?isoLang IN ("ar","be","bg","el","ja","km","kr","mk","sr","zh","ru","my","th"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
+      BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
+    
+      # create blank nodes for skos-xl labels
+      BIND(BNODE() AS ?bnodeLabel) .
+      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTransLabel) .
+    
+      # add the date to each term
+      BIND(STRDT(STR(?dateCreated), xsd:date) AS ?created) .
+    
+      # associate the status with the OP Concept status
+      BIND("http://publications.europa.eu/resource/authority/concept-status/" AS ?conceptStatusBaseURI) .
+      BIND(IF(?status = "ACTV", URI(CONCAT(?conceptStatusBaseURI, "CURRENT")), URI(CONCAT(?conceptStatusBaseURI, "DEPRECATED"))) AS ?conceptStatus) .
+    
+      # add the source to each term
+      BIND(URI(CONCAT("https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list#",?code)) AS ?source)
+        
+    }
+
+    SERVICE <x-sparql-anything:ELF_OP_matching2.csv,csv.headers=true> {
+      ?mapping xyz:ELF ?CountryELF .
+      ?mapping xyz:OP ?CountryOP .
+      ?mapping xyz:country ?country .
+    }
+
+
+    # split abbreviations delimited via ; character
+    ?abbrs apf:strSplit(?abbrList ";") .
+    BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr) .
+    ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
+    BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
+
+    # determine the URI of the skos:ConceptScheme to be created and add metadata
+    BIND(URI(CONCAT(?baseURI, "ELF")) AS ?conceptScheme) .
+    BIND("Entity Legal Forms"@en AS ?conceptSchemeLabel) .
+    BIND("The Entity Legal Forms is a controlled vocabulary classifying legal forms related to legal entities. It is supported by the Core Business vocabulary, whereas the original content is provided by the GLEIF Entity Legal Forms Code List."@en AS ?conceptSchemeDescription) .
+
+    # make sure that ELF countries are the same as those in Publications Office Countries
+    # FILTER(?countryFormation = ?eng_label) .
+    # or, if mapping from ELF to OP countries is needed, enable below
+    FILTER(?countryFormation = ?CountryELF) .
+    #FILTER(?CountryOP = ?eng_label) .
+
+}

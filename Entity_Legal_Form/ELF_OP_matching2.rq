@@ -11,17 +11,17 @@ PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX gleif-base: <https://www.gleif.org/ontology/Base/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?countryFormation ?eng_label2 ?MinDistance
+SELECT DISTINCT ?ELF ?OP ?MinDistance ?country
   WHERE {
 {
-SELECT ?countryFormation (MIN(?JaroD) AS ?JMin)
+SELECT ?ELF (MIN(?Distance) AS ?JMin)
 WHERE
 {
     SERVICE <x-sparql-anything:2023-09-28-elf-code-list-v1.5.csv,csv.headers=true> {
     
       # extract values from the respective columns of the CSV file
-      ?elf xyz:Country%20of%20formation ?countryFormation .
-      FILTER(?countryFormation !="") .
+      ?elf xyz:Country%20of%20formation ?ELF .
+      FILTER(?ELF !="") .
     
     }
     SERVICE <x-sparql-anything:countries-skos-en.ttl> {
@@ -36,11 +36,11 @@ WHERE
         }
 
     }
-  BIND ( fx:CosineDistance(?countryFormation, ?eng_label) AS ?JaroD1) .
-  BIND(IF(BOUND(?alt_label), fx:CosineDistance(?countryFormation, ?alt_label), ?JaroD1 ) AS ?JaroD2) .
-      BIND(IF(?JaroD1 <= ?JaroD2, ?JaroD1, ?JaroD2) AS ?JaroD) .
+  BIND ( fx:CosineDistance(?ELF, ?eng_label) AS ?Distance1) .
+  BIND(IF(BOUND(?alt_label), fx:CosineDistance(?ELF, ?alt_label), ?Distance1 ) AS ?Distance2) .
+      BIND(IF(?Distance1 <= ?Distance2, ?Distance1, ?Distance2) AS ?Distance) .
 }
-GROUP BY ?countryFormation 
+GROUP BY ?ELF 
 ORDER BY ASC(?JMin)
   }
   
@@ -50,7 +50,7 @@ ORDER BY ASC(?JMin)
       # extract the URI of the countries with their English label 
       ?country rdf:type skos:Concept .
       ?country skos:prefLabel ?label .      
-       BIND (STR(?label)  AS ?eng_label2) .
+       BIND (STR(?label)  AS ?OP) .
       OPTIONAL {
            ?country skos:altLabel ?altLabel2 .      
        BIND (STR(?altLabel2)  AS ?alt_label2) .
@@ -58,9 +58,9 @@ ORDER BY ASC(?JMin)
 
     }
   
-  BIND ( fx:CosineDistance(?countryFormation, ?eng_label2) AS ?MinDistance1)
+  BIND ( fx:CosineDistance(?ELF, ?OP) AS ?MinDistance1)
  
-  BIND(IF(BOUND(?alt_label2), fx:CosineDistance(?countryFormation, ?alt_label2), ?MinDistance1 ) AS ?MinDistance2) .
+  BIND(IF(BOUND(?alt_label2), fx:CosineDistance(?ELF, ?alt_label2), ?MinDistance1 ) AS ?MinDistance2) .
       BIND(IF(?MinDistance1 <= ?MinDistance2, ?MinDistance1, ?MinDistance2) AS ?MinDistance) .
   FILTER (?MinDistance = ?JMin)
 }

@@ -61,17 +61,22 @@ In addition, the legal forms:
  
 ### Finding and evaluate matches between GLEIF and Publications Office countries
 
-A preliminary analysis of the GLEIF and Publication Office shown that the list of countries have differences.
-SPARQL-Anything has been used to generate candidate correnspondences. The candidate correspondences are then evaluated by the user and the exact correspondences are then created.
+The GLEIF countries are in English language while the OP countries are in multiple languages, therefore the English labels have been selected for matching.
+
+Sparql-Anything executes the query [countries-skos-en.rq](countries-skos-en.rq) to select the countries with only the English preferred and alternative labels, generating the [countries-skos-en.tt](countries-skos-en.ttl); this allows to reduce drastically the time for finding matches. 
 
 ![](doc/find_correspondences.jpg)
 
-The GLEIF countries are in English language while the OP countries are in multiple languages, therefore the English (preferred) labels have been selected for matching.
+A preliminary analysis of the GLEIF and Publication Office has shown that the list of countries have differences.
 
-Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [Jaro-Winkler](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxjarowinklerdistance) to find the closest matches.
-Jaro-Winkler [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything,  generating only 2 false positives out of 117 results.  
+Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [CosineDistance](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxcosinedistance) to find the closest matches.
+CosineDistance (and JaroWinkler) [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
 
-The output file of the matching [ELF_OP_matching_candidates.csv](ELF_OP_matching_candidates.csv) has been reviewed so that [ELF_OP_matching.csv](ELF_OP_matching.csv) can be used in the transformation step.
+To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
+
+![](doc/matching.jpg)
+
+The output file of the matching is the file [ELF_OP_matching.csv](ELF_OP_matching.csv) to be used in the transformation step.
 
 ### Transformation
 

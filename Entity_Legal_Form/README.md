@@ -73,6 +73,7 @@ Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in 
 CosineDistance (and JaroWinkler) [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
 
 To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
+
 In the example below, the republic of Congo would have been the minimum distance if looking only at the preferred label therefore South Korea could not have been matched.
 However, taking in account the alternative labels, the distance with Republic of Korea is lesser, thus allowing to select the right match.
 

@@ -99,7 +99,7 @@ The SPARQL query:
 * adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)
 * links the countries of formation of the ELF codes with the countries in the Publications Office [Country and territories Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) by using the matching retrieved in [lines 87-89](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87-L89) with the filter in [line 105](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
 * links the ELF status with the Publications Office [Concept status Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/concept-status) by mapping directly the 2 codes, see [lines 79-80](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L79-L80)
-* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
+* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif/lei-data ) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
 
 Each single concept is generated with a unique URI for example:
 

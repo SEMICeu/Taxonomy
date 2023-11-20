@@ -115,7 +115,7 @@ Being unique 3428 codes, at least an hash key of [64 bit is needed](https://pres
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
 #### Example
-
+```
 <http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
         rdf:type           skos:Concept ;
         dct:created        "2020-06-10"^^xsd:date ;
@@ -150,6 +150,7 @@ The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl
                 "ОДО" , "ТДА" ;
         gleif-base:hasAbbreviationTransliterated
                 "ТDA" , "ODO" .
+```
 
 ### Validation
   

@@ -16,11 +16,12 @@ The process is semi-automatic and it is divided in 4 steps:
 The folder mainly includes:
 1. The file [2023-09-28-elf-code-list-v1.5.csv](2023-09-28-elf-code-list-v1.5.csv) downloaded from [GLEIF Entity Legal Forms](https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list)
 2. The file [countries-skos.rdf](countries-skos.rdf) downloaded from [Publications Office Country Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) version 20230915-0
-3. The file [ELF_OP_matching.rq](ELF_OP_matching.rq) to find the matches between GLEIF and OP countries 
-4. The file [ELF_OP_matching.csv](ELF_OP_matching.csv) that contains the results of the matches
-5. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) to generate the Entity Legal Forms in RDF
-6. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
-7. The file [output-v1.5_validated.ttl](output-v1.5_validated.ttl) validated for publication
+3. The file [countries-skos-en.rq](countries-skos-en.rq) to select only the English preferred and alternative labels of the [countries-skos.rdf](countries-skos.rdf)
+4. The file [ELF_OP_matching.rq](ELF_OP_matching.rq) to find the matches between GLEIF and OP countries 
+5. The file [ELF_OP_matching.csv](ELF_OP_matching.csv) that contains the results of the matches
+6. The file [SPARQL-query-for-ELF-v1.5.rq](SPARQL-query-for-ELF-v1.5.rq) to generate the Entity Legal Forms in RDF
+7. The file [output-v1.5.ttl](output-v1.5.ttl) generated as output containing the Entity Legal Forms in RDF
+8. The file [output-v1.5_validated.ttl](output-v1.5_validated.ttl) validated for publication
 
 ### Tools
 The [SPARQL-Anything server](https://github.com/SPARQL-Anything/sparql.anything#using-the-server) [version 0.9.DEV-5](https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.9-DEV.5) has been used to find correspondences and to perform the transformation.

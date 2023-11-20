@@ -114,6 +114,43 @@ Being unique 3428 codes, at least an hash key of [64 bit is needed](https://pres
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
+#### Example
+
+<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+        rdf:type           skos:Concept ;
+        dct:created        "2020-06-10"^^xsd:date ;
+        dct:location       "http://publications.europa.eu/resource/authority/country/BLR" ;
+        owl:sameAs         <https://rdf.gleif.org/EntityLegalForm/ELF-JLR3> ;
+        skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
+        skos:notation      "JLR3" ;
+        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+        skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be ;
+                             gleif-base:hasAbbreviationLocal
+                                     "ТДА"
+                           ] ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
+                             gleif-base:hasAbbreviationTransliterated
+                                     "ODO"
+                           ] ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+                             gleif-base:hasAbbreviationTransliterated
+                                     "ТDA"
+                           ] ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru ;
+                             gleif-base:hasAbbreviationLocal
+                                     "ОДО"
+                           ] ;
+        adms:status        <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
+        gleif-base:hasAbbreviationLocal
+                "ОДО" , "ТДА" ;
+        gleif-base:hasAbbreviationTransliterated
+                "ТDA" , "ODO" .
+
 ### Validation
   
 The [output-v1.5.ttl](output-v1.5.ttl) file is then validated on the format (SKOS) and uniqueness of the concepts:

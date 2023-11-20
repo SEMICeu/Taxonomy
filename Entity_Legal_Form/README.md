@@ -71,7 +71,7 @@ Sparql-Anything executes the query [countries-skos-en.rq](countries-skos-en.rq) 
 A preliminary analysis of the GLEIF and Publication Office has shown that the list of countries have differences.
 
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [CosineDistance](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxcosinedistance) to find the closest matches.
-CosineDistance (and JaroWinkler) [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
+CosineDistance (and JaroWinkler) [resulted better](doc/string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
 
 To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
 

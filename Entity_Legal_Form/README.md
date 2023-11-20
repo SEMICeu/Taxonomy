@@ -74,9 +74,12 @@ CosineDistance (and JaroWinkler) [resulted better](string_distance_comparison.cs
 
 To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
 
+In the example below, the republic of Congo would have been the minimum distance (0,571) if looking only at the preferred label; therefore South Korea would not have been matched (0,757).
+However, taking in account the alternative labels, the distance with Republic of Korea is lesser (0,248), thus allowing to select the right match.
+
 ![](doc/matching.jpg)
 
-The output file of the matching is the file [ELF_OP_matching.csv](ELF_OP_matching.csv) to be used in the transformation step.
+The output file of the matching is the file [ELF_OP_matching.csv](ELF_OP_matching.csv) to be used in the transformation step, containing the name of the matched country, the distance and the URI of the matched country. The latter is included so then the OP countries list is not needed anymore for the transformation step.
 
 ### Transformation
 
@@ -86,7 +89,6 @@ SPARQL-Anything has been used to perform the transformation which:
 * allows to query multiple files in different format via the SERVICE directive:
   * the GLEIF ELF Code list in CSV format, see [line 46](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L46)
   * the ELF OP matching in CSV format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87)
-  * the Publications Office Country Authority Table in RDF format, see [line 92](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L92) 
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 105]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
 
 The transformation execution at the core of the process:

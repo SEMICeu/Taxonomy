@@ -97,7 +97,7 @@ The transformation execution at the core of the process:
 
 The SPARQL query:
 * adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)
-* make sure to have the same countries present in the Publications Office Country Authority Table by using the matching retrieved in [lines 82-84](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L82-L84) with the filter in [lines 118-119](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L118-L119)
+* links with the countries in the Publications Office Country Authority Table by using the matching retrieved in [lines 87-89](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87-L89) with the filter in [line 105](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 

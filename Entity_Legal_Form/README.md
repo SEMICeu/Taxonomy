@@ -106,9 +106,11 @@ Each single concept is generated with a unique URI for example:
 <http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
 
 where:
-* The base URI is http://data.europa.eu/ih3/legal-form/
+* The base URI is http://data.europa.eu/ih3/legal-form/ in agreement with Publications Office
 * The prefix GL adds provenance to the concept, so in the future one might add more concepts not necessarily coming from GLEIF
-* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the GLEIF code concatenated with the creation date.
+* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L61).
+
+Being unique 3428 codes, at least an hash key of [64 bit is needed](https://preshing.com/20110504/hash-collision-probabilities/#small-collision-probabilities) to reduce the risk of collissions. Sparql-Anything leverages the [Sparql MD5 hash function](https://www.w3.org/TR/sparql11-query/#func-md5), the smallest with 128 bit, that should be more than sufficient to reduce risk collision. A validation test is performed at the end.
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
@@ -132,6 +134,6 @@ The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only
 
 Concerning the uniqueness, the validation has been performed manually with the query [compare_distint_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
 This validation is performed because the URI of concepts is generated using the MD5 hash functions which should not generate collission.
-The validation shows that the [number is the same](validation/compare_distint_codes_input_with_output.csv).
+The validation shows that the [number is the same](validation/compare_distint_codes_input_with_output.csv), that is 3428.
 
 The [output-v1.5.ttl](output-v1.5.ttl) has been reviewed and the [output-v1.5_validated.ttl](output-v1.5_validated.ttl) has been created by replacing manually the preferred labels in alternative label for the X0SD code.

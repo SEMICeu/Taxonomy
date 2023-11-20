@@ -110,7 +110,7 @@ where:
 * The prefix GL adds provenance to the concept, so in the future one might add more concepts not necessarily coming from GLEIF
 * The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L61).
 
-Being unique 3428 codes, at least an hash key of [64 bit is needed](https://preshing.com/20110504/hash-collision-probabilities/#small-collision-probabilities) to reduce the risk of collissions. Sparql-Anything leverages the [Sparql MD5 hash function](https://www.w3.org/TR/sparql11-query/#func-md5), the smallest with 128 bit, that should be more than sufficient to reduce risk collision. A validation test is performed at the end.
+Being unique 3428 codes, at least an hash key of [64 bit is needed](https://preshing.com/20110504/hash-collision-probabilities/#small-collision-probabilities) to reduce the risk of collisions. Sparql-Anything leverages the [Sparql MD5 hash function](https://www.w3.org/TR/sparql11-query/#func-md5), the smallest with 128 bit, that should be more than sufficient to reduce risk collision. A validation test is performed at the end.
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 

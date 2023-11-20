@@ -71,7 +71,7 @@ Sparql-Anything executes the query [countries-skos-en.rq](countries-skos-en.rq) 
 A preliminary analysis of the GLEIF and Publication Office has shown that the list of countries have differences.
 
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [CosineDistance](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxcosinedistance) to find the closest matches.
-CosineDistance (and JaroWinkler) [resulted better](string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
+CosineDistance (and JaroWinkler) [resulted better](doc/string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
 
 To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
 
@@ -90,31 +90,50 @@ SPARQL-Anything has been used to perform the transformation which:
 * allows to query multiple files in different format via the SERVICE directive:
   * the GLEIF ELF Code list in CSV format, see [line 46](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L46)
   * the ELF OP matching in CSV format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87)
-* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 105]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
+* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 94]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L94)
 
 The transformation execution at the core of the process:
 ![](doc/transformation.jpg)
 
 The SPARQL query:
 * adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)
-* make sure to have the same countries present in the Publications Office Country Authority Table by using the matching retrieved in [lines 82-84](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L82-L84) with the filter in [lines 118-119](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L118-L119)
+* links the countries of formation of the ELF codes with the countries in the Publications Office [Country and territories Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) by using the matching retrieved in [lines 87-89](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87-L89) with the filter in [line 105](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
+* links the ELF status with the Publications Office [Concept status Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/concept-status) by mapping directly the 2 codes, see [lines 79-80](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L79-L80)
+* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
+
+Each single concept is generated with a unique URI for example:
+
+<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+
+where:
+* The base URI is http://data.europa.eu/ih3/legal-form/ in agreement with Publications Office
+* The prefix GL adds provenance to the concept, so in the future one might add more concepts not necessarily coming from GLEIF
+* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L61).
+
+Being unique 3428 codes, at least an hash key of [64 bit is needed](https://preshing.com/20110504/hash-collision-probabilities/#small-collision-probabilities) to reduce the risk of collisions. Sparql-Anything leverages the [Sparql MD5 hash function](https://www.w3.org/TR/sparql11-query/#func-md5), the smallest with 128 bit, that should be more than sufficient to reduce risk collision. A validation test is performed at the end.
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
 ### Validation
   
-The [output-v1.5.ttl](output-v1.5.ttl) file is then validated manually against:
+The [output-v1.5.ttl](output-v1.5.ttl) file is then validated on the format (SKOS) and uniqueness of the concepts:
+
+Concerning the SKOS format, the validation has been performed manually with:
 
 * [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
 * the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
-The validation against the skos testing tool find out errors concerning the content:
+The validation against the skos testing tool find out [errors](validation/skos_play_result.txt) concerning the content:
 * ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645): the concepts are described in the languages of their respective countries
 * ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1): The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label
 * ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL: the concepts are described in the languages of their respective countries
 * oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645): relationships are not created in the CSV and the creation of such relations would need legal analysis
 * ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234): it happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same.
 
-The validation against the shacl shapes highlights only the problem of overlapping labels.
+The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only the problem of overlapping labels.
+
+Concerning the uniqueness, the validation has been performed manually with the query [compare_distint_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
+This validation is performed because the URI of concepts is generated using the MD5 hash functions which should not generate collission.
+The validation shows that the [number is the same](validation/compare_distint_codes_input_with_output.csv), that is 3428.
 
 The [output-v1.5.ttl](output-v1.5.ttl) has been reviewed and the [output-v1.5_validated.ttl](output-v1.5_validated.ttl) has been created by replacing manually the preferred labels in alternative label for the X0SD code.

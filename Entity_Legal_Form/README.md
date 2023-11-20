@@ -101,22 +101,37 @@ The SPARQL query:
 * links the ELF status with the Publications Office [Concept status Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/concept-status) by mapping directly the 2 codes, see [lines 79-80](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L79-L80)
 * links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
 
+Each single concept is generated with a unique URI for example:
+
+<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+
+where:
+* The base URI is http://data.europa.eu/ih3/legal-form/
+* The prefix GL adds provenance to the concept, so in the future one might add more concepts not necessarily coming from GLEIF
+* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the GLEIF code concatenated with the creation date.
+
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
 ### Validation
   
-The [output-v1.5.ttl](output-v1.5.ttl) file is then validated manually against:
+The [output-v1.5.ttl](output-v1.5.ttl) file is then validated on the format (SKOS) and uniqueness of the concepts:
+
+Concerning the SKOS format, the validation has been performed manually with:
 
 * [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
 * the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
-The validation against the skos testing tool find out errors concerning the content:
+The validation against the skos testing tool find out [errors](validation/skos_play_result.txt) concerning the content:
 * ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645): the concepts are described in the languages of their respective countries
 * ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1): The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label
 * ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL: the concepts are described in the languages of their respective countries
 * oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645): relationships are not created in the CSV and the creation of such relations would need legal analysis
 * ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234): it happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same.
 
-The validation against the shacl shapes highlights only the problem of overlapping labels.
+The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only the problem of overlapping labels.
+
+Concerning the uniqueness, the validation has been performed manually with the query [compare_distint_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
+This validation is performed because the URI of concepts is generated using the MD5 hash functions which should not generate collission.
+The validation shows that the [number is the same](validation/compare_distint_codes_input_with_output.csv).
 
 The [output-v1.5.ttl](output-v1.5.ttl) has been reviewed and the [output-v1.5_validated.ttl](output-v1.5_validated.ttl) has been created by replacing manually the preferred labels in alternative label for the X0SD code.

@@ -80,26 +80,15 @@ WHERE {
       BIND(IF(?status = "ACTV", URI(CONCAT(?conceptStatusBaseURI, "CURRENT")), URI(CONCAT(?conceptStatusBaseURI, "DEPRECATED"))) AS ?conceptStatus) .
     
       # add the source to each term
-      BIND(URI(CONCAT("https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list#",?code)) AS ?source)
+      BIND(URI(CONCAT("https://rdf.gleif.org/EntityLegalForm/",?code)) AS ?source)
         
     }
 
-    SERVICE <x-sparql-anything:ELF_OP_matching.csv,csv.headers=true,csv.delimiter=;> {
+    SERVICE <x-sparql-anything:ELF_OP_matching.csv,csv.headers=true> {
       ?mapping xyz:ELF ?CountryELF .
-      ?mapping xyz:OP ?CountryOP .
+      ?mapping xyz:country ?country .
     }
 
-    SERVICE <x-sparql-anything:countries-skos.rdf> {
-    
-      # extract the URI of the countries with their English label 
-      ?country rdf:type skos:Concept .
-      ?country skos:prefLabel ?label .
-      BIND (STR(?label)  AS ?eng_label) .
-      FILTER (lang(?label) = 'en') .
-      
-      # filter out those countries that are active, otherwise you can get multiple URI
-      FILTER NOT EXISTS {?country at:end.use ?endUse} .
-    }
 
     # split abbreviations delimited via ; character
     ?abbrs apf:strSplit(?abbrList ";") .
@@ -112,10 +101,7 @@ WHERE {
     BIND("Entity Legal Forms"@en AS ?conceptSchemeLabel) .
     BIND("The Entity Legal Forms is a controlled vocabulary classifying legal forms related to legal entities. It is supported by the Core Business vocabulary, whereas the original content is provided by the GLEIF Entity Legal Forms Code List."@en AS ?conceptSchemeDescription) .
 
-    # make sure that ELF countries are the same as those in Publications Office Countries
-    # FILTER(?countryFormation = ?eng_label) .
-    # or, if mapping from ELF to OP countries is needed, enable below
+    # Mapping from ELF to OP countries is needed
     FILTER(?countryFormation = ?CountryELF) .
-    FILTER(?CountryOP = ?eng_label) .
 
 }

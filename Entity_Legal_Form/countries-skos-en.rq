@@ -4,7 +4,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX at: <http://publications.europa.eu/ontology/authority/>
 
 CONSTRUCT {
-    ?country rdf:type skos:Concept .
     ?country skos:prefLabel ?label .
     ?country skos:altLabel ?altLabel .
 }

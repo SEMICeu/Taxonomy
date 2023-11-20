@@ -1,118 +1,118 @@
-ELF;OP
-Antigua and Barbuda;Antigua and Barbuda
-Argentina;Argentina
-Aruba;Aruba
-Australia;Australia
-Austria;Austria
-Azerbaijan;Azerbaijan
-Bahamas;Bahamas
-Bahrain;Bahrain
-Barbados;Barbados
-Belarus;Belarus
-Belgium;Belgium
-Belize;Belize
-Bermuda;Bermuda
-Bolivia (Plurinational State of);Bolivia
-Bonaire, Sint Eustatius and Saba;Bonaire, Sint Eustatius and Saba
-Botswana;Botswana
-Brazil;Brazil
-Brunei Darussalam;Brunei
-Bulgaria;Bulgaria
-Cambodia;Cambodia
-Canada;Canada
-Cayman Islands;Cayman Islands
-Chile;Chile
-China;China
-Colombia;Colombia
-Cook Islands;Cook Islands
-Costa Rica;Costa Rica
-Croatia;Croatia
-Curaçao;Curaçao
-Cyprus;Cyprus
-Czechia;Czechia
-Denmark;Denmark
-Dominican Republic;Dominican Republic
-Ecuador;Ecuador
-Estonia;Estonia
-Finland;Finland
-France;France
-Germany;Germany
-Ghana;Ghana
-Gibraltar;Gibraltar
-Greece;Greece
-Guam;Guam
-Guatemala;Guatemala
-Guernsey;Guernsey
-Honduras;Honduras
-Hong Kong;Hong Kong
-Hungary;Hungary
-Iceland;Iceland
-India;India
-Indonesia;Indonesia
-Ireland;Ireland
-Isle of Man;Isle of Man
-Italy;Italy
-Jamaica;Jamaica
-Japan;Japan
-Jersey;Jersey
-Jordan;Jordan
-Korea (Republic of);South Korea
-Kosovo;Kosovo*
-Kuwait;Kuwait
-Latvia;Latvia
-Lesotho;Lesotho
-Liechtenstein;Liechtenstein
-Lithuania;Lithuania
-Luxembourg;Luxembourg
-Malaysia;Malaysia
-Malta;Malta
-Marshall Islands;Marshall Islands
-Mauritius;Mauritius
-Mexico;Mexico
-Monaco;Monaco
-Myanmar;Myanmar/Burma
-Netherlands;Netherlands
-New Zealand;New Zealand
-North Macedonia;North Macedonia
-Norway;Norway
-Pakistan;Pakistan
-Panama;Panama
-Papua New Guinea;Papua New Guinea
-Paraguay;Paraguay
-Peru;Peru
-Philippines;Philippines
-Poland;Poland
-Portugal;Portugal
-Puerto Rico;Puerto Rico
-Qatar;Qatar
-Romania;Romania
-Russian Federation;Russia
-Saint Kitts and Nevis;Saint Kitts and Nevis
-Saint Vincent and the Grenadines;Saint Vincent and the Grenadines
-Samoa;Samoa
-Saudi Arabia;Saudi Arabia
-Serbia;Serbia
-Seychelles;Seychelles
-Singapore;Singapore
-Sint Maarten;Sint Maarten
-Slovakia;Slovakia
-Slovenia;Slovenia
-Solomon Islands;Solomon Islands
-South Africa;South Africa
-Spain;Spain
-Suriname;Suriname
-Sweden;Sweden
-Switzerland;Switzerland
-Taiwan (Province of China);Taiwan
-Thailand;Thailand
-Tonga;Tonga
-Tunisia;Tunisia
-Türkiye;Türkiye
-Tuvalu;Tuvalu
-United Arab Emirates;United Arab Emirates
-United Kingdom of Great Britain and Northern Ireland;United Kingdom
-United States of America;United States
-Vanuatu;Vanuatu
-Viet Nam;Vietnam
-Virgin Islands (British);British Virgin Islands
-Virgin Islands (U.S.);US Virgin Islands
+"ELF","OPLabel","OPLabelString","MinDistance","country"
+"Antigua and Barbuda","Antigua and Barbuda","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ATG"
+"Argentina","Argentina","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ARG"
+"Aruba","Aruba","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ABW"
+"Australia","Australia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/AUS"
+"Austria","Austria","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/AUT"
+"Azerbaijan","Azerbaijan","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/AZE"
+"Bahamas","Bahamas","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BHS"
+"Bahrain","Bahrain","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BHR"
+"Barbados","Barbados","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BRB"
+"Belarus","Belarus","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BLR"
+"Belgium","Belgium","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BEL"
+"Belize","Belize","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BLZ"
+"Bermuda","Bermuda","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BMU"
+"Bonaire, Sint Eustatius and Saba","Bonaire, Sint Eustatius and Saba","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BES"
+"Botswana","Botswana","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BWA"
+"Brazil","Brazil","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BRA"
+"Brunei Darussalam","Brunei Darussalam","AltLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BRN"
+"Bulgaria","Bulgaria","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/BGR"
+"Cambodia","Cambodia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/KHM"
+"Canada","Canada","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CAN"
+"Cayman Islands","Cayman Islands","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CYM"
+"Chile","Chile","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CHL"
+"China","China","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CHN"
+"Colombia","Colombia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/COL"
+"Cook Islands","Cook Islands","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/COK"
+"Costa Rica","Costa Rica","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CRI"
+"Croatia","Croatia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/HRV"
+"Curaçao","Curaçao","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CUW"
+"Cyprus","Cyprus","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CYP"
+"Czechia","Czechia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CZE"
+"Denmark","Denmark","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/DNK"
+"Dominican Republic","Dominican Republic","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/DOM"
+"Ecuador","Ecuador","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ECU"
+"Estonia","Estonia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/EST"
+"Finland","Finland","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/FIN"
+"France","France","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/FRA"
+"Germany","Germany","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/DEU"
+"Ghana","Ghana","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GHA"
+"Gibraltar","Gibraltar","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GIB"
+"Greece","Greece","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GRC"
+"Guam","Guam","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GUM"
+"Guatemala","Guatemala","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GTM"
+"Guernsey","Guernsey","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GGY"
+"Honduras","Honduras","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/HND"
+"Hong Kong","Hong Kong","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/HKG"
+"Hungary","Hungary","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/HUN"
+"Iceland","Iceland","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ISL"
+"India","India","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/IND"
+"Indonesia","Indonesia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/IDN"
+"Ireland","Ireland","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/IRL"
+"Isle of Man","Isle of Man","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/IMN"
+"Italy","Italy","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ITA"
+"Jamaica","Jamaica","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/JAM"
+"Japan","Japan","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/JPN"
+"Jersey","Jersey","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/JEY"
+"Jordan","Jordan","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/JOR"
+"Kosovo","Kosovo","AltLabel","0.0e0","http://publications.europa.eu/resource/authority/country/XKX"
+"Kuwait","Kuwait","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/KWT"
+"Latvia","Latvia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/LVA"
+"Lesotho","Lesotho","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/LSO"
+"Liechtenstein","Liechtenstein","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/LIE"
+"Lithuania","Lithuania","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/LTU"
+"Luxembourg","Luxembourg","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/LUX"
+"Malaysia","Malaysia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MYS"
+"Malta","Malta","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MLT"
+"Marshall Islands","Marshall Islands","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MHL"
+"Mauritius","Mauritius","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MUS"
+"Mexico","Mexico","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MEX"
+"Monaco","Monaco","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MCO"
+"Netherlands","Netherlands","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/NLD"
+"New Zealand","New Zealand","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/NZL"
+"North Macedonia","North Macedonia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/MKD"
+"Norway","Norway","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/NOR"
+"Pakistan","Pakistan","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PAK"
+"Panama","Panama","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PAN"
+"Papua New Guinea","Papua New Guinea","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PNG"
+"Paraguay","Paraguay","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PRY"
+"Peru","Peru","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PER"
+"Philippines","Philippines","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PHL"
+"Poland","Poland","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/POL"
+"Portugal","Portugal","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PRT"
+"Puerto Rico","Puerto Rico","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/PRI"
+"Qatar","Qatar","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/QAT"
+"Romania","Romania","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ROU"
+"Russian Federation","Russian Federation","AltLabel","0.0e0","http://publications.europa.eu/resource/authority/country/RUS"
+"Saint Kitts and Nevis","Saint Kitts and Nevis","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/KNA"
+"Saint Vincent and the Grenadines","Saint Vincent and the Grenadines","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/VCT"
+"Samoa","Samoa","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/WSM"
+"Saudi Arabia","Saudi Arabia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SAU"
+"Serbia","Serbia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SRB"
+"Seychelles","Seychelles","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SYC"
+"Singapore","Singapore","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SGP"
+"Sint Maarten","Sint Maarten","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SXM"
+"Slovakia","Slovakia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SVK"
+"Slovenia","Slovenia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SVN"
+"Solomon Islands","Solomon Islands","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SLB"
+"South Africa","South Africa","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ZAF"
+"Spain","Spain","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ESP"
+"Suriname","Suriname","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SUR"
+"Sweden","Sweden","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/SWE"
+"Switzerland","Switzerland","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/CHE"
+"Thailand","Thailand","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/THA"
+"Tonga","Tonga","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/TON"
+"Tunisia","Tunisia","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/TUN"
+"Tuvalu","Tuvalu","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/TUV"
+"Türkiye","Türkiye","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/TUR"
+"United Arab Emirates","United Arab Emirates","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/ARE"
+"United Kingdom of Great Britain and Northern Ireland","United Kingdom of Great Britain and Northern Ireland","AltLabel","0.0e0","http://publications.europa.eu/resource/authority/country/GBR"
+"United States of America","United States of America","AltLabel","0.0e0","http://publications.europa.eu/resource/authority/country/USA"
+"Vanuatu","Vanuatu","PrefLabel","0.0e0","http://publications.europa.eu/resource/authority/country/VUT"
+"Bolivia (Plurinational State of)","Plurinational State of Bolivia","AltLabel","0.13741805082205727e0","http://publications.europa.eu/resource/authority/country/BOL"
+"Virgin Islands (British)","British Virgin Islands","PrefLabel","0.18955679914124668e0","http://publications.europa.eu/resource/authority/country/VGB"
+"Korea (Republic of)","Republic of Korea","AltLabel","0.24853085069782066e0","http://publications.europa.eu/resource/authority/country/KOR"
+"Virgin Islands (U.S.)","US Virgin Islands","PrefLabel","0.28918134668908924e0","http://publications.europa.eu/resource/authority/country/VIR"
+"Myanmar","Myanmar/Burma","PrefLabel","0.32580013753675796e0","http://publications.europa.eu/resource/authority/country/MMR"
+"Taiwan (Province of China)","Taiwan","PrefLabel","0.5917517095361369e0","http://publications.europa.eu/resource/authority/country/TWN"
+"Viet Nam","Vietnam","PrefLabel","0.6348516283298893e0","http://publications.europa.eu/resource/authority/country/VNM"

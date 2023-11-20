@@ -80,7 +80,7 @@ WHERE {
       BIND(IF(?status = "ACTV", URI(CONCAT(?conceptStatusBaseURI, "CURRENT")), URI(CONCAT(?conceptStatusBaseURI, "DEPRECATED"))) AS ?conceptStatus) .
     
       # add the source to each term
-      BIND(URI(CONCAT("https://rdf.gleif.org/EntityLegalForm/",?code)) AS ?source)
+      BIND(URI(CONCAT("https://rdf.gleif.org/EntityLegalForm/ELF-",?code)) AS ?source)
         
     }
 

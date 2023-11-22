@@ -1,4 +1,12 @@
-# Taxonomy of public services
+# Taxonomies
+
+This repository intendo to collect all the work done in SEMIC around taxonomies to be published:
+
+* Taxonomy of public services (CPSV-AP)
+* Business and Life events (CPSV-AP)
+* Entity Legal Forms (Core Business)
+
+# Taxonomy of public services (CPSV-AP)
 
 ## Context
 While CPSV-AP is a data model thought to harmonise description of  public services in Europe, it happens that most of the catalogues and egovernment portals are following different taxonomies when classifying public services. 
@@ -9,7 +17,7 @@ In addition, following the CSPV-AP data model, public services deal with events,
 ## Public Service taxonomy file
 Follow the ReadMe directly included within the taxonomy file [here](https://github.com/catalogue-of-services-isa/Taxonomy/blob/master/Taxonomy%20proposal%20v0.10.xlsx).
 
-## Business and Life event taxonomy file
+# Business and Life events (CPSV-AP)
 
 The spreadsheet containing classification of Businees and Life events can be found [here](https://github.com/SEMICeu/Taxonomy/blob/master/Business_Life-Events_controlled_vocabulary_v1.00.xlsx)
 
@@ -35,13 +43,12 @@ The main logic that is followed to create the new (in green) controlled vocabula
  * Main focus at this stage is on level 1 Life Events (column C). Level 2 Life Events are significantly more complex, since Member States have many different categories and degrees of detail on their portals. Furthermore, the wording and approach in the two source lists are different. The SDGR provides narrowly defined procedures, whereas Annex IV groups life events on a higher level. More feedback is needed to determine the way these two sources can be consolidated. 
  * Related to the point above, wording of the Annex IV descriptions was changed. Specifically, “this life event groups..” was deleted in most cases to better align with the SDGR life events. The content changes made from the previous version are indicated in red. 
 
-
-
 ### Business Events
 
 The spreadsheet for Business Events follows the same structure as for Life Events, organised in the three columns where the mapping is made. 
 
 Furthermore, the logic also remains the same. However, the mapping here is less complex. All business events from Annex II are added under the newly proposed first level Business Event: “Running a business”. 
 
+# Entity Legal Forms (Core Business)
 
-
+Within Core Business, there is a need to classify Legal Entities. GLEIF provides a list of legal entities that have been converted into RDF and linked with other Publications Office lists (countries and status). The documentation relative to this work can be found here.

@@ -175,6 +175,6 @@ The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only
 
 Concerning the uniqueness, the validation has been performed manually with the query [compare_distint_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
 This validation is performed because the URI of concepts is generated using the MD5 hash functions which should not generate collission.
-The validation shows that the [number is the same](validation/compare_distint_codes_input_with_output.csv), that is 3428.
+The validation shows that the [number is the same](validation/compare_distinct_codes_input_with_output.csv), that is 3428.
 
 The [output-v1.5.ttl](output-v1.5.ttl) has been reviewed and the [output-v1.5_validated.ttl](output-v1.5_validated.ttl) has been created by replacing manually the preferred labels in alternative label for the X0SD code.

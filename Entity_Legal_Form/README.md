@@ -162,8 +162,14 @@ Concerning the SKOS format, the validation has been performed manually with:
 * the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
 The validation against the skos testing tool find out [errors](validation/skos_play_result.txt) concerning the content:
-* ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645)
-  Explanation: the concepts are described in the languages of their respective countries
+
+| Error  | Explanation |
+| ------------- | ------------- |
+| ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645) | the concepts are described in the languages of their respective countries  |
+
+
+* 
+  Explanation: 
 * ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1)
   Explanation: The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label
 * ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL

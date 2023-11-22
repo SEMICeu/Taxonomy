@@ -165,7 +165,7 @@ The validation against the skos testing tool find out [errors](validation/skos_p
 
 | Error  | Explanation |
 | ------------- | ------------- |
-| ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645) | the concepts are described in the languages of their respective countries.  |
+| ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645) | The concepts are described in the languages of their respective countries.  |
 | ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1) | The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label. |
 | ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL | The concepts are described in the languages of their respective countries. |
 | oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645) | Relationships do not exist in the CSV and the creation of such relations would need legal analysis. |

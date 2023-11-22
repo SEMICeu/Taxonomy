@@ -51,4 +51,4 @@ Furthermore, the logic also remains the same. However, the mapping here is less 
 
 ## Entity Legal Forms (Core Business)
 
-Within Core Business, there is a need to classify Legal Entities. GLEIF provides a list of legal entities that have been converted into RDF and linked with other Publications Office lists (countries and status). The documentation relative to this work can be found here.
+Within Core Business, there is a need to classify Legal Entities. GLEIF provides a list of legal entities that have been converted into RDF and linked with other Publications Office lists (countries and status). The documentation relative to this work can be found [here](/Entity_Legal_Form/README.md).

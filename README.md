@@ -6,18 +6,18 @@ This repository aims to collect all the work done in SEMIC around taxonomies to 
 * Business and Life events (CPSV-AP)
 * Entity Legal Forms (Core Business)
 
-# Taxonomy of public services (CPSV-AP)
+## Taxonomy of public services (CPSV-AP)
 
-## Context
+### Context
 While CPSV-AP is a data model thought to harmonise description of  public services in Europe, it happens that most of the catalogues and egovernment portals are following different taxonomies when classifying public services. 
 This leads to additional work for harmonising multiple catalogues, for instance for mapping the different terms. While each catalogue of services contains specific services offered to citizens, business and other organisations, generic public services common to most of the catalogues exist but use different names and definitions. A commonly agreed taxonomy of generic public services would help public administrations to align their catalogue of services.
 
 In addition, following the CSPV-AP data model, public services deal with events, such as busines and life events which follow other types of classification.
 
-## Public Service taxonomy file
+### Public Service taxonomy file
 Follow the ReadMe directly included within the taxonomy file [here](https://github.com/catalogue-of-services-isa/Taxonomy/blob/master/Taxonomy%20proposal%20v0.10.xlsx).
 
-# Business and Life events (CPSV-AP)
+## Business and Life events (CPSV-AP)
 
 The spreadsheet containing classification of Businees and Life events can be found [here](https://github.com/SEMICeu/Taxonomy/blob/master/Business_Life-Events_controlled_vocabulary_v1.00.xlsx)
 
@@ -49,6 +49,6 @@ The spreadsheet for Business Events follows the same structure as for Life Event
 
 Furthermore, the logic also remains the same. However, the mapping here is less complex. All business events from Annex II are added under the newly proposed first level Business Event: “Running a business”. 
 
-# Entity Legal Forms (Core Business)
+## Entity Legal Forms (Core Business)
 
 Within Core Business, there is a need to classify Legal Entities. GLEIF provides a list of legal entities that have been converted into RDF and linked with other Publications Office lists (countries and status). The documentation relative to this work can be found here.

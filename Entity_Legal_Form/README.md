@@ -173,7 +173,7 @@ The validation against the skos testing tool find out [errors](validation/skos_p
 
 The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only the problem of overlapping labels.
 
-Concerning the uniqueness, the validation has been performed manually with the query [compare_distint_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
+Concerning the uniqueness, the validation has been performed manually with the query [compare_distinct_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
 This validation is performed because the URI of concepts is generated using the MD5 hash functions which should not generate collission.
 The validation shows that the [number is the same](validation/compare_distinct_codes_input_with_output.csv), that is 3428.
 

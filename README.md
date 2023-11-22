@@ -1,6 +1,6 @@
 # Taxonomies
 
-This repository intendo to collect all the work done in SEMIC around taxonomies to be published:
+This repository aims to collect all the work done in SEMIC around taxonomies to be published:
 
 * Taxonomy of public services (CPSV-AP)
 * Business and Life events (CPSV-AP)

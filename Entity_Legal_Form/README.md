@@ -123,7 +123,7 @@ The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl
 
 #### Example
 
-The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L111-L112) has been transformed. In particular, it is possible to see how the skos-xl:labels allow associate the labels with the respective abbreviations.
+The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L111-L112) has been transformed. The example shows how a code in multiple languages with transliteration is transformed. is In particular, it is possible to see how the skos-xl:labels allow associate the labels with the respective abbreviations.
 
 ```
 <http://data.europa.eu/ih3/legal-form/gl-c-c0c25d4317cd4f02968efa8466c3e111>
@@ -134,7 +134,10 @@ The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/
         owl:sameAs         <https://rdf.gleif.org/EntityLegalForm/ELF-JLR3> ;
         skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos:notation      "JLR3" ;
-        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
+        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be ,
+"Tavarystva z dadatkovaj adkaznascyu"@be-Latn ,
+"Общество с дополнительной ответственностью"@ru ,
+"Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
         skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos-xl:prefLabel  <http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729> ,
 <http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3> ,

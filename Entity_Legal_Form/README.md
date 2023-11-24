@@ -33,7 +33,7 @@ SPARQL-Anything has been downloaded directly in this folder so it can access to 
 
 Due to it's size (200 MB), SPARQL-Anything was not included in this repository, so, in order to run the query, one must download the server version of SPARQL-Anything themselves.
 
-For the validation step, the [skos-testing-tool](https://skos-play.sparna.fr/skos-testing-tool/) and  [jena shacl](https://jena.apache.org/documentation/shacl/index.html) tools have been used.
+For the validation step, the [skos-testing-tool](https://skos-play.sparna.fr/skos-testing-tool/) service and the [jena shacl](https://jena.apache.org/documentation/shacl/index.html) tool have been used.
 
 ### Analysis of the GLEIF Entity Legal Forms
 

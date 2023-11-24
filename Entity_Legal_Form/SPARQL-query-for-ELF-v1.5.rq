@@ -1,3 +1,4 @@
+PREFIX eu: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX at: <http://publications.europa.eu/ontology/authority/>
@@ -8,13 +9,13 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 PREFIX dct: <http://purl.org/dc/terms/>
-PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
 PREFIX gleif-base: <https://www.gleif.org/ontology/Base/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
     ?concept rdf:type skos:Concept .
-    ?concept adms:status ?conceptStatus .
+    ?concept euvoc:status ?conceptStatus .
     ?concept dct:location ?country .
     ?concept skos:prefLabel ?legalNameLang .
     ?concept skos:prefLabel ?legalNameTransLang .
@@ -24,20 +25,22 @@ CONSTRUCT {
     ?concept skos:notation ?code .
     ?concept owl:sameAs ?source .
   
-    ?concept skos-xl:prefLabel ?bnodeLabel .
-    ?bnodeLabel rdf:type skos-xl:Label .
-    ?bnodeLabel skos-xl:literalForm ?legalNameLang .
-    ?bnodeLabel gleif-base:hasAbbreviationLocal ?abbr .
+    ?concept skos-xl:prefLabel ?labelURI.
+    ?labelURI rdf:type skos-xl:Label .
+    ?labelURI skos-xl:literalForm ?legalNameLang .
+    ?labelURI gleif-base:hasAbbreviationLocal ?abbr .
   
-    ?concept skos-xl:prefLabel ?bnodeTransLabel .
-    ?bnodeTransLabel rdf:type skos-xl:Label .
-    ?bnodeTransLabel skos-xl:literalForm ?legalNameTransLang .
-    ?bnodeTransLabel gleif-base:hasAbbreviationTransliterated ?abbrTrans .
+    ?concept skos-xl:prefLabel ?labelTransURI .
+    ?labelTransURI rdf:type skos-xl:Label .
+    ?labelTransURI skos-xl:literalForm ?legalNameTransLang .
+    ?labelTransURI gleif-base:hasAbbreviationTransliterated ?abbrTrans .
   
     ?conceptScheme rdf:type skos:ConceptScheme .
     ?conceptScheme skos:prefLabel ?conceptSchemeLabel .
     ?conceptScheme dct:title ?conceptSchemeLabel .
     ?conceptScheme dct:description ?conceptSchemeDescription .
+    ?conceptScheme dct:created ?conceptSchemeDate .
+    ?conceptScheme owl:versionInfo ?conceptSchemeVersion .
     ?conceptScheme skos:hasTopConcept ?concept .
     ?concept skos:topConceptOf ?conceptScheme .
     ?concept skos:inScheme ?conceptScheme .
@@ -59,18 +62,24 @@ WHERE {
       # determine the URI of the skos:Concept to be created
       BIND("http://data.europa.eu/ih3/legal-form/" AS ?baseURI) .
       BIND(MD5(CONCAT(?code, "-", ?dateCreated)) AS ?id) .
-      BIND(URI(CONCAT(?baseURI, "GL-", ?id)) AS ?concept) .    
+      BIND(URI(CONCAT(?baseURI, "gl-c-", ?id)) AS ?concept) .    
     
       # determine the preflabel of the skos:Concept
-      BIND(STRLANG(?legalName,?isoLang) AS ?legalNameLang ) .
+      # KD84 code had ZWSP unprintable character that is removed
+      BIND(STRLANG(REPLACE(?legalName,"[\\x{200B}]", ""),?isoLang) AS ?legalNameLang ) .
     
       # determine if the transliteration need to be added   
       BIND(IF(?isoLang IN ("ar","be","bg","el","ja","km","kr","mk","sr","zh","ru","my","th"), CONCAT(?isoLang,"-Latn"), 1/0) AS ?isoLang_trans) .
-      BIND(IF(BOUND(?isoLang_trans), STRLANG(?legalNameTrans,?isoLang_trans), 1/0) AS ?legalNameTransLang) .
+      BIND(IF(BOUND(?isoLang_trans), STRLANG(REPLACE(?legalNameTrans,"[\\x{200B}]", ""),?isoLang_trans), 1/0) AS ?legalNameTransLang) .
     
-      # create blank nodes for skos-xl labels
-      BIND(BNODE() AS ?bnodeLabel) .
-      BIND(IF(BOUND(?isoLang_trans),BNODE(), 1/0) AS ?bnodeTransLabel) .
+      # create URI for skos-xl label
+      BIND(MD5(CONCAT(?code, "-", ?dateCreated,"-", ?legalName)) AS ?labelId) .
+      BIND(URI(CONCAT(?baseURI, "gl-l-", ?labelId)) AS ?labelURI) . 
+    
+      # BIND(BNODE() AS ?bnodeLabel) .
+      # create URI for skos-xl transliterated label
+      BIND(IF(BOUND(?isoLang_trans), MD5(CONCAT(?code, "-", ?dateCreated,"-", ?legalNameTrans)), 1/0) AS ?labelTransId ).
+      BIND(IF(BOUND(?isoLang_trans), URI(CONCAT(?baseURI, "gl-l-", ?labelTransId)), 1/0) AS ?labelTransURI) . 
     
       # add the date to each term
       BIND(STRDT(STR(?dateCreated), xsd:date) AS ?created) .
@@ -92,14 +101,19 @@ WHERE {
 
     # split abbreviations delimited via ; character
     ?abbrs apf:strSplit(?abbrList ";") .
-    BIND (IF(STRLEN(?abbrs) > 0, ?abbrs, 1/0) AS ?abbr) .
+    BIND (IF(STRLEN(?abbrs) > 0, STRLANG(?abbrs,?isoLang), 1/0) AS ?abbr) .
     ?abbrsTrans apf:strSplit(?abbrListTrans ";") .
-    BIND (IF(STRLEN(?abbrsTrans) > 0, ?abbrsTrans, 1/0) AS ?abbrTrans) .
+    BIND (IF(STRLEN(?abbrsTrans) > 0, STRLANG(?abbrsTrans,?isoLang_trans), 1/0) AS ?abbrTrans) .
 
     # determine the URI of the skos:ConceptScheme to be created and add metadata
     BIND(URI(CONCAT(?baseURI, "ELF")) AS ?conceptScheme) .
     BIND("Entity Legal Forms"@en AS ?conceptSchemeLabel) .
     BIND("The Entity Legal Forms is a controlled vocabulary classifying legal forms related to legal entities. It is supported by the Core Business vocabulary, whereas the original content is provided by the GLEIF Entity Legal Forms Code List."@en AS ?conceptSchemeDescription) .
+    
+    BIND( now() AS ?currentDateTime ) .
+  BIND( STRDT(CONCAT( STR(year(?currentDateTime)), "-", STR(month(?currentDateTime)), "-", STR(day(?currentDateTime))), xsd:date) AS ?conceptSchemeDate) .
+    BIND ("1.0" AS ?conceptSchemeVersion) .
+    
 
     # Mapping from ELF to OP countries is needed
     FILTER(?countryFormation = ?CountryELF) .

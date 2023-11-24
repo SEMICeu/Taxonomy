@@ -88,8 +88,8 @@ SPARQL-Anything has been used to perform the transformation which:
 * does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
 * allows to perform just a SPARQL CONSTRUCT query, see [line 16](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L16), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 69](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L69)
 * allows to query multiple files in different format via the SERVICE directive:
-  * the GLEIF ELF Code list in CSV format, see [line 46](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L46)
-  * the ELF OP matching in CSV format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87)
+  * the GLEIF ELF Code list in CSV format, see [line 49](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L49)
+  * the ELF OP matching in CSV format, see [line 96](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L96)
 * can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 94]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L94)
 
 The transformation execution at the core of the process:

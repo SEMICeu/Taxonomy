@@ -191,6 +191,7 @@ The validation against the skos testing tool found out [errors](validation/skos_
 | ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL | The concepts are described in the languages of their respective countries. |
 | oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645) | Relationships do not exist in the CSV and the creation of such relations would need legal analysis. |
 | ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234) | It happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same. |
+| ucl - Unprintable Characters. FAIL (2) | The code KD84 code had the "ZWSP" unprintable character that has been removed within the transformation, see lines [69](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L69) and [73](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L73).
 
 The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only the problem of overlapping labels.
 

@@ -16,7 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 CONSTRUCT {
     ?concept rdf:type skos:Concept .
     ?concept euvoc:status ?conceptStatus .
-    ?concept dct:location ?country .
+    ?concept dct:location ?countryURI .
     ?concept skos:prefLabel ?legalNameLang .
     ?concept skos:prefLabel ?legalNameTransLang .
     ?concept gleif-base:hasAbbreviationLocal ?abbr .
@@ -98,7 +98,8 @@ WHERE {
       ?mapping xyz:country ?country .
     }
 
-
+    BIND(URI(?country) AS ?countryURI).
+  
     # split abbreviations delimited via ; character
     ?abbrs apf:strSplit(?abbrList ";") .
     BIND (IF(STRLEN(?abbrs) > 0, STRLANG(?abbrs,?isoLang), 1/0) AS ?abbr) .

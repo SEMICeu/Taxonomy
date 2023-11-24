@@ -182,7 +182,7 @@ Concerning the SKOS format, the validation has been performed manually with:
 * [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
 * the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
-The validation against the skos testing tool find out [errors](validation/skos_play_result.txt) concerning the content:
+The validation against the skos testing tool found out [errors](validation/skos_play_result.txt) concerning the content:
 
 | Error  | Explanation |
 | ------------- | ------------- |

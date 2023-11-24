@@ -123,7 +123,8 @@ The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl
 
 #### Example
 
-The example below show how the code [JLR3]()
+The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L111-L112) has been transformed. In particular, it is possible to see how the skos-xl:labels allow associate the labels with the respective abbreviations.
+
 ```
 <http://data.europa.eu/ih3/legal-form/gl-c-c0c25d4317cd4f02968efa8466c3e111>
         rdf:type           skos:Concept ;

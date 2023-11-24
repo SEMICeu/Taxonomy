@@ -110,48 +110,60 @@ Each single concept is generated with a unique URI for example:
 where:
 * The base URI is http://data.europa.eu/ih3/legal-form/ in agreement with Publications Office
 * The prefix "gl" adds provenance to the concept to indicate GLEIF organisation, so in the future one might add more concepts not necessarily coming from GLEIF
-* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L61).
+* the prefix "c" means concept, to distinguish from the URI of skos-xl:labels
+* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L64).
 
 Being unique 3428 codes, at least an hash key of [64 bit is needed](https://preshing.com/20110504/hash-collision-probabilities/#small-collision-probabilities) to reduce the risk of collisions. Sparql-Anything leverages the [Sparql MD5 hash function](https://www.w3.org/TR/sparql11-query/#func-md5), the smallest with 128 bit, that should be more than sufficient to reduce risk collision. A validation test is performed at the end.
+
+The same process is applied to the URI skos-xl:labels such as:
+
+<http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729>
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
 #### Example
+
+The example below show how the code [JLR3]()
 ```
-<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+<http://data.europa.eu/ih3/legal-form/gl-c-c0c25d4317cd4f02968efa8466c3e111>
         rdf:type           skos:Concept ;
+        euvoc:status       <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
         dct:created        "2020-06-10"^^xsd:date ;
         dct:location       "http://publications.europa.eu/resource/authority/country/BLR" ;
         owl:sameAs         <https://rdf.gleif.org/EntityLegalForm/ELF-JLR3> ;
         skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos:notation      "JLR3" ;
-        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
         skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be ;
-                             gleif-base:hasAbbreviationLocal
-                                     "ТДА"
-                           ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
-                             gleif-base:hasAbbreviationTransliterated
-                                     "ODO"
-                           ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
-                             gleif-base:hasAbbreviationTransliterated
-                                     "ТDA"
-                           ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru ;
-                             gleif-base:hasAbbreviationLocal
-                                     "ОДО"
-                           ] ;
-        adms:status        <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
+        skos-xl:prefLabel  <http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729> , <http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3> , <http://data.europa.eu/ih3/legal-form/gl-l-8f8652b5a610ed343ad5b5cfbd5e2c06> , <http://data.europa.eu/ih3/legal-form/gl-l-5a49c9ce7e9d60e5cda330adb089206e> ;
         gleif-base:hasAbbreviationLocal
-                "ОДО" , "ТДА" ;
+                "ОДО"@ru , "ТДА"@be ;
         gleif-base:hasAbbreviationTransliterated
-                "ТDA" , "ODO" .
+                "ODO"@ru-Latn , "ТDA"@be-Latn .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+        gleif-base:hasAbbreviationTransliterated
+                "ТDA"@be-Latn .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
+        gleif-base:hasAbbreviationTransliterated
+                "ODO"@ru-Latn .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-8f8652b5a610ed343ad5b5cfbd5e2c06>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be ;
+        gleif-base:hasAbbreviationLocal
+                "ТДА"@be .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-5a49c9ce7e9d60e5cda330adb089206e>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru ;
+        gleif-base:hasAbbreviationLocal
+                "ОДО"@ru .
 ```
 
 ### Validation

@@ -3,6 +3,8 @@
 ## Content
 This folder includes the material used to generate the Entity Legal Forms in RDF to be published by the Publications Office for the [legal form type of a Legal Entity](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AlegalFormType) in the [Core Business vocabulary](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/).
 
+The authoritative source is the GLEIF organisation that provides a list of Entity Legal Forms, SEMIC is responsible for the transformation in RDF and Publications Office to make it public.
+
 ## Process
 
 The process is semi-automatic and it is divided in 4 steps:

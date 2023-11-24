@@ -179,8 +179,8 @@ The [output-v1.5.ttl](output-v1.5.ttl) file is then validated on the format (SKO
 
 Concerning the SKOS format, the validation has been performed manually with:
 
-* [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
-* the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
+* the service [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
+* the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used the comman line tool [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
 The validation against the skos testing tool found out [errors](validation/skos_play_result.txt) concerning the content:
 

@@ -130,7 +130,7 @@ The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/
         rdf:type           skos:Concept ;
         euvoc:status       <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
         dct:created        "2020-06-10"^^xsd:date ;
-        dct:location       "http://publications.europa.eu/resource/authority/country/BLR" ;
+        dct:location       <http://publications.europa.eu/resource/authority/country/BLR> ;
         owl:sameAs         <https://rdf.gleif.org/EntityLegalForm/ELF-JLR3> ;
         skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos:notation      "JLR3" ;

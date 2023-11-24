@@ -136,7 +136,10 @@ The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/
         skos:notation      "JLR3" ;
         skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
         skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
-        skos-xl:prefLabel  <http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729> , <http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3> , <http://data.europa.eu/ih3/legal-form/gl-l-8f8652b5a610ed343ad5b5cfbd5e2c06> , <http://data.europa.eu/ih3/legal-form/gl-l-5a49c9ce7e9d60e5cda330adb089206e> ;
+        skos-xl:prefLabel  <http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729> ,
+<http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3> ,
+<http://data.europa.eu/ih3/legal-form/gl-l-8f8652b5a610ed343ad5b5cfbd5e2c06> ,
+<http://data.europa.eu/ih3/legal-form/gl-l-5a49c9ce7e9d60e5cda330adb089206e> ;
         gleif-base:hasAbbreviationLocal
                 "ОДО"@ru , "ТДА"@be ;
         gleif-base:hasAbbreviationTransliterated

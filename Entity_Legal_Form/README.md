@@ -3,6 +3,8 @@
 ## Content
 This folder includes the material used to generate the Entity Legal Forms in RDF to be published by the Publications Office for the [legal form type of a Legal Entity](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AlegalFormType) in the [Core Business vocabulary](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/).
 
+The authoritative source is the GLEIF organisation that provides a list of Entity Legal Forms, SEMIC is responsible for the transformation in RDF and Publications Office to make it public.
+
 ## Process
 
 The process is semi-automatic and it is divided in 4 steps:
@@ -86,70 +88,89 @@ The output file of the matching is the file [ELF_OP_matching.csv](ELF_OP_matchin
 
 SPARQL-Anything has been used to perform the transformation which:
 * does not need to change the structure of the GLEIF CSV file, provided as input for the transformation
-* allows to perform just a SPARQL CONSTRUCT query, see [line 15](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L15), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 65](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L65)
+* allows to perform just a SPARQL CONSTRUCT query, see [line 16](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L16), and can leverage SPARQL functions such as [STRLANG](https://www.w3.org/TR/sparql11-query/#func-strlang) to combine a string with a language tag, see [line 69](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L69)
 * allows to query multiple files in different format via the SERVICE directive:
-  * the GLEIF ELF Code list in CSV format, see [line 46](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L46)
-  * the ELF OP matching in CSV format, see [line 87](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87)
-* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 94]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L94)
+  * the GLEIF ELF Code list in CSV format, see [line 49](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L49)
+  * the ELF OP matching in CSV format, see [line 96](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L96)
+* can leverage the [string split function](https://jena.apache.org/documentation/query/library-propfunc.html) from the underlying Jena Fuseki, to split a string using a delimiter, see [line 103]( https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L103)
 
 The transformation execution at the core of the process:
 ![](doc/transformation.jpg)
 
 The SPARQL query:
-* adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)
-* links the countries of formation of the ELF codes with the countries in the Publications Office [Country and territories Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) by using the matching retrieved in [lines 87-89](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87-L89) with the filter in [line 105](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
-* links the ELF status with the Publications Office [Concept status Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/concept-status) by mapping directly the 2 codes, see [lines 79-80](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L79-L80)
-* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif/lei-data ) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
+* adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 72](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L72)
+* links the countries of formation of the ELF codes with the countries in the Publications Office [Country and territories Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) by using the matching retrieved in [lines 96-98](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L96-L98) with the filter in [line 119](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L119)
+* links the ELF status with the Publications Office [Concept status Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/concept-status) by mapping directly the 2 codes, see [lines 88-89](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L88-L89)
+* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif/lei-data ) by means of owl:sameAs, see see [line 92](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L92). Being not an authoritative source and, currently transforming version 1.4 of the GLEIF code list, there is just a URI pointing to the respective code and not a temptative of matching.
 
 Each single concept is generated with a unique URI for example:
 
-<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+<http://data.europa.eu/ih3/legal-form/gl-c-c0c25d4317cd4f02968efa8466c3e111>
 
 where:
 * The base URI is http://data.europa.eu/ih3/legal-form/ in agreement with Publications Office
-* The prefix GL adds provenance to the concept, so in the future one might add more concepts not necessarily coming from GLEIF
-* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L61).
+* The prefix "gl" adds provenance to the concept to indicate GLEIF organisation, so in the future one might add more concepts not necessarily coming from GLEIF
+* the prefix "c" means concept, to distinguish from the URI of skos-xl:labels
+* The unique code c0c25d4317cd4f02968efa8466c3e111 is the result of the MD5 hash of the [GLEIF code concatenated with the creation date](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L64).
 
 Being unique 3428 codes, at least an hash key of [64 bit is needed](https://preshing.com/20110504/hash-collision-probabilities/#small-collision-probabilities) to reduce the risk of collisions. Sparql-Anything leverages the [Sparql MD5 hash function](https://www.w3.org/TR/sparql11-query/#func-md5), the smallest with 128 bit, that should be more than sufficient to reduce risk collision. A validation test is performed at the end.
+
+The same process is applied to the URI skos-xl:labels such as:
+
+<http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729>
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
 #### Example
+
+The example below shows how the code [JLR3](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L111-L112) has been transformed. The example shows how a code in multiple languages with transliteration is transformed. In particular, it is possible to see how the skos-xl:labels allow associate the labels with the respective abbreviations.
+
 ```
-<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+<http://data.europa.eu/ih3/legal-form/gl-c-c0c25d4317cd4f02968efa8466c3e111>
         rdf:type           skos:Concept ;
+        euvoc:status       <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
         dct:created        "2020-06-10"^^xsd:date ;
         dct:location       "http://publications.europa.eu/resource/authority/country/BLR" ;
         owl:sameAs         <https://rdf.gleif.org/EntityLegalForm/ELF-JLR3> ;
         skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
         skos:notation      "JLR3" ;
-        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be ,
+"Tavarystva z dadatkovaj adkaznascyu"@be-Latn ,
+"Общество с дополнительной ответственностью"@ru ,
+"Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
         skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be ;
-                             gleif-base:hasAbbreviationLocal
-                                     "ТДА"
-                           ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
-                             gleif-base:hasAbbreviationTransliterated
-                                     "ODO"
-                           ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
-                             gleif-base:hasAbbreviationTransliterated
-                                     "ТDA"
-                           ] ;
-        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
-                             skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru ;
-                             gleif-base:hasAbbreviationLocal
-                                     "ОДО"
-                           ] ;
-        adms:status        <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
+        skos-xl:prefLabel  <http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729> ,
+<http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3> ,
+<http://data.europa.eu/ih3/legal-form/gl-l-8f8652b5a610ed343ad5b5cfbd5e2c06> ,
+<http://data.europa.eu/ih3/legal-form/gl-l-5a49c9ce7e9d60e5cda330adb089206e> ;
         gleif-base:hasAbbreviationLocal
-                "ОДО" , "ТДА" ;
+                "ОДО"@ru , "ТДА"@be ;
         gleif-base:hasAbbreviationTransliterated
-                "ТDA" , "ODO" .
+                "ODO"@ru-Latn , "ТDA"@be-Latn .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-507b6c48346f579bb159044190e8b729>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+        gleif-base:hasAbbreviationTransliterated
+                "ТDA"@be-Latn .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-5c25670efe8121e5b0a610559953a0f3>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
+        gleif-base:hasAbbreviationTransliterated
+                "ODO"@ru-Latn .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-8f8652b5a610ed343ad5b5cfbd5e2c06>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be ;
+        gleif-base:hasAbbreviationLocal
+                "ТДА"@be .
+
+<http://data.europa.eu/ih3/legal-form/gl-l-5a49c9ce7e9d60e5cda330adb089206e>
+        rdf:type             skos-xl:Label ;
+        skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru ;
+        gleif-base:hasAbbreviationLocal
+                "ОДО"@ru .
 ```
 
 ### Validation
@@ -161,7 +182,7 @@ Concerning the SKOS format, the validation has been performed manually with:
 * [https://skos-play.sparna.fr/skos-testing-tool/](https://skos-play.sparna.fr/skos-testing-tool/)
 * the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
-The validation against the skos testing tool find out [errors](validation/skos_play_result.txt) concerning the content:
+The validation against the skos testing tool found out [errors](validation/skos_play_result.txt) concerning the content:
 
 | Error  | Explanation |
 | ------------- | ------------- |
@@ -169,7 +190,8 @@ The validation against the skos testing tool find out [errors](validation/skos_p
 | ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1) | The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label. |
 | ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL | The concepts are described in the languages of their respective countries. |
 | oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645) | Relationships do not exist in the CSV and the creation of such relations would need legal analysis. |
-| ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234) | It happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same. |
+| ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234) | It happens that certain countries uses same labels such as the codes [5WU6](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L2023) (Netherlands) and [7SJP](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L139) (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same. |
+| ucl - Unprintable Characters. FAIL (2) | The code [KD84](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/2023-09-28-elf-code-list-v1.5.csv#L373-L374) code had the "ZWSP" unprintable character that has been removed within the transformation, see lines [69](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L69) and [73](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L73).
 
 The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only the problem of overlapping labels.
 

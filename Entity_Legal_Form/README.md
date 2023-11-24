@@ -73,9 +73,9 @@ A preliminary analysis of the GLEIF and Publication Office has shown that the li
 Sparql-Anything executes the [ELF_OP_matching.rq](ELF_OP_matching.rq) which, in turn, uses the string distance function [CosineDistance](https://github.com/SPARQL-Anything/sparql.anything/blob/v0.9-DEV/FUNCTIONS_AND_MAGIC_PROPERTIES.md#fxcosinedistance) to find the closest matches.
 CosineDistance (and JaroWinkler) [resulted better](doc/string_distance_comparison.csv) than other string distances available in Sparql-Anything, generating only 2 false positives out of 117 results looking at the preferred labels.
 
-To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also 2 false positive has been found correctly.
+To improve the results, the CosineDistance has been run also on the alternative labels and the minimum distance among the preferred and alternative labels has been selected. In this way also the 2 false positives have been found correctly.
 
-In the example below, the republic of Congo would have been the minimum distance (0,571) if looking only at the preferred label; therefore South Korea would not have been matched (0,757).
+In the example below, the republic of Congo would have been the minimum distance (0,571) if looking only at the preferred labels; therefore South Korea would not have been matched (0,757).
 However, taking in account the alternative labels, the distance with Republic of Korea is lesser (0,248), thus allowing to select the right match.
 
 ![](doc/matching.jpg)
@@ -99,7 +99,7 @@ The SPARQL query:
 * adds the transliteration to Latin only for certain languages like Bulgarian (bg) or Greek (el), see [line 68](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L68)
 * links the countries of formation of the ELF codes with the countries in the Publications Office [Country and territories Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country) by using the matching retrieved in [lines 87-89](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L87-L89) with the filter in [line 105](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L105)
 * links the ELF status with the Publications Office [Concept status Authority Table](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/concept-status) by mapping directly the 2 codes, see [lines 79-80](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L79-L80)
-* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
+* links the generated concepts with the [RDF GLEIF data concepts](https://data.world/gleif/lei-data ) by means of owl:sameAs, see see [line 83](https://github.com/SEMICeu/Taxonomy/blob/master/Entity_Legal_Form/SPARQL-query-for-ELF-v1.5.rq#L83)
 
 Each single concept is generated with a unique URI for example:
 
@@ -114,6 +114,44 @@ Being unique 3428 codes, at least an hash key of [64 bit is needed](https://pres
 
 The output of the transformation is a RDF file [output-v1.5.ttl](output-v1.5.ttl) containing skos:ConceptScheme pointing to all skos:Concept generated.
 
+#### Example
+```
+<http://data.europa.eu/ih3/legal-form/GL-c0c25d4317cd4f02968efa8466c3e111>
+        rdf:type           skos:Concept ;
+        dct:created        "2020-06-10"^^xsd:date ;
+        dct:location       "http://publications.europa.eu/resource/authority/country/BLR" ;
+        owl:sameAs         <https://rdf.gleif.org/EntityLegalForm/ELF-JLR3> ;
+        skos:inScheme      <http://data.europa.eu/ih3/legal-form/ELF> ;
+        skos:notation      "JLR3" ;
+        skos:prefLabel     "Таварыства з дадатковай адказнасцю"@be , "Общество с дополнительной ответственностью"@ru , "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn , "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+        skos:topConceptOf  <http://data.europa.eu/ih3/legal-form/ELF> ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Таварыства з дадатковай адказнасцю"@be ;
+                             gleif-base:hasAbbreviationLocal
+                                     "ТДА"
+                           ] ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Obshchestvo s dopolnitel'noj otvetstvennost'yu"@ru-Latn ;
+                             gleif-base:hasAbbreviationTransliterated
+                                     "ODO"
+                           ] ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Tavarystva z dadatkovaj adkaznascyu"@be-Latn ;
+                             gleif-base:hasAbbreviationTransliterated
+                                     "ТDA"
+                           ] ;
+        skos-xl:prefLabel  [ rdf:type             skos-xl:Label ;
+                             skos-xl:literalForm  "Общество с дополнительной ответственностью"@ru ;
+                             gleif-base:hasAbbreviationLocal
+                                     "ОДО"
+                           ] ;
+        adms:status        <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
+        gleif-base:hasAbbreviationLocal
+                "ОДО" , "ТДА" ;
+        gleif-base:hasAbbreviationTransliterated
+                "ТDA" , "ODO" .
+```
+
 ### Validation
   
 The [output-v1.5.ttl](output-v1.5.ttl) file is then validated on the format (SKOS) and uniqueness of the concepts:
@@ -124,16 +162,19 @@ Concerning the SKOS format, the validation has been performed manually with:
 * the shapes downloaded from [https://github.com/skohub-io/shapes](https://github.com/skohub-io/shapes) and used [jena shacl](https://jena.apache.org/documentation/shacl/index.html) to validate
 
 The validation against the skos testing tool find out [errors](validation/skos_play_result.txt) concerning the content:
-* ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645): the concepts are described in the languages of their respective countries
-* ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1): The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label
-* ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL: the concepts are described in the languages of their respective countries
-* oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645): relationships are not created in the CSV and the creation of such relations would need legal analysis
-* ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234): it happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same.
+
+| Error  | Explanation |
+| ------------- | ------------- |
+| ilc - Incomplete Language Coverage	Finds concepts lacking description in languages that are present for other concepts.	FAIL (2645) | The concepts are described in the languages of their respective countries.  |
+| ipl - Inconsistent Preferred Labels	Finds resources with more then one prefLabel per language.	FAIL (1) | The code [X0SD](2023-09-28-elf-code-list-v1.5.csv#L338-L339) is therefore not valid, currently resolved manually by changing the preferred label in alternative label. |
+| ncl - No Common Languages	Checks for common languages in all concept literals.	FAIL | The concepts are described in the languages of their respective countries. |
+| oc - Orphan Concepts	Finds all orphan concepts, i.e. those not having semantic relationships to other concepts.	WARNING (2645) | Relationships do not exist in the CSV and the creation of such relations would need legal analysis. |
+| ol - Overlapping Labels	Finds concepts with similar (identical) labels.	FAIL (234) | It happens that certain countries uses same labels such as the codes 5WU6 (Netherlands) and 7SJP (Belgium) that use the same label "Europees economisch samenwerkingsverband", it doesn't necessarily mean that the concepts are the same. |
 
 The validation against the shacl shapes [highlights](jena-shacl_result.ttl) only the problem of overlapping labels.
 
-Concerning the uniqueness, the validation has been performed manually with the query [compare_distint_codes_input_with_output.rq](validation/compare_distint_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
+Concerning the uniqueness, the validation has been performed manually with the query [compare_distinct_codes_input_with_output.rq](validation/compare_distinct_codes_input_with_output.rq) to count the number of distinc codes in the GLEIF CSV against the number of unique concepts generated.
 This validation is performed because the URI of concepts is generated using the MD5 hash functions which should not generate collission.
-The validation shows that the [number is the same](validation/compare_distint_codes_input_with_output.csv), that is 3428.
+The validation shows that the [number is the same](validation/compare_distinct_codes_input_with_output.csv), that is 3428.
 
 The [output-v1.5.ttl](output-v1.5.ttl) has been reviewed and the [output-v1.5_validated.ttl](output-v1.5_validated.ttl) has been created by replacing manually the preferred labels in alternative label for the X0SD code.

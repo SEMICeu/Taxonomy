@@ -1,0 +1,25 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?concept ?code (COUNT(DISTINCT(?label)) as ?labelCount) 
+WHERE {
+  
+   SERVICE <x-sparql-anything:output-v1.5.ttl> {
+    
+      # extract the URI of the countries with their English label 
+      ?concept rdf:type skos:Concept . #expected 3428
+      ?concept skos:prefLabel ?label .
+      ?concept skos:prefLabel ?label2 .
+      ?concept skos:notation ?code .
+      BIND (STR (?label) as ?labelString) .
+      BIND (STR (?label2) as ?labelString2) .
+    FILTER (LANG(?label) != LANG(?label2) ).
+    FILTER (?labelString = ?labelString2) .
+    }
+    
+   
+}
+GROUP BY ?concept ?code
+ORDER BY DESC (?labelCount)

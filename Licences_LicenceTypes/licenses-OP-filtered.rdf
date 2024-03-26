@@ -1,0 +1,960 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:xyz="http://sparql.xyz/facade-x/data/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/DLDE_ZERO_2_0">
+    <skos:exactMatch rdf:resource="https://www.govdata.de/dl-de/by-2-0"/>
+    <dc:identifier>DLDE_ZERO_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Data licence Germany – Zero – Version 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MS_PL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MS-PL"/>
+    <dc:identifier>MS_PL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Microsoft Public License (MS-PL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NLOD_1_0">
+    <skos:exactMatch rdf:resource="http://data.norge.no/nlod/en/1.0"/>
+    <dc:identifier>NLOD_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Norwegian Licence for Open Government Data 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ETALAB_2_0">
+    <skos:exactMatch rdf:resource="https://www.etalab.gouv.fr/licence-ouverte-open-licence/"/>
+    <dc:identifier>ETALAB_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Etalab Open Licence V 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/GPL_3_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/GPL-3.0"/>
+    <dc:identifier>GPL_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU General Public License version 3</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EUROGEO_2022">
+    <skos:exactMatch rdf:resource="https://www.mapsforeurope.org/licence"/>
+    <dc:identifier>EUROGEO_2022</dc:identifier>
+    <skos:prefLabel xml:lang="en">EuroGeographics Open Data Licence v.2022</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYND_3_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/"/>
+    <dc:identifier>CC_BYND_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivs 3.0 Unported</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EUPL_1_0">
+    <skos:exactMatch rdf:resource="http://ec.europa.eu/idabc/en/document/7330.html"/>
+    <dc:identifier>EUPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">European Union Public Licence v.1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA">
+    <dc:identifier>CC_BYSA</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–ShareAlike 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EFL_2">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/EFL-2.0"/>
+    <dc:identifier>EFL_2</dc:identifier>
+    <skos:prefLabel xml:lang="en">Eiffel Forum License, version 2</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LILIQ_P_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LiLiQ-P-1.1"/>
+    <dc:identifier>LILIQ_P_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Québec Free and Open-Source Licence – Permissive (LiLiQ-P) version 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OSL_3_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OSL-3.0"/>
+    <dc:identifier>OSL_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Software License, version 3.0 (OSL-3.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MULTICS">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Multics"/>
+    <dc:identifier>MULTICS</dc:identifier>
+    <skos:prefLabel xml:lang="en">Multics License (Multics)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA_3_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+    <dc:identifier>CC_BYSA_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–ShareAlike 3.0 Unported</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/BSD_3_CLAUSE">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/BSD-3-Clause"/>
+    <dc:identifier>BSD_3_CLAUSE</dc:identifier>
+    <skos:prefLabel xml:lang="en">3-Clause BSD License</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ECL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/ECL-2.0"/>
+    <dc:identifier>ECL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Educational Community License version 2.0 (ECL-2.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_2_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+    <dc:identifier>CC_BY_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution 2.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/RPL_1_5">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/RPL-1.5"/>
+    <dc:identifier>RPL_1_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Reciprocal Public License 1.5 (RPL-1.5)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCND">
+    <dc:identifier>CC_BYNCND</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/FRAMEWORX_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Frameworx-1.0"/>
+    <dc:identifier>FRAMEWORX_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Frameworx License 1.0 (Frameworx-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CPAL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/CPAL-1.0"/>
+    <dc:identifier>CPAL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Common Public Attribution License Version 1.0 (CPAL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ARTISTIC_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Artistic-1.0"/>
+    <dc:identifier>ARTISTIC_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Artistic License 1.0 (Artistic-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OGL_3_0">
+    <skos:exactMatch rdf:resource="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"/>
+    <dc:identifier>OGL_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Government Licence 3.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-nd/3.0/"/>
+    <dc:identifier>CC_BYNCND_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–NoDerivs 3.0 Unported</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/XNET">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Xnet"/>
+    <dc:identifier>XNET</dc:identifier>
+    <skos:prefLabel xml:lang="en">The X.Net, Inc. License (Xnet)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_3_0_NL">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by/3.0/nl/legalcode"/>
+    <dc:identifier>CC_BY_3_0_NL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Attribution 3.0 Netherlands</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_PDM_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+    <dc:identifier>CC_PDM_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Public Domain Mark 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/SIMPL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/SimPL-2.0"/>
+    <dc:identifier>SIMPL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Simple Public License (SimPL-2.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/SLEEPYCAT">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Sleepycat"/>
+    <dc:identifier>SLEEPYCAT</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Sleepycat License (Sleepycat)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MIT">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MIT"/>
+    <dc:identifier>MIT</dc:identifier>
+    <skos:prefLabel xml:lang="en">The MIT License</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CATOSL_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/CATOSL-1.1"/>
+    <dc:identifier>CATOSL_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Computer Associates Trusted Open Source License 1.1 (CATOSL-1.1)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ISC">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/ISC"/>
+    <dc:identifier>ISC</dc:identifier>
+    <skos:prefLabel xml:lang="en">ISC License (ISC)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LPL_1_02">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LPL-1.02"/>
+    <dc:identifier>LPL_1_02</dc:identifier>
+    <skos:prefLabel xml:lang="en">Lucent Public License Version 1.02 (LPL-1.02)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LPPL_1_3C">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LPPL-1.3c"/>
+    <dc:identifier>LPPL_1_3C</dc:identifier>
+    <skos:prefLabel xml:lang="en">LaTeX Project Public License v1.3c (LPPL-1.3c)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYND_2_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nd/2.0/"/>
+    <dc:identifier>CC_BYND_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivs 2.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ODC_BY">
+    <skos:exactMatch rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
+    <dc:identifier>ODC_BY</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Data Commons Attribution License v1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/DLDE_BY_2_0">
+    <skos:exactMatch rdf:resource="https://www.govdata.de/dl-de/by-2-0"/>
+    <dc:identifier>DLDE_BY_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Data licence Germany – attribution – Version 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EPL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/EPL-2.0"/>
+    <dc:identifier>EPL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Eclipse Public License version 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/GNU_FDL_1_2">
+    <skos:exactMatch rdf:resource="ttps://gnu.org/licenses/old-licenses/fdl-1.2"/>
+    <dc:identifier>GNU_FDL_1_2</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Free Documentation License 1.2</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/SPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/SPL-1.0"/>
+    <dc:identifier>SPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Sun Public License Version 1.0 (SPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NPOSL_3_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/NPOSL-3.0"/>
+    <dc:identifier>NPOSL_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Non-Profit Open Software License version 3.0 (NPOSL-3.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EFL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/EFL-1.0"/>
+    <dc:identifier>EFL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Eiffel Forum License, version 1 (EFL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MOTOSOTO">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Motosoto"/>
+    <dc:identifier>MOTOSOTO</dc:identifier>
+    <skos:prefLabel xml:lang="en">Motosoto Open Source License – Version 0.9.1 (Motosoto)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EUPL_1_2">
+    <skos:exactMatch rdf:resource="https://joinup.ec.europa.eu/collection/eupl/eupl-text-11-12"/>
+    <dc:identifier>EUPL_1_2</dc:identifier>
+    <skos:prefLabel xml:lang="en">European Union Public Licence v. 1.2</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCND_2_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.0/"/>
+    <dc:identifier>CC_BYNCND_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–NoDerivs 2.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/HPND">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/HPND"/>
+    <dc:identifier>HPND</dc:identifier>
+    <skos:prefLabel xml:lang="en">Historical Permission Notice and Disclaimer (HPND)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OSL_2_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OSL-2.1"/>
+    <dc:identifier>OSL_2_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Open Software License, version 2.1 (OSL-2.1)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/FAIR">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Fair"/>
+    <dc:identifier>FAIR</dc:identifier>
+    <skos:prefLabel xml:lang="en">Fair License (Fair)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/RSCPL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/RSCPL"/>
+    <dc:identifier>RSCPL</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Ricoh Source Code Public License (RSCPL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/CPL-1.0"/>
+    <dc:identifier>CPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Common Public License, version 1.0 (CPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dc:identifier>CC_BY_4_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CNRI_PYTHON">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/CNRI-Python"/>
+    <dc:identifier>CNRI_PYTHON</dc:identifier>
+    <skos:prefLabel xml:lang="en">The CNRI portion of the multi-part Python License (CNRI-Python)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/PSEUL">
+    <skos:exactMatch rdf:resource="https://www.ordnancesurvey.co.uk/documents/licensing/inspire-end-user-licence.pdf"/>
+    <dc:identifier>PSEUL</dc:identifier>
+    <skos:prefLabel xml:lang="en">INSPIRE End User Licence</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ENTESSA">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Entessa"/>
+    <dc:identifier>ENTESSA</dc:identifier>
+    <skos:prefLabel xml:lang="en">Entessa Public License Version 1.0 (Entessa)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/0BSD">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/0BSD"/>
+    <dc:identifier>0BSD</dc:identifier>
+    <skos:prefLabel xml:lang="en">Zero-Clause BSD / Free Public License 1.0.0 (0BSD)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OGTSL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OGTSL"/>
+    <dc:identifier>OGTSL</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Open Group Test Suite License (OGTSL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NOKIA">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/NOKIA"/>
+    <dc:identifier>NOKIA</dc:identifier>
+    <skos:prefLabel xml:lang="en">Nokia Open Source License Version 1.0a (NOKIA)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/AGPL_3_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/AGPL-3.0"/>
+    <dc:identifier>AGPL_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Affero General Public License version 3</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OCLC_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OCLC-2.0"/>
+    <dc:identifier>OCLC_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The OCLC Research Public License 2.0 License (OCLC-2.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/GNU_FDL_1_3">
+    <skos:exactMatch rdf:resource="http://www.gnu.org/licenses/licenses.html"/>
+    <dc:identifier>GNU_FDL_1_3</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Free Documentation License 1.3</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LILIQ_RPLUS_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LiLiQ-Rplus-1.1"/>
+    <dc:identifier>LILIQ_RPLUS_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Québec Free and Open-Source Licence – Strong Reciprocity (LiLiQ-R+) version 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OP_DATPRO">
+    <dc:identifier>OP_DATPRO</dc:identifier>
+    <skos:prefLabel xml:lang="en">Provisional data</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_3_0_AT">
+    <skos:exactMatch rdf:resource="https://creativecommons.org/licenses/by/3.0/at/legalcode"/>
+    <dc:identifier>CC_BY_3_0_AT</dc:identifier>
+    <skos:prefLabel xml:lang="en">Attribution 3.0 Austria</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/W3C">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/W3C"/>
+    <dc:identifier>W3C</dc:identifier>
+    <skos:prefLabel xml:lang="en">The W3C Software Notice and License (W3C)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LGPL_3_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LGPL-3.0"/>
+    <dc:identifier>LGPL_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Lesser General Public License version 3</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ISA_OML_1_1">
+    <skos:exactMatch rdf:resource="https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11"/>
+    <dc:identifier>ISA_OML_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">ISA Open Metadata Licence 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EUPL_1_1">
+    <skos:exactMatch rdf:resource="https://joinup.ec.europa.eu/collection/eupl/eupl-text-11-12"/>
+    <dc:identifier>EUPL_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">European Union Public Licence v. 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NTP">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/NTP"/>
+    <dc:identifier>NTP</dc:identifier>
+    <skos:prefLabel xml:lang="en">NTP License (NTP)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/PYTHON_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Python-2.0"/>
+    <dc:identifier>PYTHON_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Python License (Python-2.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/IODL_2_0">
+    <skos:exactMatch rdf:resource="https://www.dati.gov.it/content/italian-open-data-license-v20"/>
+    <dc:identifier>IODL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Italian Open Data License v2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_3_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+    <dc:identifier>CC_BYNCSA_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–ShareAlike 3.0 Unported</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNC_3_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/"/>
+    <dc:identifier>CC_BYNC_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial 3.0 Unported</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CLARIN_ACA_1_0">
+    <skos:exactMatch rdf:resource="https://www.clarin.eu/content/licenses-and-clarin-categories"/>
+    <dc:identifier>CLARIN_ACA_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Clarin Academic End-User Licence (ACA) 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ECOS_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/eCos-2.0"/>
+    <dc:identifier>ECOS_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">eCos License version 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CECILL_2_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/CECILL-2.1"/>
+    <dc:identifier>CECILL_2_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">CEA CNRS Inria Free Software License Agreement, v2.1 (CECILL-2.1)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_2_5">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by/2.5/"/>
+    <dc:identifier>CC_BY_2_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution 2.5 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYND">
+    <dc:identifier>CC_BYND</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivatives 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by/1.0/"/>
+    <dc:identifier>CC_BY_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution 1.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ODC_PDDL">
+    <skos:exactMatch rdf:resource="http://opendatacommons.org/licenses/pddl/1.0/"/>
+    <dc:identifier>ODC_PDDL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Data Commons Public Domain Dedication and License 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ZPL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/ZPL-2.0"/>
+    <dc:identifier>ZPL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Zope Public License Version 2.0 (ZPL-2.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MS_RL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MS-RL"/>
+    <dc:identifier>MS_RL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Microsoft Reciprocal License (MS-RL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCSA">
+    <dc:identifier>CC_BYNCSA</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/BSD_3_CLAUSE_LBNL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/BSD-3-Clause-LBNL"/>
+    <dc:identifier>BSD_3_CLAUSE_LBNL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Lawrence Berkeley National Labs BSD Variant License (BSD-3-Clause-LBNL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NAUMEN">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Naumen"/>
+    <dc:identifier>NAUMEN</dc:identifier>
+    <skos:prefLabel xml:lang="en">NAUMEN Public License (Naumen)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EU_DATAGRID">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/EUDatagrid"/>
+    <dc:identifier>EU_DATAGRID</dc:identifier>
+    <skos:prefLabel xml:lang="en">EU DataGrid Software License (EUDatagrid)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OGL_2_0">
+    <skos:exactMatch rdf:resource="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/"/>
+    <dc:identifier>OGL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Government Licence 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCND_4_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+    <dc:identifier>CC_BYNCND_4_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA_3_0_NL">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/nl/legalcode/"/>
+    <dc:identifier>CC_BYSA_3_0_NL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Attribution-ShareAlike 3.0 Netherlands </skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/APSL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/APSL-2.0"/>
+    <dc:identifier>APSL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Apple Public Source License 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNC_4_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc/4.0/"/>
+    <dc:identifier>CC_BYNC_4_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/RPSL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/RPSL-1.0"/>
+    <dc:identifier>RPSL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">RealNetworks Public Source License Version 1.0 (RPSL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/COM_REUSE">
+    <skos:exactMatch rdf:resource="http://data.europa.eu/eli/dec/2011/833/oj"/>
+    <dc:identifier>COM_REUSE</dc:identifier>
+    <skos:prefLabel xml:lang="en">European Commission reuse notice</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/POSTGRE_SQL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/PostgreSQL"/>
+    <dc:identifier>POSTGRE_SQL</dc:identifier>
+    <skos:prefLabel xml:lang="en">The PostgreSQL Licence (PostgreSQL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/BSL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/BSL-1.0"/>
+    <dc:identifier>BSL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Boost Software License 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_4_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+    <dc:identifier>CC_BYNCSA_4_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/RPL_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/RPL-1.1"/>
+    <dc:identifier>RPL_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Reciprocal Public License, version 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/DLDE_BYNC_1_0">
+    <skos:exactMatch rdf:resource="https://www.govdata.de/dl-de/by-nc-1-0"/>
+    <dc:identifier>DLDE_BYNC_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Data licence Germany – attribution – non-commercial – Version 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNC">
+    <dc:identifier>CC_BYNC</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/GNU_FDL_1_1">
+    <skos:exactMatch rdf:resource="https://gnu.org/licenses/old-licenses/fdl-1.1"/>
+    <dc:identifier>GNU_FDL_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Free Documentation License 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MPL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MPL-2.0"/>
+    <dc:identifier>MPL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Mozilla Public License (MPL), version 2.0 (MPL-2.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/DLDE_BY_1_0">
+    <skos:exactMatch rdf:resource="https://www.govdata.de/dl-de/by-1-0"/>
+    <dc:identifier>DLDE_BY_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Data licence Germany – attribution – Version 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NCSA">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/NCSA"/>
+    <dc:identifier>NCSA</dc:identifier>
+    <skos:prefLabel xml:lang="en">The University of Illinois/NCSA Open Source License (NCSA)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/WATCOM_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Watcom-1.0"/>
+    <dc:identifier>WATCOM_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Sybase Open Source Licence (Watcom-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NLOD_2_0">
+    <skos:exactMatch rdf:resource="https://data.norge.no/nlod/en/2.0/"/>
+    <dc:identifier>NLOD_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Norwegian Licence for Open Government Data (NLOD) 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_2_5">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/"/>
+    <dc:identifier>CC_BYNCSA_2_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–ShareAlike 2.5 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    <dc:identifier>CC0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons CC0 1.0 Universal</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/BSD_PLUS_PATENT">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/BSDplusPatent"/>
+    <dc:identifier>BSD_PLUS_PATENT</dc:identifier>
+    <skos:prefLabel xml:lang="en">BSD+Patent</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNC_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc/1.0/"/>
+    <dc:identifier>CC_BYNC_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial 1.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYND_4_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nd/4.0/"/>
+    <dc:identifier>CC_BYND_4_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivatives 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LGPL_2_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LGPL-2.1"/>
+    <dc:identifier>LGPL_2_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Lesser General Public License version 2.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY">
+    <dc:identifier>CC_BY</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/APACHE_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Apache-2.0"/>
+    <dc:identifier>APACHE_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Apache License, Version 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CDDL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/CDDL-1.0"/>
+    <dc:identifier>CDDL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Common Development and Distribution License 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNC_2_5">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc/2.5/"/>
+    <dc:identifier>CC_BYNC_2_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial 2.5 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA_2_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-sa/2.0/"/>
+    <dc:identifier>CC_BYSA_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–ShareAlike 2.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-sa/1.0/"/>
+    <dc:identifier>CC_BYNCSA_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–ShareAlike 1.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ECL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/ECL-1.0"/>
+    <dc:identifier>ECL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Educational Community License version 1.0 (ECL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/QPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/QPL-1.0"/>
+    <dc:identifier>QPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Q Public License Version (QPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OPL_2_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OPL-2.1"/>
+    <dc:identifier>OPL_2_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">OSET Public License version 2.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/IPA">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/IPA"/>
+    <dc:identifier>IPA</dc:identifier>
+    <skos:prefLabel xml:lang="en">IPA Font License (IPA)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_3_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc:identifier>CC_BY_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution 3.0 Unported</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ISA_OML">
+    <skos:exactMatch rdf:resource="https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11"/>
+    <dc:identifier>ISA_OML</dc:identifier>
+    <skos:prefLabel xml:lang="en">ISA Open Metadata Licence 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCND_2_5">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.5/"/>
+    <dc:identifier>CC_BYNCND_2_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–NoDerivs 2.5 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/UPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/UPL"/>
+    <dc:identifier>UPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Universal Permissive License (UPL), Version 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/GPL_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/GPL-2.0"/>
+    <dc:identifier>GPL_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU General Public License version 2</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MIROS">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MS-RL"/>
+    <dc:identifier>MIROS</dc:identifier>
+    <skos:prefLabel xml:lang="en">MirOS License (MirOS)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MPL-1.0"/>
+    <dc:identifier>MPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Mozilla Public License (MPL), version 1.0 (MPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LPL-1.0"/>
+    <dc:identifier>LPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Lucent Public License, Plan 9, version 1.0 (LPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ARTISTIC_2_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Artistic-2.0"/>
+    <dc:identifier>ARTISTIC_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Artistic License 2.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/IPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/IPL-1.0"/>
+    <dc:identifier>IPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">IBM Public License Version 1.0 (IPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNC_2_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc/2.0/"/>
+    <dc:identifier>CC_BYNC_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial 2.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/IODL_1_0">
+    <skos:exactMatch rdf:resource="http://www.formez.it/iodl/"/>
+    <dc:identifier>IODL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Italian Open Data License v1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/HROD">
+    <skos:exactMatch rdf:resource="http://data.gov.hr/open-licence-republic-croatia"/>
+    <dc:identifier>HROD</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Licence – The Republic of Croatia</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NGPL">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/NGPL"/>
+    <dc:identifier>NGPL</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Nethack General Public License (NGPL)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA_2_5">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/"/>
+    <dc:identifier>CC_BYSA_2_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–ShareAlike 2.5 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OSL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OSL-1.0"/>
+    <dc:identifier>OSL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Software License, version 1.0 (OSL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/VSL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/VSL-1.0"/>
+    <dc:identifier>VSL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The Vovida Software License v. 1.0 (VSL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_2_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"/>
+    <dc:identifier>CC_BYNCSA_2_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NonCommercial–ShareAlike 2.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-sa/1.0/"/>
+    <dc:identifier>CC_BYSA_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–ShareAlike 1.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/APL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/APL-1.0"/>
+    <dc:identifier>APL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Adaptive Public License 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/EPL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/EPL-1.0"/>
+    <dc:identifier>EPL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Eclipse Public License 1.0 (EPL-1.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OGL_ROU_1_0">
+    <skos:exactMatch rdf:resource="http://data.gov.ro/base/images/logoinst/OGL-ROU-1.0.pdf"/>
+    <dc:identifier>OGL_ROU_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Non-Commercial Government Licence 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ZLIB">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Zlib"/>
+    <dc:identifier>ZLIB</dc:identifier>
+    <skos:prefLabel xml:lang="en">The zlib/libpng License (Zlib)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYND_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nd/1.0/"/>
+    <dc:identifier>CC_BYND_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivs 1.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/ODC_BL">
+    <skos:exactMatch rdf:resource="http://opendatacommons.org/licenses/odbl/1.0/"/>
+    <dc:identifier>ODC_BL</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Data Commons Open Database License v1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/NASA_1_3">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/NASA-1.3"/>
+    <dc:identifier>NASA_1_3</dc:identifier>
+    <skos:prefLabel xml:lang="en">NASA Open Source Agreement v1.3 (NASA-1.3)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/GNU_FDL">
+    <skos:exactMatch rdf:resource="http://www.gnu.org/licenses/licenses.html"/>
+    <dc:identifier>GNU_FDL</dc:identifier>
+    <skos:prefLabel xml:lang="en">GNU Free Documentation License</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/MPL_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/MPL-1.1"/>
+    <dc:identifier>MPL_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Mozilla Public License (MPL), version 1.1 (MPL-1.1)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OGL_1_0">
+    <skos:exactMatch rdf:resource="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/"/>
+    <dc:identifier>OGL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Open Government Licence 1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYND_2_5">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nd/2.5/"/>
+    <dc:identifier>CC_BYND_2_5</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivs 2.5 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OGL_NC">
+    <skos:exactMatch rdf:resource="http://www.nationalarchives.gov.uk/doc/non-commercial-government-licence/non-commercial-government-licence.htm"/>
+    <dc:identifier>OGL_NC</dc:identifier>
+    <skos:prefLabel xml:lang="en">Non-Commercial Government Licence</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/UCL_1_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/UCL-1.0"/>
+    <dc:identifier>UCL_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Upstream Compatibility License v1.0</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/LILIQ_R_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/LiLiQ-R-1.1"/>
+    <dc:identifier>LILIQ_R_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Québec Free and Open-Source Licence – Reciprocity (LiLiQ-R) version 1.1</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/WXWINDOWS">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/WXwindows"/>
+    <dc:identifier>WXWINDOWS</dc:identifier>
+    <skos:prefLabel xml:lang="en">The wxWindows Library Licence (wxWindows)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/APACHE_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/Apache-1.1"/>
+    <dc:identifier>APACHE_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">Apache Software License, version 1.1 (Apache-1.1)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYNCND_1_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-nd-nc/1.0/"/>
+    <dc:identifier>CC_BYNCND_1_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–NoDerivs–NonCommercial 1.0 Generic</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/OFL_1_1">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/OFL-1.1"/>
+    <dc:identifier>OFL_1_1</dc:identifier>
+    <skos:prefLabel xml:lang="en">SIL Open Font License (OFL-1.1)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/BSD_2_CLAUSE">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/BSD-2-Clause"/>
+    <dc:identifier>BSD_2_CLAUSE</dc:identifier>
+    <skos:prefLabel xml:lang="en">2-Clause BSD License</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BYSA_4_0">
+    <skos:exactMatch rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+    <dc:identifier>CC_BYSA_4_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">Creative Commons Attribution–ShareAlike 4.0 International</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/PHP_3_0">
+    <skos:exactMatch rdf:resource="https://opensource.org/licenses/PHP-3.0"/>
+    <dc:identifier>PHP_3_0</dc:identifier>
+    <skos:prefLabel xml:lang="en">The PHP License 3.0 (PHP-3.0)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+</rdf:RDF>

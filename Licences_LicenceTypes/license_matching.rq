@@ -1,0 +1,58 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX at: <http://publications.europa.eu/ontology/authority/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX fx:  <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX skos-xl: <http://www.w3.org/2008/05/skos-xl#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX gleif-base: <https://www.gleif.org/ontology/Base/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?subject ?equivalent  ?spdxurl ?OPLabel ?SPDXLabel ?OPid ?SPDXid ?BestMatch ?LabelID ?MinDistance
+  WHERE {
+{
+SELECT ?subject ?equivalent ?OPLabel ?OPid (MIN(?Distance) AS ?JMin)
+WHERE
+{
+    SERVICE <x-sparql-anything:licenses-OP-filtered.rdf> {
+      ?subject skos:prefLabel ?ELF .
+        BIND(STR(?ELF) AS ?OPLabel) .
+      ?subject dc:identifier ?ELFidentifier .
+        BIND((REPLACE(?ELFidentifier, "_", "-")) AS ?OPid) .
+        OPTIONAL {?subject skos:exactMatch ?equivalent } .
+    }
+    SERVICE <x-sparql-anything:licenses.json> { 
+        ?elem    xyz:name  ?eng_label .
+        ?elem    xyz:licenseId ?license .
+        BIND(UCASE(REPLACE(?license,"\\.","-")) AS ?SPDXid) .
+    }
+      
+  BIND(fx:CosineDistance(?OPLabel, ?eng_label) AS ?Distance1) .
+  BIND(fx:CosineDistance(?OPid, ?SPDXid) AS ?Distance2) .
+  BIND(IF(?Distance1 <= ?Distance2, ?Distance1, ?Distance2) AS ?Distance) .
+}
+GROUP BY ?subject ?equivalent ?OPLabel ?OPid
+ORDER BY ASC(?JMin)
+  }
+ 
+  SERVICE <x-sparql-anything:licenses.json> {
+        ?elem    xyz:name  ?SPDXLabel .
+        ?elem    xyz:licenseId ?license .
+        BIND(UCASE(REPLACE(?license,"\\.","-")) AS ?SPDXid) .
+    }
+ 
+  BIND(fx:CosineDistance(?OPLabel, ?SPDXLabel) AS ?MinDistance1)
+  BIND(fx:CosineDistance(?OPid, ?SPDXid) AS ?MinDistance2) .
+  BIND(IF(?MinDistance1 <= ?MinDistance2, ?MinDistance1, ?MinDistance2) AS ?MinDistance) .
+  BIND(IF(?MinDistance1 <= ?MinDistance2, ?SPDXLabel, ?SPDXid) AS ?BestMatch).
+  BIND(IF(?MinDistance1 <= ?MinDistance2, "Label", "ID") AS ?LabelID).
+  BIND(URI(CONCAT("https://spdx.org/licenses/",?license)) AS ?spdxurl) .
+  FILTER (?MinDistance = ?JMin)
+}
+ORDER BY ?MinDistance
+

@@ -1,0 +1,23 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+CONSTRUCT {
+         ?subject rdf:type skos:Concept .
+       ?subject skos:prefLabel ?label .
+    ?subject dc:identifier ?identifier .
+      ?subject skos:exactMatch ?url .
+}
+WHERE {
+  
+    SERVICE <x-sparql-anything:licences-skos2.rdf> {
+       ?subject rdf:type skos:Concept .
+       ?subject skos:prefLabel ?label .
+    ?subject dc:identifier ?identifier .
+    OPTIONAL {
+    ?subject skos:exactMatch ?url .
+    }
+        FILTER(lang(?label) = "en") .
+    }
+}
